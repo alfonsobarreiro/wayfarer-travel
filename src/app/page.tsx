@@ -1,0 +1,511 @@
+"use client";
+
+import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Compass,
+  BookOpen,
+  Sparkles,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ArrowRight,
+} from "lucide-react";
+import { SignUpModal } from "@/components/form/SignUpModal";
+import { allDestinations as destinations } from "@/data/destinations";
+
+const benefits = [
+  {
+    icon: MapPin,
+    number: "01",
+    title: "Tailored to You",
+    description:
+      "Destinations matched to your travel style, budget, and interests — not generic top-10 lists. Tell us how you travel, and we'll show you where.",
+    image:
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
+  },
+  {
+    icon: Compass,
+    number: "02",
+    title: "Go Deeper",
+    description:
+      "Local markets over tourist traps. Hidden trails over crowded viewpoints. We surface the places that don't make the first page of search results.",
+    image:
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+  },
+  {
+    icon: BookOpen,
+    number: "03",
+    title: "Plan Smarter",
+    description:
+      "Weather patterns, visa requirements, local customs, budget breakdowns — everything you'd spend hours researching, organized in one place.",
+    image:
+      "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=800&q=80",
+  },
+  {
+    icon: Sparkles,
+    number: "04",
+    title: "Evolves With You",
+    description:
+      "The more you explore, the sharper your recommendations get. Your travel profile grows with every trip, every save, every search.",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+  },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" as const },
+  }),
+};
+
+export default function HomePage() {
+  const [signUpOpen, setSignUpOpen] = useState(false);
+  const [hoveredBenefit, setHoveredBenefit] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isHoveringCarousel, setIsHoveringCarousel] = useState(false);
+
+  // Auto-scroll carousel — slow continuous scroll, pause on hover
+  const autoScroll = useCallback(() => {
+    if (!carouselRef.current || isHoveringCarousel) return;
+    const el = carouselRef.current;
+    // If we've scrolled to the end, reset to start
+    if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 2) {
+      el.scrollLeft = 0;
+    } else {
+      el.scrollLeft += 1;
+    }
+  }, [isHoveringCarousel]);
+
+  useEffect(() => {
+    const id = setInterval(autoScroll, 30); // ~33fps, 1px per tick = slow drift
+    return () => clearInterval(id);
+  }, [autoScroll]);
+
+  function scrollCarousel(direction: "left" | "right") {
+    if (!carouselRef.current) return;
+    const scrollAmount = carouselRef.current.offsetWidth * 0.7;
+    carouselRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  }
+
+  return (
+    <>
+      {/* ── Hero ────────────────────────────────────── */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1600&q=80"
+            alt="Tropical coastline"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 25%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.2) 75%, transparent 100%)",
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
+          <motion.div
+            className="max-w-2xl"
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1
+              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-neutral-900 mb-6"
+              style={{ fontFamily: "var(--font-heading)" }}
+              variants={fadeUp}
+              custom={0}
+            >
+              Discover
+              <br />
+              Unforgettable
+              <br />
+              New Destinations
+            </motion.h1>
+
+            <motion.p
+              className="text-lg text-neutral-600 mb-4 max-w-md"
+              variants={fadeUp}
+              custom={1}
+            >
+              Wayfarer makes it simple to discover a world of adventures
+              tailored just for you.
+            </motion.p>
+
+            <motion.p
+              className="text-base text-neutral-500 mb-8"
+              variants={fadeUp}
+              custom={2}
+            >
+              There&apos;s an adventure waiting just for you.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4"
+              variants={fadeUp}
+              custom={3}
+            >
+              <button
+                onClick={() => setSignUpOpen(true)}
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors shadow-lg shadow-brand-600/20"
+              >
+                Sign Up!
+              </button>
+              <p className="text-xs text-neutral-500 self-center">
+                No spam, just adventures.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-400"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+        >
+          <span className="text-xs font-medium">Scroll to explore</span>
+          <ChevronDown className="w-5 h-5" />
+        </motion.div>
+      </section>
+
+      {/* ── Destinations Carousel ──────────────────── */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <motion.h2
+                className="text-3xl md:text-4xl font-bold tracking-tight"
+                style={{ fontFamily: "var(--font-heading)" }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Destinations
+              </motion.h2>
+              <p className="text-neutral-500 mt-2">
+                Swipe to explore where Wayfarer can take you.
+              </p>
+            </div>
+
+            <div className="hidden md:flex gap-2">
+              <button
+                onClick={() => scrollCarousel("left")}
+                className="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-neutral-100 transition-colors"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="w-5 h-5 text-neutral-600" />
+              </button>
+              <button
+                onClick={() => scrollCarousel("right")}
+                className="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-neutral-100 transition-colors"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="w-5 h-5 text-neutral-600" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          ref={carouselRef}
+          className="flex gap-5 overflow-x-auto pb-4 px-6 md:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          onMouseEnter={() => setIsHoveringCarousel(true)}
+          onMouseLeave={() => setIsHoveringCarousel(false)}
+        >
+          {destinations.slice(0, 7).map((dest, i) => (
+            <motion.div
+              key={dest.slug}
+              className="flex-shrink-0"
+              style={{ width: "clamp(280px, 35vw, 420px)" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+            >
+              <Link
+                href={`/destinations/${dest.slug}`}
+                className="group block"
+              >
+                <div className="relative overflow-hidden rounded-md aspect-[3/4] mb-4 img-skeleton">
+                  <Image
+                    src={dest.image}
+                    alt={dest.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <p className="text-white/70 text-xs font-medium uppercase tracking-wider mb-1 flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      {dest.country}
+                    </p>
+                    <h3
+                      className="text-white text-xl font-bold"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {dest.name}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-sm text-neutral-500 line-clamp-2 group-hover:text-neutral-700 transition-colors">
+                  {dest.tagline}
+                </p>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 mt-8 flex justify-end">
+          <Link
+            href="/destinations"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors"
+          >
+            View all destinations
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* ── Discover Teaser ──────────────────────── */}
+      <section className="py-20 md:py-28 bg-neutral-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div className="md:w-1/2">
+              <motion.p
+                className="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Interactive
+              </motion.p>
+              <motion.h2
+                className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4"
+                style={{ fontFamily: "var(--font-heading)" }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Explore the Globe
+              </motion.h2>
+              <p className="text-neutral-400 mb-8 leading-relaxed max-w-md">
+                Spin a 3D globe, click any pin, and discover destinations that
+                match your curiosity — not an algorithm. {destinations.length}+
+                places, all in your hands.
+              </p>
+              <Link
+                href="/discover"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors"
+              >
+                Open the Globe
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <motion.div
+              className="md:w-1/2 flex justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800&q=80"
+                  alt="Globe showing travel destinations"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-neutral-900/20" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-white/60 text-xs font-medium uppercase tracking-widest mb-1">
+                    {destinations.length}+ destinations
+                  </p>
+                  <p className="text-white text-sm font-semibold">
+                    Spin. Click. Discover.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Wayfarer — split layout with hover image ── */}
+      <section className="py-20 md:py-28 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-14">
+            <motion.p
+              className="text-brand-600 text-sm font-semibold uppercase tracking-widest mb-3"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Why Wayfarer
+            </motion.p>
+            <motion.h2
+              className="text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Travel that fits your life
+            </motion.h2>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            {/* Left — benefits list */}
+            <div className="lg:w-1/2 space-y-0">
+              {benefits.map((benefit, i) => (
+                <motion.div
+                  key={benefit.title}
+                  className={`group cursor-pointer py-8 border-t border-neutral-200 first:border-t-0 first:pt-0 last:pb-0 transition-opacity duration-300 ${
+                    hoveredBenefit === i ? "opacity-100" : "lg:opacity-50 lg:hover:opacity-100"
+                  }`}
+                  onMouseEnter={() => setHoveredBenefit(i)}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08, duration: 0.5 }}
+                >
+                  <div className="flex gap-6">
+                    {/* Number */}
+                    <span
+                      className={`text-3xl md:text-4xl font-bold transition-colors duration-300 flex-shrink-0 w-12 ${
+                        hoveredBenefit === i ? "text-brand-500" : "text-neutral-200"
+                      }`}
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {benefit.number}
+                    </span>
+
+                    {/* Content */}
+                    <div>
+                      <div className="flex items-center gap-2.5 mb-2">
+                        <benefit.icon className={`w-5 h-5 transition-colors duration-300 ${
+                          hoveredBenefit === i ? "text-brand-600" : "text-neutral-500"
+                        }`} />
+                        <h3
+                          className="text-lg md:text-xl font-bold text-neutral-900"
+                          style={{ fontFamily: "var(--font-heading)" }}
+                        >
+                          {benefit.title}
+                        </h3>
+                      </div>
+                      <p className="text-neutral-500 leading-relaxed text-sm md:text-base">
+                        {benefit.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Right — hover-responsive image */}
+            <div className="lg:w-1/2 w-full">
+              <div className="relative aspect-square rounded-md overflow-hidden lg:sticky lg:top-28">
+                {benefits.map((benefit, i) => (
+                  <Image
+                    key={i}
+                    src={benefit.image}
+                    alt={benefit.title}
+                    fill
+                    className={`object-cover transition-opacity duration-500 ${
+                      hoveredBenefit === i ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                {/* Subtle overlay with active benefit label */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-white/60 text-xs font-medium uppercase tracking-widest mb-1">
+                    {benefits[hoveredBenefit].number}
+                  </p>
+                  <p
+                    className="text-white text-xl font-bold"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {benefits[hoveredBenefit].title}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA — Parallax ─────────────────────────── */}
+      <section className="relative py-32 md:py-44 overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1469521669194-babb45599def?w=1600&q=80')",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+          <motion.p
+            className="text-brand-300 text-sm font-semibold uppercase tracking-widest mb-4"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Your next adventure starts here
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            style={{ fontFamily: "var(--font-heading)" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            See how Wayfarer
+            <br />
+            supports your journey
+          </motion.h2>
+          <motion.p
+            className="text-lg text-white/70 mb-10 max-w-xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            Personalized recommendations, interactive planning tools, and a
+            community of explorers — all free to get started.
+          </motion.p>
+          <motion.button
+            onClick={() => setSignUpOpen(true)}
+            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-brand-600 text-white font-semibold text-base hover:bg-brand-700 transition-colors shadow-xl shadow-brand-600/30"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Get Started Free
+          </motion.button>
+        </div>
+      </section>
+
+      <SignUpModal open={signUpOpen} onClose={() => setSignUpOpen(false)} />
+    </>
+  );
+}
