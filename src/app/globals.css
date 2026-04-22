@@ -1,46 +1,206 @@
 @import "tailwindcss";
 
+/* ============================================================
+   DESIGN TOKENS — Wayfarer Travel
+   Mirrors the Figma variable system:
+   Primitives (_primitives) → Semantic (color) → Component
+   Brand: Navy / Lavender / Deep Indigo
+   Accent: Terra Cotta · Secondary: Sage Green · Neutrals: warm gray
+   ============================================================ */
+
 @theme {
-  /* Wayfarer Brand Colors - from mockup */
-  --color-brand-50: #fdf8f6;
-  --color-brand-100: #f2e8e5;
-  --color-brand-200: #eaddd7;
-  --color-brand-300: #d6c4b8;
-  --color-brand-400: #b8977e;
-  --color-brand-500: #a67c5b;
-  --color-brand-600: #8b5e3c;
-  --color-brand-700: #6d4730;
-  --color-brand-800: #553724;
-  --color-brand-900: #3d281b;
-  --color-brand-950: #2a1b12;
 
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
+  /* ----------------------------------------------------------
+     PRIMITIVES: Brand (Navy)
+     Anchors from brief: brand-500 = #3E3C78 (Navy)
+                         brand-200 = #C5C7E3 (Lavender)
+                         brand-900 = #2C2B5A (Deep Indigo)
+  ---------------------------------------------------------- */
+  --color-brand-50:  #F3F3FA;
+  --color-brand-100: #E1E2F1;
+  --color-brand-200: #C5C7E3;
+  --color-brand-300: #9E9DC8;
+  --color-brand-400: #6E6DA5;
+  --color-brand-500: #3E3C78;
+  --color-brand-600: #3A3871;
+  --color-brand-700: #353469;
+  --color-brand-800: #302F62;
+  --color-brand-900: #2C2B5A;
 
-  /* Typography */
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  /* ----------------------------------------------------------
+     PRIMITIVES: Accent (Terra Cotta)
+     Anchor: accent-500 = #D27A5E
+  ---------------------------------------------------------- */
+  --color-accent-50:  #FDF4F0;
+  --color-accent-100: #F9E4DB;
+  --color-accent-200: #F1C4B1;
+  --color-accent-300: #E7A084;
+  --color-accent-400: #DC8568;
+  --color-accent-500: #D27A5E;
+  --color-accent-600: #B4624A;
+  --color-accent-700: #8F4A37;
+  --color-accent-800: #6B3628;
+  --color-accent-900: #4A241A;
 
-  /* Spacing scale */
-  --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
-  --spacing-30: 7.5rem;
+  /* ----------------------------------------------------------
+     PRIMITIVES: Sage (Secondary per brief)
+     Anchor: sage-300 = #A3C9A8
+  ---------------------------------------------------------- */
+  --color-sage-50:  #F1F7F2;
+  --color-sage-100: #E3EFE4;
+  --color-sage-200: #C6E0CA;
+  --color-sage-300: #A3C9A8;
+  --color-sage-400: #82B287;
+  --color-sage-500: #669B6C;
+  --color-sage-600: #507E56;
+  --color-sage-700: #3E6244;
+  --color-sage-800: #2E4932;
+  --color-sage-900: #1F3023;
+
+  /* ----------------------------------------------------------
+     PRIMITIVES: Neutral (warm gray)
+     From brief: neutral-50 = #F8F9FB (Off-White)
+                 neutral-200 = #D8D9E0 (Light Gray)
+                 neutral-500 = #6B6560
+                 neutral-800 = #2E2E30 (Dark Charcoal)
+  ---------------------------------------------------------- */
+  --color-neutral-50:  #F8F9FB;
+  --color-neutral-100: #EEEEF0;
+  --color-neutral-200: #D8D9E0;
+  --color-neutral-300: #B7B5BA;
+  --color-neutral-400: #8E8B90;
+  --color-neutral-500: #6B6560;
+  --color-neutral-600: #524E4D;
+  --color-neutral-700: #3F3D3B;
+  --color-neutral-800: #2E2E30;
+  --color-neutral-900: #1C1C1E;
+
+  /* ----------------------------------------------------------
+     SEMANTIC: Background
+  ---------------------------------------------------------- */
+  --color-bg-page:            #FFFFFF;
+  --color-bg-surface:         var(--color-neutral-50);
+  --color-bg-surface-raised:  #FFFFFF;
+  --color-bg-surface-invert:  var(--color-neutral-900);
+  --color-bg-subtle:          var(--color-neutral-100);
+  --color-bg-muted:           var(--color-neutral-200);
+  --color-bg-primary:         var(--color-brand-500);
+  --color-bg-primary-hover:   var(--color-brand-700);
+  --color-bg-primary-active:  var(--color-brand-600);
+  --color-bg-primary-muted:   var(--color-brand-50);
+  --color-bg-accent:          var(--color-accent-500);
+  --color-bg-accent-hover:    var(--color-accent-600);
+  --color-bg-accent-muted:    var(--color-accent-50);
+  --color-bg-success:         var(--color-sage-500);
+  --color-bg-success-muted:   var(--color-sage-50);
+
+  /* ----------------------------------------------------------
+     SEMANTIC: Text
+  ---------------------------------------------------------- */
+  --color-text-default:     var(--color-neutral-900);
+  --color-text-secondary:   var(--color-neutral-700);
+  --color-text-muted:       var(--color-neutral-500);
+  --color-text-subtle:      var(--color-neutral-400);
+  --color-text-inverse:     #FFFFFF;
+  --color-text-primary:     var(--color-brand-500);
+  --color-text-on-primary:  #FFFFFF;
+  --color-text-accent:      var(--color-accent-700);
+  --color-text-link:        var(--color-brand-500);
+  --color-text-link-hover:  var(--color-brand-700);
+
+  /* ----------------------------------------------------------
+     SEMANTIC: Border
+  ---------------------------------------------------------- */
+  --color-border-default: var(--color-neutral-200);
+  --color-border-strong:  var(--color-neutral-300);
+  --color-border-subtle:  var(--color-neutral-100);
+  --color-border-input:   var(--color-neutral-300);
+  --color-border-focus:   var(--color-brand-500);
+  --color-border-primary: var(--color-brand-500);
+  --color-border-accent:  var(--color-accent-500);
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+     Per brief: Space Grotesk Bold headings, Inter Regular body
+  ---------------------------------------------------------- */
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+
+  /* Type scale — matches brief sizes (H1 60, H2 48, H3 32, H4 24; Body 20/18/16) */
+  --text-display:  3.75rem; /* 60px — hero */
+  --text-h1:       3rem;    /* 48px */
+  --text-h2:       2rem;    /* 32px */
+  --text-h3:       1.5rem;  /* 24px */
+  --text-h4:       1.25rem; /* 20px */
+  --text-body-lg:  1.25rem; /* 20px */
+  --text-body:     1rem;    /* 16px */
+  --text-body-sm:  0.875rem;/* 14px */
+  --text-caption:  0.75rem; /* 12px */
+
+  /* Leading */
+  --leading-display: 1.1;
+  --leading-heading: 1.2;
+  --leading-body:    1.6;
+
+  /* Letter spacing (negative for display per Figma) */
+  --tracking-heading: -0.01em;
+
+  /* ----------------------------------------------------------
+     SPACING
+     4-based scale; named semantic roles mirror Figma "space" collection
+  ---------------------------------------------------------- */
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4  */
+  --space-2:   0.5rem;   /* 8  */
+  --space-3:   0.75rem;  /* 12 */
+  --space-4:   1rem;     /* 16 */
+  --space-5:   1.25rem;  /* 20 */
+  --space-6:   1.5rem;   /* 24 */
+  --space-7:   1.75rem;  /* 28 */
+  --space-8:   2rem;     /* 32 */
+  --space-9:   2.25rem;  /* 36 */
+  --space-10:  2.5rem;   /* 40 */
+  --space-12:  3rem;     /* 48 */
+
+  /* ----------------------------------------------------------
+     RADIUS
+  ---------------------------------------------------------- */
+  --radius-xs:   0.125rem; /* 2px  */
+  --radius-sm:   0.25rem;  /* 4px  */
+  --radius-md:   0.5rem;   /* 8px  */
+  --radius-lg:   0.75rem;  /* 12px */
+  --radius-xl:   1rem;     /* 16px */
+  --radius-2xl:  1.5rem;   /* 24px */
+  --radius-full: 9999px;
+
+  /* ----------------------------------------------------------
+     EFFECTS (elevation; two-layer shadows matching Figma)
+  ---------------------------------------------------------- */
+  --shadow-e1: 0 1px 2px rgba(0,0,0,0.16), 0 2px 8px -2px rgba(0,0,0,0.08);
+  --shadow-e2: 0 2px 4px -1px rgba(0,0,0,0.16), 0 4px 12px -4px rgba(0,0,0,0.08);
+  --shadow-e3: 0 4px 10px -2px rgba(0,0,0,0.16), 0 10px 24px -8px rgba(0,0,0,0.08);
+  --shadow-e4: 0 8px 16px -4px rgba(0,0,0,0.16), 0 16px 40px -12px rgba(0,0,0,0.08);
+  --shadow-e5: 0 12px 24px -6px rgba(0,0,0,0.16), 0 24px 64px -16px rgba(0,0,0,0.08);
+
+  /* Focus ring */
+  --ring-focus: 0 0 0 2px var(--color-brand-500);
 }
 
-/* Custom utility classes */
+/* ============================================================
+   GLOBAL BASELINE
+   ============================================================ */
+
 @layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
   body {
     font-family: var(--font-body);
-    color: var(--color-neutral-800);
-    background-color: #ffffff;
+    color: var(--color-text-default);
+    background-color: var(--color-bg-page);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -48,14 +208,24 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--color-neutral-900);
+    color: var(--color-text-default);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+  }
+
+  a {
+    color: var(--color-text-link);
+  }
+
+  a:hover {
+    color: var(--color-text-link-hover);
   }
 }
 
 /* Skeleton loading shimmer for images */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
 }
 
 .img-skeleton {
@@ -76,7 +246,6 @@
   border-radius: 4px;
 }
 
-/* Remove focus ring for mouse/touch users */
 *:focus:not(:focus-visible) {
   outline: none;
 }

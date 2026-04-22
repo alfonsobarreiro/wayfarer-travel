@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { SignUpModal } from "@/components/form/SignUpModal";
+import { WayfarerLogo } from "@/components/WayfarerLogo";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,29 +14,13 @@ export function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200/60">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
-          {/* Logo */}
+          {/* Logo — real Wayfarer wordmark + globemark, inlined to inherit color */}
           <Link
             href="/"
-            className="flex items-center gap-2 text-xl font-bold tracking-tight"
-            style={{ fontFamily: "var(--font-heading)" }}
+            aria-label="Wayfarer home"
+            className="flex items-center text-brand-900"
           >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="14" cy="14" r="13" stroke="#8b5e3c" strokeWidth="2" />
-              <path
-                d="M7 14C7 14 10 8 14 8C18 8 21 14 21 14C21 14 18 20 14 20C10 20 7 14 7 14Z"
-                stroke="#8b5e3c"
-                strokeWidth="1.5"
-                fill="none"
-              />
-              <circle cx="14" cy="14" r="2.5" fill="#8b5e3c" />
-            </svg>
-            <span className="text-neutral-900">Wayfarer</span>
+            <WayfarerLogo className="h-7 w-auto" />
           </Link>
 
           {/* Desktop Nav */}

@@ -61,10 +61,14 @@ export function DestinationMap({
         // IMPORTANT: No `transform` on this element — Mapbox owns `transform`
         // for marker positioning. Setting it causes pins to jump to 0,0.
         // Hover feedback uses only background + box-shadow changes.
+        // Brand: accent-500 = Terra Cotta per brief ("secondary icons in terra cotta").
+        // Hover: accent-700 for darker active feedback.
+        const ACCENT = "#D27A5E";
+        const ACCENT_HOVER = "#8F4A37";
         el.style.cssText = `
           width: 32px;
           height: 32px;
-          background: #8b5e3c;
+          background: ${ACCENT};
           border: 2.5px solid white;
           border-radius: 50%;
           cursor: pointer;
@@ -87,11 +91,11 @@ export function DestinationMap({
         };
 
         el.addEventListener("mouseenter", () => {
-          el.style.background = "#6d4730";
-          el.style.boxShadow = "0 4px 14px rgba(139,94,60,0.5)";
+          el.style.background = ACCENT_HOVER;
+          el.style.boxShadow = "0 4px 14px rgba(210,122,94,0.5)";
         });
         el.addEventListener("mouseleave", () => {
-          el.style.background = "#8b5e3c";
+          el.style.background = ACCENT;
           el.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
         });
         el.addEventListener("click", handleSelect);
