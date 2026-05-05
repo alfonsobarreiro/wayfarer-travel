@@ -130,12 +130,9 @@ export const extraDestinations2: Destination[] = [
       "Hallstatt seems designed by an artist's brush. This 13th-century village sits on the shores of Hallstätter See, with colorful 18th-century houses and their reflections dancing in the crystalline water. Surrounded by Alpine peaks, the village's charm has made it one of Austria's most photographed destinations. Beyond the iconic village square, hiking trails lead to mountain huts with panoramic views.",
     coordinates: { lat: 47.5479, lng: 13.6497 },
     image:
-      "https://images.unsplash.com/photo-tV06QVJXVxU?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-tV06QVJXVxU?w=1200&q=80",
       "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&q=80",
-      "https://images.unsplash.com/photo-1500735592493-75eb631c3eb4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&q=80",
     ],
     highlights: [
       "Hallstatt village square",
@@ -172,7 +169,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1526048598645-62b31f82b8f5?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1526048598645-62b31f82b8f5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1551959915-acf0dd64e5d5?w=1200&q=80",
       "https://images.unsplash.com/photo-1508615039623-a25605d2b022?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
@@ -252,7 +248,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1504681869696-d977211a5f4c?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Maya Beach",
@@ -291,7 +286,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "El Nido limestone cliffs",
@@ -330,7 +324,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Limestone karsts cruise",
@@ -369,7 +362,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1513415564515-763d91423bdd?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Sandstone pillar formations",
@@ -408,7 +400,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Northern lights",
@@ -446,7 +437,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -481,11 +471,9 @@ export const extraDestinations2: Destination[] = [
       "The Salar de Uyuni stretches 10,000 square kilometers of pure white salt across the Bolivian highlands. During the dry season, the flat becomes a surreal void where sky and earth blur together. In the wet season, a thin water layer creates a perfect mirror, the largest on Earth, reflecting clouds as if they float across the ground. The Andes frame the horizon. Flamingo-filled lagoons and geysers nearby complete the otherworldly landscape.",
     coordinates: { lat: -19.3068, lng: -66.8193 },
     image:
-      "https://images.unsplash.com/photo-kp_87tExCwI?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-kp_87tExCwI?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -525,7 +513,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Waterfall cascades",
@@ -559,11 +546,9 @@ export const extraDestinations2: Destination[] = [
       "Wadi Rum is a landscape of massive simplicity. Towering sandstone monoliths rise from rust-red sand like monuments to ancient gods. The valley is immense — one can drive for hours and feel no closer to the horizon. This is Bedouin country. Jeep expeditions navigate the dunes, camp under stars, and visit Bedouin communities. The color palette shifts from orange to purple to black as light moves across the day. This desert humbles.",
     coordinates: { lat: 29.5791, lng: 35.4216 },
     image:
-      "https://images.unsplash.com/photo-5dL74UswYb0?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-5dL74UswYb0?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -603,7 +588,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1537799943037-f5da89a65689?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Ferry village hopping",
@@ -641,7 +625,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -676,11 +659,9 @@ export const extraDestinations2: Destination[] = [
       "Raja Ampat translates to 'Four Kings' — the four main islands dominating an archipelago of 1,800+ islands. The waters are the richest in marine biodiversity on Earth. Diving reveals kaleidoscopic coral gardens, schooling fish in impossible numbers, and megafauna encounters. The islands themselves are covered in dense tropical forest, with white-sand beaches and turquoise lagoons. This is adventure diving for experienced divers willing to tackle challenging conditions.",
     coordinates: { lat: -0.2144, lng: 130.2575 },
     image:
-      "https://images.unsplash.com/photo-E0edlaFT6jY?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-E0edlaFT6jY?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -715,12 +696,10 @@ export const extraDestinations2: Destination[] = [
       "Svalbard is one of the northernmost inhabited territories. The archipelago features towering glaciers, Arctic tundra, and wildlife adapted to extreme cold. Polar bears outnumber humans. Arctic wildlife tours offer encounters with bears, walruses, and Arctic foxes. In summer, the midnight sun bathes the landscape in perpetual daylight. In winter, northern lights dance overhead. The small settlements — Longyearbyen being the main one — feel like frontier outposts.",
     coordinates: { lat: 77.9454, lng: 15.6267 },
     image:
-      "https://images.unsplash.com/photo-iIFPOnG3W84?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-iIFPOnG3W84?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Polar bear safaris",
@@ -758,7 +737,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -797,7 +775,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1547005327-ef75a6961556?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -837,7 +814,6 @@ export const extraDestinations2: Destination[] = [
       "https://images.unsplash.com/photo-1509909756405-be0199881695?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
     ],
     highlights: [
       "Cliff-edge hiking",
@@ -871,11 +847,9 @@ export const extraDestinations2: Destination[] = [
       "Kangaroo Island, off South Australia's coast, is a wildlife lover's paradise. Koalas, kangaroos, wallabies, and sea lions inhabit the island's protected reserves. The coastline features dramatic granite boulders, sea cliffs, and secluded beaches. Fleurieu Fur Seal Centre offers close encounters with marine mammals. Remarkable Rocks — giant granite formations on the southern coast — are spectacular at sunset. The island feels timeless.",
     coordinates: { lat: -35.9818, lng: 139.8071 },
     image:
-      "https://images.unsplash.com/photo-1mD403Eby6E?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1mD403Eby6E?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -914,7 +888,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -953,7 +926,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1501523460185-2aa5d2a0f981?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -992,7 +964,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1031,7 +1002,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1506377585622-bedcbb027afc?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1070,7 +1040,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1105,11 +1074,9 @@ export const extraDestinations2: Destination[] = [
       "Montenegro packs drama into a small space. The Boka Kotorska fjord rivals famous Norwegian waterways with steep cliffs and hidden coves. Medieval villages perch on mountainsides. Durmitor National Park offers trekking and mountain lakes. The Adriatic coast features pristine beaches and Venetian-influenced towns. Montenegro is less touristy than Dalmatian Croatia, offering authentic Balkan culture and hospitality. The vibe is adventurous and welcoming.",
     coordinates: { lat: 42.4364, lng: 19.2594 },
     image:
-      "https://images.unsplash.com/photo-psChA9KNod8?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-psChA9KNod8?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1148,7 +1115,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1187,7 +1153,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1226,7 +1191,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1261,11 +1225,9 @@ export const extraDestinations2: Destination[] = [
       "Luang Namtha sits in northern Laos, gateway to Nam Ha National Protected Area. The region is home to multiple ethnic minority groups — Akha, Lisu, Hmong — maintaining traditional ways. Multi-day jungle treks lead to minority villages for authentic cultural encounters. The jungle itself teems with birds and wildlife. This is off-the-beaten-path Laos, where mass tourism hasn't yet arrived. Treks are challenging but rewarding.",
     coordinates: { lat: 20.9431, lng: 101.3808 },
     image:
-      "https://images.unsplash.com/photo-1540329957110-b87b06f5d769?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1540329957110-b87b06f5d769?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1304,7 +1266,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1343,7 +1304,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1382,7 +1342,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1501523460185-2aa5d2a0f981?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1421,7 +1380,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1460,7 +1418,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1495,11 +1452,9 @@ export const extraDestinations2: Destination[] = [
       "Easter Island sits 3,500 km from Chile, one of the most isolated inhabited places on Earth. The island is famous for its moai — hundreds of massive stone statues carved centuries ago by Polynesian Rapa Nui people. The purpose and fate remain mysteries. Crater lakes dot the volcanic landscape. The culture, despite colonization, remains distinctly Polynesian. The island's isolation makes it feel like stepping onto another world.",
     coordinates: { lat: -27.1127, lng: -109.3521 },
     image:
-      "https://images.unsplash.com/photo-1500735285222-a95626b934cb?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1500735285222-a95626b934cb?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1538,7 +1493,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1577,7 +1531,6 @@ export const extraDestinations2: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1511316378714-611cbdf206f7?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [

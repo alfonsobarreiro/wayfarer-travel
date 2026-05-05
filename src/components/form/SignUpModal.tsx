@@ -58,7 +58,7 @@ const topDestinations = [
 const bgImages = [
   "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=60",
   "https://images.unsplash.com/photo-1469521669194-babb45599def?w=800&q=60",
-  "https://images.unsplash.com/photo-1553856622-d1b352e24e2c?w=800&q=60",
+  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=60",
   "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=60",
   "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=60",
 ];

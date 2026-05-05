@@ -32,3 +32,4 @@ _resources/
 
 # backups
 *.backup
+tsconfig.tsbuildinfo

@@ -3,6 +3,7 @@
 import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { DestinationImage } from "@/components/DestinationImage";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -41,10 +42,11 @@ export default function DestinationDetailPage({
 
   return (
     <div className="pt-16">
-      {/* Hero */}
+      {/* Hero — uses dest.image (semantic), falls back to first gallery URL if it 404s */}
       <section className="relative h-[60vh] min-h-[400px]">
-        <Image
-          src={dest.gallery[0]}
+        <DestinationImage
+          src={dest.image}
+          fallbackSrc={dest.gallery[0]}
           alt={dest.name}
           fill
           className="object-cover"
@@ -116,25 +118,33 @@ export default function DestinationDetailPage({
               >
                 Gallery
               </h2>
-              <div className="grid grid-cols-2 gap-4">
-                {dest.gallery.map((img, i) => (
-                  <motion.div
-                    key={i}
-                    className="relative rounded-lg overflow-hidden aspect-[4/3] img-skeleton"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                  >
-                    <Image
-                      src={img}
-                      alt={`${dest.name} ${i + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </motion.div>
-                ))}
-              </div>
+              {dest.gallery.length > 0 ? (
+                <div className="grid grid-cols-2 gap-4">
+                  {dest.gallery.map((img, i) => (
+                    <motion.div
+                      key={i}
+                      className="relative rounded-lg overflow-hidden aspect-[4/3] img-skeleton"
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                    >
+                      <DestinationImage
+                        src={img}
+                        fallbackSrc={dest.image}
+                        alt={`${dest.name} ${i + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-neutral-500 italic">
+                  Photo gallery coming soon.
+                </p>
+              )}
             </div>
 
             {/* Highlights */}

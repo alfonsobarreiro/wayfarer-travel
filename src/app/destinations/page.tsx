@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { DestinationImage } from "@/components/DestinationImage";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, ArrowRight, Globe, SlidersHorizontal } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
@@ -85,10 +86,12 @@ export default function DestinationsPage() {
           >
             <div className="bg-white rounded-lg border border-neutral-200 p-6 flex flex-col md:flex-row gap-6 items-center shadow-sm">
               <div className="relative w-full md:w-48 h-32 rounded-lg overflow-hidden flex-shrink-0 img-skeleton">
-                <Image
+                <DestinationImage
                   src={selected.image}
+                  fallbackSrc={selected.gallery[0]}
                   alt={selected.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 192px"
                   className="object-cover"
                 />
               </div>
@@ -173,10 +176,12 @@ export default function DestinationsPage() {
                   onMouseEnter={() => setSelected(dest)}
                 >
                   <div className="relative rounded-lg overflow-hidden aspect-[3/2] mb-4 img-skeleton">
-                    <Image
+                    <DestinationImage
                       src={dest.image}
+                      fallbackSrc={dest.gallery[0]}
                       alt={dest.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

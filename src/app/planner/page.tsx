@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, Reorder } from "framer-motion";
+import { DestinationImage } from "@/components/DestinationImage";
 import {
   Plus,
   Trash2,
@@ -345,10 +346,12 @@ export default function PlannerPage() {
                     onClick={() => addDestination(dest)}
                     className="group relative rounded-lg overflow-hidden aspect-[3/2] text-left"
                   >
-                    <Image
+                    <DestinationImage
                       src={dest.image}
+                      fallbackSrc={dest.gallery[0]}
                       alt={dest.name}
                       fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/70 transition-colors" />

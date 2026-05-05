@@ -36,7 +36,6 @@ export const destinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&q=80",
       "https://images.unsplash.com/photo-1587922546307-776227941871?w=1200&q=80",
-      "https://images.unsplash.com/photo-1614531232878-f0ab4e5e60d6?w=1200&q=80",
       "https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=1200&q=80",
     ],
     highlights: [
@@ -75,8 +74,6 @@ export const destinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1520769669658-f07657f5a307?w=1200&q=80",
       "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80",
-      "https://images.unsplash.com/photo-1494564605686-2e931f77a8a2?w=1200&q=80",
-      "https://images.unsplash.com/photo-1517783999520-f068d7431571?w=1200&q=80",
     ],
     highlights: [
       "Ilulissat Icefjord (UNESCO)",
@@ -193,8 +190,6 @@ export const destinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-      "https://images.unsplash.com/photo-1548820579-f3035fb18199?w=1200&q=80",
-      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200&q=80",
     ],
     highlights: [
       "Jemaa el-Fnaa Square",
@@ -232,8 +227,6 @@ export const destinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1469521669194-babb45599def?w=1200&q=80",
       "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1200&q=80",
-      "https://images.unsplash.com/photo-1547488074-ca0b0c2a1ed7?w=1200&q=80",
-      "https://images.unsplash.com/photo-1580397581145-23c39e1ca20d?w=1200&q=80",
     ],
     highlights: [
       "Milford Sound",

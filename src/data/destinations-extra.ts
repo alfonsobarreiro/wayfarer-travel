@@ -16,7 +16,6 @@ export const extraDestinations: Destination[] = [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
-      "https://images.unsplash.com/photo-1537996866009-d7bc92e0d92c?w=1200&q=80",
     ],
     highlights: [
       "Tanah Lot Temple",
@@ -52,8 +51,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1528127269029-171a2fab3052?w=1200&q=80",
-      "https://images.unsplash.com/photo-1512453013405-cfc0f80faf0d?w=1200&q=80",
     ],
     highlights: [
       "Fushimi Inari Shrine",
@@ -88,9 +85,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
-      "https://images.unsplash.com/photo-1501601696742-e5869436e171?w=1200&q=80",
-      "https://images.unsplash.com/photo-1539356455934-b8a6e9b9ff87?w=1200&q=80",
-      "https://images.unsplash.com/photo-1553900485-5d8f85b9e74e?w=1200&q=80",
     ],
     highlights: [
       "Blue Mosque",
@@ -125,8 +119,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570437667641-f1b90e1f5d63?w=1200&q=80",
-      "https://images.unsplash.com/photo-1572182140005-c67cdb1e8c5f?w=1200&q=80",
       "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&q=80",
     ],
     highlights: [
@@ -164,7 +156,6 @@ export const extraDestinations: Destination[] = [
       "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1200&q=80",
       "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=1200&q=80",
       "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80",
-      "https://images.unsplash.com/photo-1565843966291-cf37657d4cbc?w=1200&q=80",
     ],
     highlights: [
       "Main Temple",
@@ -196,9 +187,9 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Reykjavik is a compact, creative capital with a lively cultural scene and café culture. But the true magic lies beyond the city: the Golden Circle's geysers and waterfalls, the Blue Lagoon's geothermal waters, black sand beaches, and glacial valleys. Ice caves glow blue in winter. The northern lights dance overhead in darkness. Waterfalls thunder with power. Hot springs steam in the wilderness. Iceland feels otherworldly—a place where the Earth's raw forces are visible and visceral.",
     coordinates: { lat: 64.1466, lng: -21.9426 },
-    image: "https://images.unsplash.com/photo-WAi_3CjDI7M?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-WAi_3CjDI7M?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
       "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
@@ -237,8 +228,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
       "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1591050900924-e88ade7ffa52?w=1200&q=80",
-      "https://images.unsplash.com/photo-1519567221471-212250acb236?w=1200&q=80",
     ],
     highlights: [
       "Burj Khalifa",
@@ -273,8 +262,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=1200&q=80",
-      "https://images.unsplash.com/photo-1586960055992-f9e27456c556?w=1200&q=80",
-      "https://images.unsplash.com/photo-1572403786000-e9c2f9e0c03b?w=1200&q=80",
       "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80",
     ],
     highlights: [
@@ -310,9 +297,7 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570735566322-5375c2ca4a31?w=1200&q=80",
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80",
-      "https://images.unsplash.com/photo-1602152496225-4ab33fb8a8b5?w=1200&q=80",
     ],
     highlights: [
       "Malecón Waterfront",
@@ -344,12 +329,10 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Petra emerges from the desert like a mirage—thousand-year-old structures carved directly from rose-colored sandstone cliffs. The Treasury's ornate facade greets visitors at the canyon entrance, instantly iconic. Beyond lie hidden temples, monasteries, and royal tombs carved with precision by ancient Nabatean craftsmen. The site sprawls across canyons and valleys, rewarding exploration. A sunset hike to the Monastery offers dramatic backlighting. Petra is not just archaeology—it's a testament to human ingenuity and the timeless beauty of desert landscapes.",
     coordinates: { lat: 30.3286, lng: 35.4419 },
-    image: "https://images.unsplash.com/photo-5JHj33-s604?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-5JHj33-s604?w=1200&q=80",
+    image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1580397581145-23c39e1ca20d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1568604605114-967-8130f3a36994?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
       "The Treasury",
@@ -384,8 +367,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
-      "https://images.unsplash.com/photo-1605840284819-8ef6e18fb20c?w=1200&q=80",
       "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80",
     ],
     highlights: [
@@ -421,7 +402,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80",
-      "https://images.unsplash.com/photo-1562883676-8c6f10687c40?w=1200&q=80",
       "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80",
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80",
     ],
@@ -455,12 +435,10 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Cairo sprawls along the Nile, a city of over 20 million where ancient and modern collide. The Giza Pyramids—those eternal wonders—pierce the city's edge. The Egyptian Museum holds treasures beyond measure. Khan el-Khalili bazaar buzzes with merchants and the scent of spices. Islamic Cairo's mosques showcase architectural masterpieces. Felucca sailboats drift peacefully on the Nile. The city's energy is intense, chaotic, and intoxicating. Cairo reveals itself slowly—layer by layer, day by day—a living testament to millennia of human civilization.",
     coordinates: { lat: 30.0444, lng: 31.2357 },
-    image: "https://images.unsplash.com/photo-rxv2qwYPe6s?w=800&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-rxv2qwYPe6s?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
+    image:
       "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&q=80",
-      "https://images.unsplash.com/photo-1551946581-8c1d3eaf0e55?w=1200&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&q=80",
     ],
     highlights: [
       "Giza Pyramids",
@@ -497,7 +475,6 @@ export const extraDestinations: Destination[] = [
       "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=80",
       "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
-      "https://images.unsplash.com/photo-1586141726632-eafcd6c07f42?w=1200&q=80",
     ],
     highlights: [
       "Coral Reef Snorkeling",
@@ -533,7 +510,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1200&q=80",
       "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80",
-      "https://images.unsplash.com/photo-1565843966291-cf37657d4cbc?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -569,8 +545,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1530541830798-ac108b5f625f?w=1200&q=80",
-      "https://images.unsplash.com/photo-1538611505868-d71b11be0f51?w=1200&q=80",
       "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&q=80",
     ],
     highlights: [
@@ -603,12 +577,11 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Dubrovnik is a Mediterranean jewel perfectly preserved behind ancient city walls. Walk the marble-paved Stradun street, the main thoroughfare linking east and west gates. Climb the walls for 360-degree views of red-tiled roofs and the Adriatic beyond. Gothic and Renaissance palaces showcase local wealth. The Old Harbor fills with fishing boats. Despite Game of Thrones tourism, Dubrovnik retains authentic charm. Nearby islands offer escapes from crowds. The sunset over the city, viewed from outside the walls, paints the scene in golden light—utterly timeless.",
     coordinates: { lat: 42.6426, lng: 18.1044 },
-    image: "https://images.unsplash.com/photo-_nupO8tu6sg?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-_nupO8tu6sg?w=1200&q=80",
       "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1504681869696-d977e17a3e0f?w=1200&q=80",
     ],
     highlights: [
       "City Walls Walk",
@@ -680,9 +653,7 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570733407-8f3a3bf8910f?w=1200&q=80",
       "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552733407-5d5c46b3da98?w=1200&q=80",
     ],
     highlights: [
       "Coral Reef Diving",
@@ -719,7 +690,6 @@ export const extraDestinations: Destination[] = [
       "https://images.unsplash.com/photo-1553775927-a071d5a6a39a?w=1200&q=80",
       "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&q=80",
       "https://images.unsplash.com/photo-1487730116645-74489c95b41b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1528127269029-171a2fab3052?w=1200&q=80",
     ],
     highlights: [
       "Potala Palace",
@@ -755,8 +725,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
-      "https://images.unsplash.com/photo-1567968250604-e76d0e6f2de3?w=1200&q=80",
     ],
     highlights: [
       "Belém Tower",
@@ -792,8 +760,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
-      "https://images.unsplash.com/photo-1524447215551-5a16c5e84e28?w=1200&q=80",
     ],
     highlights: [
       "Canal Cruises",
@@ -828,7 +794,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&q=80",
       "https://images.unsplash.com/photo-1487730116645-74489c95b41b?w=1200&q=80",
     ],
@@ -862,10 +827,9 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Cartagena is a candy-colored dream on Colombia's coast. The walled Old City—a UNESCO site—overflows with pastel-painted colonial buildings, flower-draped balconies, and narrow cobblestone alleys. Fort San Felipe looms protectively. Street musicians and artists enliven plazas. The Caribbean breeze carries tropical scents. Nearby Rosario Islands offer island-hopping and snorkeling. The city pulses with energy and warmth. Despite tourism, Cartagena retains authenticity and charm. The blend of Spanish colonial history, African heritage, and Caribbean culture creates a unique atmosphere—sensual, vibrant, and welcoming.",
     coordinates: { lat: 10.3910, lng: -75.4794 },
-    image: "https://images.unsplash.com/photo-L6T_6Rp2iEk?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-L6T_6Rp2iEk?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
     ],
@@ -904,7 +868,6 @@ export const extraDestinations: Destination[] = [
       "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
-      "https://images.unsplash.com/photo-1589880516342-a60e5a6c3c6f?w=1200&q=80",
     ],
     highlights: [
       "Main Falls Viewpoint",
@@ -939,7 +902,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
     ],
@@ -977,7 +939,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1014,7 +975,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80",
     ],
     highlights: [
@@ -1051,7 +1011,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
     ],
     highlights: [
@@ -1087,8 +1046,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1547488074-ca0b0c2a1ed7?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1124,9 +1081,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552320554-5fefe8c9ef14?w=1200&q=80",
-      "https://images.unsplash.com/photo-1503227611692-fca42210b104?w=1200&q=80",
     ],
     highlights: [
       "Edinburgh Castle",
@@ -1161,7 +1115,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552733407-5d5c46b3da98?w=1200&q=80",
       "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
@@ -1198,7 +1151,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1526711657229-e7e080ed7aa1?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1526711657229-e7e080ed7aa1?w=1200&q=80",
-      "https://images.unsplash.com/photo-1528127269029-171a2fab3052?w=1200&q=80",
       "https://images.unsplash.com/photo-1487730116645-74489c95b41b?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
@@ -1232,11 +1184,9 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Chiang Mai offers a different Thailand—mountainous, cultural, and spiritual. Over 300 temples dot the city, many with monks in residence. The Old City, surrounded by ancient moats, is walkable and charming. Night markets overflow with food, crafts, and energy. The nearby Doi Inthanon National Park offers cool mountain air and hiking. Ethical elephant sanctuaries allow visitors to observe these magnificent creatures respectfully. The city is a center for Buddhist learning and meditation. Thai massage originated in the North—practitioners here are among the best. Chiang Mai moves slower than Bangkok, inviting extended stays and deep connections.",
     coordinates: { lat: 18.7883, lng: 98.9853 },
-    image: "https://images.unsplash.com/photo-QcBHVxK0iRY?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-QcBHVxK0iRY?w=1200&q=80",
-      "https://images.unsplash.com/photo-1508391846015-35a9af0fa2e2?w=1200&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     highlights: [
@@ -1273,7 +1223,6 @@ export const extraDestinations: Destination[] = [
     gallery: [
       "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
     ],
     highlights: [
@@ -1311,7 +1260,6 @@ export const extraDestinations: Destination[] = [
       "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=1200&q=80",
       "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552733407-5d5c46b3da98?w=1200&q=80",
     ],
     highlights: [
       "Tulum Ruins",
@@ -1346,8 +1294,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1525983360072-2ebda055ba40?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1525983360072-2ebda055ba40?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552733407-5d5c46b3da98?w=1200&q=80",
       "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&q=80",
     ],
     highlights: [
@@ -1380,10 +1326,9 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Angkor Wat is a masterpiece of ancient engineering and art—the largest religious monument on Earth. The temple complex was built in the 12th century and abandoned for centuries, reclaimed by jungle. Towering spires and intricate stone carvings are breathtaking. Thousands of years of skilled craftwork went into every detail. The sunrise, watched from outside the complex, paints the temple in golden light—iconic and transcendent. Beyond Angkor Wat lies a vast temple complex (Angkor Archaeological Park) with hundreds of sites at various states of preservation and overgrowth. Exploring for multiple days reveals different temples and vistas. The history is contested—the temples endured Khmer Rouge damage, now carefully restored.",
     coordinates: { lat: 13.3667, lng: 103.8667 },
-    image: "https://images.unsplash.com/photo-EY3tC81nFt0?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-EY3tC81nFt0?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
       "https://images.unsplash.com/photo-1487730116645-74489c95b41b?w=1200&q=80",
     ],
@@ -1420,9 +1365,6 @@ export const extraDestinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80",
-      "https://images.unsplash.com/photo-1516359311223-2b37eb20fbf5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1549144611-11a034e8b7ce?w=1200&q=80",
-      "https://images.unsplash.com/photo-1549381557-19ea8c128fcf?w=1200&q=80",
     ],
     highlights: [
       "Great Migration",
@@ -1454,10 +1396,9 @@ export const extraDestinations: Destination[] = [
     longDescription:
       "Luang Prabang is Southeast Asia's soul—preserved, peaceful, and spiritual. The town sits on the Mekong River, surrounded by jungle-covered mountains. French colonial architecture blends with Lao temples. Monks in saffron robes gather each dawn for alms collection—a ritual unchanged for centuries. The Night Market offers local crafts and food. Temples are everywhere—each revealing intricate woodwork and golden details. The pace is slow, inviting extended stays and contemplation. Nearby waterfalls and caves offer day trips. The Mekong River sunset is magical. Luang Prabang feels like traveling backward in time to a gentler Southeast Asia.",
     coordinates: { lat: 19.8845, lng: 102.1348 },
-    image: "https://images.unsplash.com/photo-ttFDJvw6CY8?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-ttFDJvw6CY8?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570731066063-e5b60d1b74db?w=1200&q=80",
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],

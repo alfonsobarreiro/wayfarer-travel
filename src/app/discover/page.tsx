@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { DestinationImage } from "@/components/DestinationImage";
 import { motion } from "framer-motion";
 import { MapPin, ArrowRight, Compass } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
@@ -73,14 +74,13 @@ export default function DiscoverPage() {
                 className="bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden"
               >
                 <div className="relative aspect-[16/9]">
-                  <Image
+                  <DestinationImage
                     src={selected.image}
+                    fallbackSrc={selected.gallery[0]}
                     alt={selected.name}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-5 flex items-center gap-1.5 text-white/70 text-xs font-medium">
@@ -151,10 +151,12 @@ export default function DiscoverPage() {
                   className="group block"
                 >
                   <div className="relative rounded-lg overflow-hidden aspect-[3/2] mb-3">
-                    <Image
+                    <DestinationImage
                       src={dest.image}
+                      fallbackSrc={dest.gallery[0]}
                       alt={dest.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

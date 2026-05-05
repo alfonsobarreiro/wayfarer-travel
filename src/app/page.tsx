@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { DestinationImage } from "@/components/DestinationImage";
 import { motion } from "framer-motion";
 import {
   MapPin,
@@ -242,10 +243,12 @@ export default function HomePage() {
                 className="group block"
               >
                 <div className="relative overflow-hidden rounded-md aspect-[3/4] mb-4 img-skeleton">
-                  <Image
+                  <DestinationImage
                     src={dest.image}
+                    fallbackSrc={dest.gallery[0]}
                     alt={dest.name}
                     fill
+                    sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 280px"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
