@@ -254,3 +254,21 @@
 .scroll-smooth::-webkit-scrollbar {
   display: none;
 }
+
+/* ============================================================
+   PRINT STYLES — Trip Planner export-to-PDF path
+   The planner uses window.print(); these rules strip chrome
+   (navbar, footer, sidebar, buttons) and tighten the page so
+   the resulting PDF reads as a clean itinerary.
+   ============================================================ */
+@media print {
+  @page { margin: 0.6in; }
+
+  header, footer, nav, aside, .print\:hidden { display: none !important; }
+
+  body { background: #fff !important; color: #111 !important; }
+
+  /* Avoid breaking segments across pages */
+  main section > div > .space-y-3 > * { break-inside: avoid; }
+}
+
