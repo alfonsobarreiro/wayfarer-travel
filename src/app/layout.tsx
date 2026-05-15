@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SearchProvider } from "@/components/search/SearchContext";
+import { SearchOverlay } from "@/components/search/SearchOverlay";
 
 export const metadata: Metadata = {
   title: "Wayfarer — Discover Unforgettable New Destinations",
@@ -29,9 +31,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SearchProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <SearchOverlay />
+        </SearchProvider>
       </body>
     </html>
   );

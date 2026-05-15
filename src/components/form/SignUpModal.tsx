@@ -34,7 +34,14 @@ type Step3 = z.infer<typeof step3Schema>;
 type Step4 = z.infer<typeof step4Schema>;
 
 const travelStyles = ["Solo Explorer", "Couple Getaway", "Family Adventure", "Group Travel"];
-const budgets = ["Budget-Friendly", "Mid-Range", "Luxury", "No Limit"];
+// Numeric per-day USD ranges instead of subjective labels.
+// The value is what gets stored; range/label are for the UI.
+const budgets: { value: string; range: string; note: string }[] = [
+  { value: "budget",   range: "$50–100",  note: "per day" },
+  { value: "mid",      range: "$100–250", note: "per day" },
+  { value: "premium",  range: "$250–500", note: "per day" },
+  { value: "no-limit", range: "$500+",    note: "per day" },
+];
 const groupSizes = ["Just Me", "2 People", "3–5 People", "6+ People"];
 const interests = [
   "Beaches & Islands",
@@ -359,24 +366,30 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                 Budget Range
                               </label>
                               <div className="grid grid-cols-2 gap-3">
-                                {budgets.map((b) => (
-                                  <button
-                                    key={b}
-                                    type="button"
-                                    onClick={() =>
-                                      form2.setValue("budget", b, {
-                                        shouldValidate: true,
-                                      })
-                                    }
-                                    className={`p-3 rounded-lg border text-sm font-medium transition-all ${
-                                      form2.watch("budget") === b
-                                        ? "border-brand-600 bg-brand-50 text-brand-800"
-                                        : "border-neutral-200 text-neutral-600 hover:border-neutral-300"
-                                    }`}
-                                  >
-                                    {b}
-                                  </button>
-                                ))}
+                                {budgets.map((b) => {
+                                  const active = form2.watch("budget") === b.value;
+                                  return (
+                                    <button
+                                      key={b.value}
+                                      type="button"
+                                      onClick={() =>
+                                        form2.setValue("budget", b.value, {
+                                          shouldValidate: true,
+                                        })
+                                      }
+                                      className={`p-3 rounded-lg border text-sm font-semibold transition-all text-left ${
+                                        active
+                                          ? "border-brand-600 bg-brand-50 text-brand-800"
+                                          : "border-neutral-200 text-neutral-700 hover:border-neutral-300"
+                                      }`}
+                                    >
+                                      <span className="block tabular-nums">{b.range}</span>
+                                      <span className={`block text-xs font-normal mt-0.5 ${active ? "text-brand-700" : "text-neutral-500"}`}>
+                                        {b.note}
+                                      </span>
+                                    </button>
+                                  );
+                                })}
                               </div>
                               {form2.formState.errors.budget && (
                                 <p className={errorClass}>
@@ -534,7 +547,11 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                   {form2.getValues("travelStyle") || "—"}
                                 </span>
                                 <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200">
-                                  {form2.getValues("budget") || "—"}
+                                  {(() => {
+                                    const v = form2.getValues("budget");
+                                    const match = budgets.find((b) => b.value === v);
+                                    return match ? `${match.range} / day` : "—";
+                                  })()}
                                 </span>
                                 <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200">
                                   {form2.getValues("groupSize") || "—"}

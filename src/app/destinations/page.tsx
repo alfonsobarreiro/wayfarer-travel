@@ -5,12 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, ArrowRight, Globe, SlidersHorizontal } from "lucide-react";
+import { MapPin, ArrowRight, Globe, SlidersHorizontal, Search } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
+import { useSearch } from "@/components/search/SearchContext";
 import {
   allDestinations as destinations,
   type Destination,
 } from "@/data/destinations";
+
+// Preselect Bhutan so the map is alive on first load.
+const initialDestination =
+  destinations.find((d) => d.slug === "bhutan") ?? destinations[0];
 
 const continents = [
   "All",
@@ -23,8 +28,9 @@ const continents = [
 ];
 
 export default function DestinationsPage() {
-  const [selected, setSelected] = useState<Destination | null>(null);
+  const [selected, setSelected] = useState<Destination | null>(initialDestination);
   const [activeContinent, setActiveContinent] = useState("All");
+  const { open: openSearch } = useSearch();
 
   const filtered = useMemo(() => {
     if (activeContinent === "All") return destinations;
@@ -62,6 +68,21 @@ export default function DestinationsPage() {
             {Object.keys(counts).length - 1} continents. Filter by region or
             click any pin on the globe.
           </motion.p>
+
+          {/* In-page search affordance (opens the global overlay) */}
+          <motion.button
+            type="button"
+            onClick={openSearch}
+            className="mt-6 inline-flex items-center gap-2 pl-3 pr-2 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 text-sm text-white/90 transition-colors min-w-[280px]"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
+          >
+            <Search className="w-4 h-4 text-white/70" />
+            <span className="flex-1 text-left">Search a country, region, or interest</span>
+            <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
+              ⌘K
+            </kbd>
+          </motion.button>
         </div>
       </section>
 

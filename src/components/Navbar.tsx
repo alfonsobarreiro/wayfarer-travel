@@ -1,14 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { SignUpModal } from "@/components/form/SignUpModal";
+import { SignInModal } from "@/components/form/SignInModal";
 import { WayfarerLogo } from "@/components/WayfarerLogo";
+import { useSearch } from "@/components/search/SearchContext";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [signUpOpen, setSignUpOpen] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
+  const { open: openSearch } = useSearch();
+  const [isMac, setIsMac] = useState(false);
+
+  // Detect Mac for accurate keybind hint
+  useEffect(() => {
+    setIsMac(typeof navigator !== "undefined" && /Mac|iPhone|iPad/i.test(navigator.platform));
+  }, []);
 
   return (
     <>
@@ -46,12 +56,42 @@ export function Navbar() {
           </div>
 
           {/* Right side */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            {/* Persistent search entry point — desktop: pill button, mobile: icon */}
+            <button
+              type="button"
+              onClick={openSearch}
+              aria-label="Search destinations"
+              className="hidden md:inline-flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-full border border-neutral-200 text-sm text-neutral-500 hover:text-neutral-700 hover:border-neutral-300 transition-colors min-w-[200px]"
+            >
+              <Search className="w-4 h-4" />
+              <span className="flex-1 text-left">Search destinations</span>
+              <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-500 border border-neutral-200">
+                {isMac ? "⌘K" : "Ctrl K"}
+              </kbd>
+            </button>
+            <button
+              type="button"
+              onClick={openSearch}
+              aria-label="Search"
+              className="md:hidden p-2 rounded-full hover:bg-neutral-100 transition-colors"
+            >
+              <Search className="w-5 h-5 text-neutral-600" />
+            </button>
+
+            {/* Sign in (secondary) + Sign up (primary). Pair signals returning
+                users have a way in, not just new ones. */}
+            <button
+              onClick={() => setSignInOpen(true)}
+              className="hidden md:inline-flex text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              Sign in
+            </button>
             <button
               onClick={() => setSignUpOpen(true)}
-              className="hidden md:inline-flex text-sm font-medium text-brand-700 hover:text-brand-800 transition-colors"
+              className="hidden md:inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition-colors"
             >
-              Sign Up
+              Sign up
             </button>
             <button
               aria-label="Menu"
@@ -91,20 +131,36 @@ export function Navbar() {
             >
               Plan
             </Link>
-            <button
-              onClick={() => {
-                setSignUpOpen(true);
-                setMobileOpen(false);
-              }}
-              className="block text-sm font-medium text-brand-700"
-            >
-              Sign Up
-            </button>
+            <div className="pt-2 border-t border-neutral-100 flex gap-3">
+              <button
+                onClick={() => {
+                  setSignInOpen(true);
+                  setMobileOpen(false);
+                }}
+                className="flex-1 py-2 rounded-full border border-neutral-200 text-sm font-medium text-neutral-700"
+              >
+                Sign in
+              </button>
+              <button
+                onClick={() => {
+                  setSignUpOpen(true);
+                  setMobileOpen(false);
+                }}
+                className="flex-1 py-2 rounded-full bg-brand-600 text-white text-sm font-semibold"
+              >
+                Sign up
+              </button>
+            </div>
           </div>
         )}
       </header>
 
       <SignUpModal open={signUpOpen} onClose={() => setSignUpOpen(false)} />
+      <SignInModal
+        open={signInOpen}
+        onClose={() => setSignInOpen(false)}
+        onSwitchToSignUp={() => setSignUpOpen(true)}
+      />
     </>
   );
 }

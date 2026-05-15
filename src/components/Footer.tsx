@@ -13,7 +13,7 @@ export function Footer() {
             >
               Wayfarer
             </h3>
-            <p className="text-sm leading-relaxed text-neutral-400">
+            <p className="text-sm leading-relaxed text-neutral-300">
               A travel discovery platform for curious explorers. Find
               authentic destinations matched to how you actually travel.
             </p>
@@ -48,18 +48,18 @@ export function Footer() {
             <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
               Project
             </h4>
-            <p className="text-sm text-neutral-500 leading-relaxed">
+            <p className="text-sm text-neutral-300 leading-relaxed">
               Wayfarer is a concept project designed by Alfonso Barreiro.
               Built with Next.js, Mapbox, and Framer Motion.
             </p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-neutral-500">
-            &copy; {new Date().getFullYear()} Alfonso Barreiro. Concept project — not a real product.
+        <div className="mt-12 pt-8 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-neutral-400">
+            &copy; {new Date().getFullYear()} Alfonso Barreiro. Concept project, not a real product.
           </p>
-          <p className="text-xs text-neutral-500">
+          <p className="text-xs text-neutral-400">
             Designed with intention.
           </p>
         </div>

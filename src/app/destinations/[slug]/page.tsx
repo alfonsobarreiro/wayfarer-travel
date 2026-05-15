@@ -1,7 +1,6 @@
 "use client";
 
 import { use } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion } from "framer-motion";
@@ -14,7 +13,6 @@ import {
   Clock,
   MapPin,
   Lightbulb,
-  Star,
   BadgeCheck,
 } from "lucide-react";
 import { getDestinationBySlug, allDestinations as destinations } from "@/data/destinations";
@@ -39,6 +37,29 @@ export default function DestinationDetailPage({
     { icon: Banknote, label: "Currency", value: dest.currency },
     { icon: Clock, label: "Timezone", value: dest.timezone },
   ];
+
+  // Travel tips: split on a natural break (em dash, en dash, colon) to extract
+  // a title + body. If there's no break, derive a short imperative title from
+  // the leading clause so every tip carries the same visual hierarchy.
+  function parseTip(tip: string): { title: string; body: string } {
+    for (const sep of [" — ", " – ", ": "]) {
+      const idx = tip.indexOf(sep);
+      if (idx > 2 && idx < 50) {
+        return {
+          title: tip.slice(0, idx).trim(),
+          body:  tip.slice(idx + sep.length).trim(),
+        };
+      }
+    }
+    // Heuristic title: first 3–4 words, with leading article dropped.
+    const stripped = tip.replace(/^(The|A|An)\s+/i, "");
+    const words = stripped.split(/\s+/);
+    const titleWords = words.slice(0, Math.min(4, words.length)).join(" ");
+    // Strip trailing punctuation from title
+    const title = titleWords.replace(/[,.;]$/, "");
+    const remainder = words.slice(4).join(" ").replace(/^[,.;]\s*/, "").trim();
+    return remainder ? { title, body: remainder } : { title, body: "" };
+  }
 
   return (
     <div className="pt-16">
@@ -147,7 +168,8 @@ export default function DestinationDetailPage({
               )}
             </div>
 
-            {/* Highlights */}
+            {/* Highlights — info, not actions. No card chrome, no icons that
+                read as buttons. Numbered list reads as reference material. */}
             <div>
               <h2
                 className="text-2xl font-bold mb-4"
@@ -155,19 +177,19 @@ export default function DestinationDetailPage({
               >
                 Highlights
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {dest.highlights.map((h) => (
-                  <div
+              <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 list-none">
+                {dest.highlights.map((h, i) => (
+                  <li
                     key={h}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-brand-50 border border-brand-100"
+                    className="flex items-baseline gap-3 text-neutral-800"
                   >
-                    <Star className="w-4 h-4 text-brand-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-neutral-700">
-                      {h}
+                    <span className="text-xs font-mono text-neutral-400 tabular-nums w-5 flex-shrink-0">
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                  </div>
+                    <span className="text-base leading-relaxed">{h}</span>
+                  </li>
                 ))}
-              </div>
+              </ol>
             </div>
 
             {/* Map */}
@@ -187,30 +209,53 @@ export default function DestinationDetailPage({
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Quick info */}
+            {/* Quick info — Best Time is the most decision-relevant row,
+                so it gets visual weight: brand swatch, larger value, heavier
+                type. Supporting rows step down to a calmer hierarchy. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
-                className="text-lg font-bold mb-4"
+                className="text-lg font-bold mb-5"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Quick Info
               </h3>
-              <div className="space-y-4">
-                {infoItems.map((item) => (
+
+              {/* Best Time — promoted row */}
+              <div className="-mx-6 px-6 py-4 mb-5 bg-brand-50/60 border-y border-brand-100">
+                <div className="flex items-start gap-3">
+                  <Calendar className="w-5 h-5 text-brand-700 mt-1 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-700 mb-1">
+                      Best Time to Visit
+                    </p>
+                    <p className="text-base font-semibold text-neutral-900 leading-snug">
+                      {dest.bestTimeToVisit}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Supporting rows */}
+              <dl className="space-y-3">
+                {infoItems.slice(1).map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
-                    <item.icon className="w-5 h-5 text-brand-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-xs font-medium text-neutral-500 uppercase tracking-wider">
+                    <item.icon className="w-4 h-4 text-neutral-400 mt-1 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <dt className="text-[11px] font-medium text-neutral-500 uppercase tracking-wider">
                         {item.label}
-                      </p>
-                      <p className="text-sm text-neutral-700">{item.value}</p>
+                      </dt>
+                      <dd className="text-sm font-medium text-neutral-900">
+                        {item.value}
+                      </dd>
                     </div>
                   </div>
                 ))}
-              </div>
+              </dl>
             </div>
 
-            {/* Travel tips */}
+            {/* Travel tips — each tip rendered as a titled block instead of a
+                fragmented snippet. Title = leading clause or the part before a
+                natural separator; body = the rest. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
                 className="text-lg font-bold mb-4 flex items-center gap-2"
@@ -219,15 +264,22 @@ export default function DestinationDetailPage({
                 <Lightbulb className="w-5 h-5 text-brand-600" />
                 Travel Tips
               </h3>
-              <ul className="space-y-3">
-                {dest.travelTips.map((tip, i) => (
-                  <li
-                    key={i}
-                    className="text-sm text-neutral-600 leading-relaxed pl-4 border-l-2 border-brand-200"
-                  >
-                    {tip}
-                  </li>
-                ))}
+              <ul className="space-y-4">
+                {dest.travelTips.map((tip, i) => {
+                  const { title, body } = parseTip(tip);
+                  return (
+                    <li key={i} className="pl-4 border-l-2 border-brand-200">
+                      <p className="text-sm font-semibold text-neutral-900 leading-snug">
+                        {title}
+                      </p>
+                      {body && (
+                        <p className="text-sm text-neutral-600 leading-relaxed mt-1">
+                          {body}
+                        </p>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -268,10 +320,12 @@ export default function DestinationDetailPage({
                 className="group block"
               >
                 <div className="relative rounded-lg overflow-hidden aspect-[3/2] mb-3">
-                  <Image
+                  <DestinationImage
                     src={d.image}
+                    fallbackSrc={d.gallery[0]}
                     alt={d.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
