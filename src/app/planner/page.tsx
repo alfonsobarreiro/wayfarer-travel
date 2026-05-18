@@ -38,6 +38,7 @@ import {
   Car,
   Share2,
   Printer,
+  Ticket,
   Check,
   Info,
   ChevronDown,
@@ -387,7 +388,7 @@ export default function PlannerPage() {
                 <Stat label="Days"      value={totalDays} />
                 <Stat label="Saved"     value={savedCount} />
               </div>
-              <div className="flex gap-2 ml-auto">
+              <div className="flex flex-wrap items-center gap-2 ml-auto">
                 <button
                   onClick={handlePrint}
                   disabled={segments.length === 0}
@@ -404,6 +405,21 @@ export default function PlannerPage() {
                   <Share2 className="w-4 h-4" />
                   Share
                 </button>
+                {/* Direction-of-travel hint: the planner ends in handoff, not
+                    just an itinerary. Disabled affordance signals what's next
+                    without pretending it works today. */}
+                <span
+                  title="Hand off the trip to a booking partner. Coming next."
+                  aria-label="Send to booking — coming next"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-sm font-medium text-neutral-400 cursor-not-allowed select-none"
+                >
+                  <Ticket className="w-4 h-4" />
+                  <span className="hidden sm:inline">Send to booking</span>
+                  <span className="sm:hidden">Booking</span>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-1.5 py-0.5 rounded">
+                    Soon
+                  </span>
+                </span>
               </div>
             </div>
           </div>
