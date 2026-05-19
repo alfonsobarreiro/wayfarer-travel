@@ -6,9 +6,9 @@ import { SearchProvider } from "@/components/search/SearchContext";
 import { SearchOverlay } from "@/components/search/SearchOverlay";
 
 export const metadata: Metadata = {
-  title: "Wayfarer — Discover Unforgettable New Destinations",
+  title: "Wayfarer · Discover Unforgettable New Destinations",
   description:
-    "Wayfarer helps you discover a world of adventures tailored just for you. Personalized travel planning powered by AI.",
+    "Wayfarer helps you discover a world of adventures tailored to how you actually travel. Personalized planning, an interactive globe, and itineraries that hold together.",
 };
 
 export default function RootLayout({

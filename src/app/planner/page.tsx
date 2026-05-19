@@ -410,7 +410,7 @@ export default function PlannerPage() {
                     without pretending it works today. */}
                 <span
                   title="Hand off the trip to a booking partner. Coming next."
-                  aria-label="Send to booking — coming next"
+                  aria-label="Send to booking. Coming next."
                   className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-sm font-medium text-neutral-400 cursor-not-allowed select-none"
                 >
                   <Ticket className="w-4 h-4" />
@@ -424,7 +424,8 @@ export default function PlannerPage() {
             </div>
           </div>
 
-          {/* Model clarifier — Cate flagged: explain Day vs Segment vs Saved */}
+          {/* Model clarifier: explain Day vs Segment vs Saved Location so the
+              three primitives don't blur together. */}
           <button
             type="button"
             onClick={() => setModelHelpOpen((v) => !v)}

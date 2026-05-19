@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion } from "framer-motion";
@@ -24,7 +23,7 @@ const benefits = [
     number: "01",
     title: "Tailored to You",
     description:
-      "Destinations matched to your travel style, budget, and interests — not generic top-10 lists. Tell us how you travel, and we'll show you where.",
+      "Destinations matched to your travel style, budget, and interests. Not generic top-10 lists. Tell us how you travel, and we'll show you where.",
     image:
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
   },
@@ -42,7 +41,7 @@ const benefits = [
     number: "03",
     title: "Plan Smarter",
     description:
-      "Weather patterns, visa requirements, local customs, budget breakdowns — everything you'd spend hours researching, organized in one place.",
+      "Weather patterns, visa requirements, local customs, budget breakdowns. Everything you'd spend hours researching, organized in one place.",
     image:
       "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=800&q=80",
   },
@@ -103,8 +102,9 @@ export default function HomePage() {
       {/* ── Hero ────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <DestinationImage
             src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1600&q=80"
+            fallbackSrc="https://images.unsplash.com/photo-1469521669194-babb45599def?w=1600&q=80"
             alt="Tropical coastline"
             fill
             className="object-cover"
@@ -308,7 +308,7 @@ export default function HomePage() {
               </motion.h2>
               <p className="text-neutral-400 mb-8 leading-relaxed max-w-md">
                 Spin a 3D globe, click any pin, and discover destinations that
-                match your curiosity — not an algorithm. {destinations.length}+
+                match your curiosity, not an algorithm. {destinations.length}+
                 places, all in your hands.
               </p>
               <Link
@@ -328,8 +328,9 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden">
-                <Image
+                <DestinationImage
                   src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800&q=80"
+                  fallbackSrc="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
                   alt="Globe showing travel destinations"
                   fill
                   className="object-cover"
@@ -424,9 +425,10 @@ export default function HomePage() {
             <div className="lg:w-1/2 w-full">
               <div className="relative aspect-square rounded-md overflow-hidden lg:sticky lg:top-28">
                 {benefits.map((benefit, i) => (
-                  <Image
+                  <DestinationImage
                     key={i}
                     src={benefit.image}
+                    fallbackSrc={benefits[(i + 1) % benefits.length].image}
                     alt={benefit.title}
                     fill
                     className={`object-cover transition-opacity duration-500 ${
@@ -494,7 +496,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-50px" }}
           >
             Personalized recommendations, interactive planning tools, and a
-            community of explorers — all free to get started.
+            community of explorers. All free to get started.
           </motion.p>
           <motion.button
             onClick={() => setSignUpOpen(true)}
