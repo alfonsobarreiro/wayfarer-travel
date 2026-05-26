@@ -33,3 +33,6 @@ _resources/
 # backups
 *.backup
 tsconfig.tsbuildinfo
+
+# local QA / audit screenshots (never deploy)
+.qa/
