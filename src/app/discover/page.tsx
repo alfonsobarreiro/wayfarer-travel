@@ -84,7 +84,7 @@ export default function DiscoverPage() {
               selectedSlug={selected?.slug}
               className="h-[550px] rounded-lg"
             />
-            <p className="mt-3 flex items-center gap-2 text-xs text-neutral-500">
+            <p className="mt-3 flex items-center gap-2 text-xs text-neutral-400">
               <MousePointerClick className="w-3.5 h-3.5" />
               Drag to spin. Click any pin to switch destinations.
             </p>
@@ -121,7 +121,7 @@ export default function DiscoverPage() {
                   >
                     {selected.name}
                   </h3>
-                  <p className="text-brand-400 text-xs font-medium mb-3">
+                  <p className="text-brand-300 text-xs font-medium mb-3">
                     {selected.tagline}
                   </p>
                   <p className="text-neutral-400 text-sm leading-relaxed mb-4 line-clamp-3">
@@ -138,7 +138,7 @@ export default function DiscoverPage() {
             ) : (
               <div className="bg-neutral-900/50 rounded-lg border border-neutral-800 p-10 text-center">
                 <Compass className="w-10 h-10 text-neutral-700 mx-auto mb-3" />
-                <p className="text-neutral-500 text-sm">
+                <p className="text-neutral-400 text-sm">
                   Click any pin on the globe to explore a destination
                 </p>
               </div>
@@ -159,7 +159,7 @@ export default function DiscoverPage() {
           >
             Hidden Gems
           </motion.h2>
-          <p className="text-neutral-500 mb-10">
+          <p className="text-neutral-400 mb-10">
             Off-the-beaten-path destinations most travelers overlook.
           </p>
 
@@ -194,7 +194,7 @@ export default function DiscoverPage() {
                   <h3 className="font-bold text-white group-hover:text-brand-400 transition-colors text-sm">
                     {dest.name}
                   </h3>
-                  <p className="text-xs text-neutral-500 line-clamp-1">
+                  <p className="text-xs text-neutral-400 line-clamp-1">
                     {dest.tagline}
                   </p>
                 </Link>
@@ -205,7 +205,7 @@ export default function DiscoverPage() {
           <div className="mt-10 text-center">
             <Link
               href="/destinations"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors"
             >
               Browse all destinations <ArrowRight className="w-4 h-4" />
             </Link>

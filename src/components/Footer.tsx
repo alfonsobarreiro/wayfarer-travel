@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-900 text-neutral-300">
+    <footer className="bg-neutral-900 text-neutral-200">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
@@ -56,10 +56,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-neutral-400">
+          <p className="text-xs text-neutral-300">
             &copy; {new Date().getFullYear()} Alfonso Barreiro. Concept project, not a real product.
           </p>
-          <p className="text-xs text-neutral-400">
+          <p className="text-xs text-neutral-300">
             Designed with intention.
           </p>
         </div>

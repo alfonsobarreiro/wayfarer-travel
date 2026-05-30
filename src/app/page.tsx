@@ -290,7 +290,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="md:w-1/2">
               <motion.p
-                className="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3"
+                className="text-brand-300 text-sm font-semibold uppercase tracking-widest mb-3"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
