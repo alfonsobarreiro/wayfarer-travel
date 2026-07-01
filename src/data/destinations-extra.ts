@@ -76,7 +76,7 @@ export const extraDestinations: Destination[] = [
     slug: "istanbul",
     name: "Istanbul",
     country: "Turkey",
-    continent: "Europe / Asia",
+    continent: "Europe",
     tagline: "Where East Meets West",
     description: "Historic city straddling two continents, blending Ottoman grandeur with modern energy.",
     longDescription:
@@ -181,7 +181,7 @@ export const extraDestinations: Destination[] = [
     slug: "reykjavik",
     name: "Reykjavik",
     country: "Iceland",
-    continent: "North Atlantic",
+    continent: "Europe",
     tagline: "Land of Fire and Ice",
     description: "Vibrant capital gateway to Iceland's glaciers, geysers, and golden circle wonders.",
     longDescription:
