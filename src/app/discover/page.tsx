@@ -32,40 +32,54 @@ export default function DiscoverPage() {
 
   return (
     <div className="pt-16 min-h-screen bg-bg-surface-inverse">
-      {/* Hero */}
-      <Section>
-        <Container>
-          <motion.h1
-            className="text-[2.5rem] md:text-[3.75rem] font-medium text-white mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            Explore the Globe
-          </motion.h1>
-          <motion.p
-            className="text-neutral-200 text-[1.0625rem] max-w-xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
-          >
-            Spin the globe, click any pin, and browse destinations picked
-            by hand.
-          </motion.p>
+      {/* Hero — full-bleed image with a strong bottom-weighted scrim so the
+          H1 + deck + search read cleanly. Content aligned bottom-left inside
+          Container (matches destinations page pattern). */}
+      <section className="relative h-[62vh] min-h-[460px]">
+        <DestinationImage
+          src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=1800&q=80"
+          fallbackSrc="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1800&q=80"
+          alt="Wayfarer discover — a sun-lit street scene, travel and place"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Two-stop scrim: heavier at bottom under the type, softer above. */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/20" />
+        <div className="absolute inset-0 flex items-end">
+          <Container className="pb-12 w-full">
+            <motion.h1
+              className="text-[2.5rem] md:text-[3.75rem] font-medium text-white mb-3"
+              style={{ fontFamily: "var(--font-heading)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
+            >
+              Explore the Globe
+            </motion.h1>
+            <motion.p
+              className="text-neutral-100 text-[1.0625rem] max-w-xl mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+            >
+              Spin the globe, click any pin, and browse destinations picked
+              by hand.
+            </motion.p>
 
-          {/* Search — icon + text link, matches the nav pattern; no pill,
-              no placeholder, no keyboard-shortcut chip. */}
-          <motion.button
-            type="button"
-            onClick={openSearch}
-            className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-white/80 hover:text-white transition-colors"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
-          >
-            <Search className="w-4 h-4" />
-            <span>Search destinations</span>
-          </motion.button>
-        </Container>
-      </Section>
+            {/* Textbox-style search: bordered pill on translucent white so it
+                reads as a text input, with the SearchOverlay opening on click. */}
+            <motion.button
+              type="button"
+              onClick={openSearch}
+              className="inline-flex items-center gap-3 pl-4 pr-4 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-[0.9375rem] text-white/90 transition-colors min-w-[340px]"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
+            >
+              <Search className="w-4 h-4 text-white/80" />
+              <span className="flex-1 text-left">Search destinations</span>
+            </motion.button>
+          </Container>
+        </div>
+      </section>
 
       {/* Globe + Selected Card */}
       <section className="pb-16">
