@@ -66,42 +66,56 @@ export default function DestinationsPage() {
 
   return (
     <div className="pt-16">
-      {/* Hero */}
-      <Section bg="inverse">
-        <Container>
-          <motion.h1
-            className="text-[2.5rem] md:text-[3.75rem] font-medium mb-4"
-            style={{ fontFamily: "var(--font-heading)" }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
-          >
-            Top Spots
-          </motion.h1>
-          <motion.p
-            className="text-neutral-200 text-[1.0625rem] max-w-xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
-          >
-            {destinations.length} curated destinations across{" "}
-            {Object.keys(counts).length - 1} continents. Filter by region or
-            click any pin on the globe.
-          </motion.p>
+      {/* Hero — full-bleed image with a strong bottom-weighted scrim so the
+          H1 + deck + search read cleanly. Content aligned bottom-left inside
+          Container (matches destinations detail page pattern). */}
+      <section className="relative h-[62vh] min-h-[460px]">
+        <DestinationImage
+          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1800&q=80"
+          fallbackSrc="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=1800&q=80"
+          alt="Wayfarer top spots — mountain landscape at dusk"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Two-stop scrim: heavier at bottom under the type, softer above. */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/20" />
+        <div className="absolute inset-0 flex items-end">
+          <Container className="pb-12 w-full">
+            <motion.h1
+              className="text-[2.5rem] md:text-[3.75rem] font-medium text-white mb-3"
+              style={{ fontFamily: "var(--font-heading)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
+            >
+              Top Spots
+            </motion.h1>
+            <motion.p
+              className="text-neutral-100 text-[1.0625rem] max-w-xl mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+            >
+              {destinations.length} curated destinations across{" "}
+              {Object.keys(counts).length - 1} continents. Filter by region or
+              click any pin on the globe.
+            </motion.p>
 
-          {/* Search as a text-and-icon link, matching the nav's simple
-              pattern (icon + "Search" text, no pill / no placeholder /
-              no Kbd chip). Colors adapted to the dark hero surface. */}
-          <motion.button
-            type="button"
-            onClick={openSearch}
-            className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-white/80 hover:text-white transition-colors"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
-          >
-            <Search className="w-4 h-4" />
-            <span>Search destinations</span>
-          </motion.button>
-        </Container>
-      </Section>
+            {/* Textbox-style search: bordered pill on translucent white so it
+                reads as a text input, with the SearchOverlay opening on click.
+                No Kbd chip — the search is one-click, no power-user hint. */}
+            <motion.button
+              type="button"
+              onClick={openSearch}
+              className="inline-flex items-center gap-3 pl-4 pr-4 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-[0.9375rem] text-white/90 transition-colors min-w-[340px]"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
+            >
+              <Search className="w-4 h-4 text-white/80" />
+              <span className="flex-1 text-left">Search destinations</span>
+            </motion.button>
+          </Container>
+        </div>
+      </section>
 
       {/* Map */}
       <section className="-mt-8 relative z-10">
