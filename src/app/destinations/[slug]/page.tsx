@@ -93,7 +93,7 @@ export default function DestinationDetailPage({
           <Container className="pb-12 w-full">
             <Link
               href="/destinations"
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mb-4 transition-colors"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white text-[0.9375rem] mb-4 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> All Destinations
             </Link>
@@ -114,7 +114,7 @@ export default function DestinationDetailPage({
               </motion.div>
             )}
             <motion.h1
-              className="text-4xl md:text-6xl font-medium text-white mb-2"
+              className="text-[2.5rem] md:text-[3.75rem] font-medium text-white mb-3"
               style={{ fontFamily: "var(--font-heading)" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
@@ -122,7 +122,7 @@ export default function DestinationDetailPage({
               {dest.name}
             </motion.h1>
             <motion.p
-              className="text-base text-white/80 flex items-center gap-2"
+              className="text-neutral-100 text-[1.0625rem] flex items-center gap-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
             >
@@ -145,12 +145,12 @@ export default function DestinationDetailPage({
               animate={{ opacity: 1, y: 0 }}
             >
               <h2
-                className="text-2xl font-bold mb-4"
+                className="text-[1.75rem] font-medium mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 About {dest.name}
               </h2>
-              <p className="text-neutral-600 text-base">
+              <p className="text-neutral-600 text-[1.0625rem]">
                 {dest.longDescription}
               </p>
             </motion.div>
@@ -158,7 +158,7 @@ export default function DestinationDetailPage({
             {/* Gallery */}
             <div>
               <h2
-                className="text-2xl font-bold mb-4"
+                className="text-[1.75rem] font-medium mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Gallery
@@ -186,7 +186,7 @@ export default function DestinationDetailPage({
                   ))}
                 </div>
               ) : (
-                <p className="text-sm text-neutral-500 italic">
+                <p className="text-[0.9375rem] text-neutral-500 italic">
                   Photo gallery coming soon.
                 </p>
               )}
@@ -196,7 +196,7 @@ export default function DestinationDetailPage({
                 read as buttons. Numbered list reads as reference material. */}
             <div>
               <h2
-                className="text-2xl font-bold mb-4"
+                className="text-[1.75rem] font-medium mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Highlights
@@ -210,7 +210,7 @@ export default function DestinationDetailPage({
                     <span className="text-xs font-mono text-neutral-400 tabular-nums w-5 flex-shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-base">{h}</span>
+                    <span className="text-[1.0625rem]">{h}</span>
                   </li>
                 ))}
               </ol>
@@ -219,7 +219,7 @@ export default function DestinationDetailPage({
             {/* Map */}
             <div>
               <h2
-                className="text-2xl font-bold mb-4"
+                className="text-[1.75rem] font-medium mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Location
@@ -238,7 +238,7 @@ export default function DestinationDetailPage({
                 type. Supporting rows step down to a calmer hierarchy. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
-                className="text-xl font-bold mb-6"
+                className="text-xl font-medium mb-6"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Quick Info
@@ -251,10 +251,10 @@ export default function DestinationDetailPage({
                 <div className="flex items-start gap-3">
                   <Calendar className="w-5 h-5 text-link-strong mt-1 flex-shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-link-strong mb-1">
-                      Best Time to Visit
+                    <p className="text-xs font-medium text-link-strong mb-1">
+                      Best time to visit
                     </p>
-                    <p className="text-base font-medium text-neutral-900">
+                    <p className="text-[1.0625rem] font-medium text-neutral-900">
                       {dest.bestTimeToVisit}
                     </p>
                   </div>
@@ -270,7 +270,7 @@ export default function DestinationDetailPage({
                       <dt className="text-xs font-medium text-neutral-500">
                         {item.label}
                       </dt>
-                      <dd className="text-sm font-medium text-neutral-900">
+                      <dd className="text-[0.9375rem] font-medium text-neutral-900">
                         {item.value}
                       </dd>
                     </div>
@@ -284,12 +284,12 @@ export default function DestinationDetailPage({
                 natural separator; body = the rest. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
-                className="text-xl font-bold mb-4 flex items-center gap-2"
+                className="text-xl font-medium mb-4 flex items-center gap-2"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {/* Cognac accent on tips reads as editorial supporting
                     voice next to navy primary chrome. */}
-                <Lightbulb className="w-5 h-5 text-accent-600" />
+                <Lightbulb className="w-5 h-5 text-neutral-500" />
                 Travel Tips
               </h3>
               <ul className="space-y-4">
@@ -297,11 +297,11 @@ export default function DestinationDetailPage({
                   const { title, body } = parseTip(tip);
                   return (
                     <li key={i} className="pl-4 border-l-2 border-border-chip">
-                      <p className="text-sm font-medium text-neutral-900">
+                      <p className="text-[0.9375rem] font-medium text-neutral-900">
                         {title}
                       </p>
                       {body && (
-                        <p className="text-sm text-neutral-600 mt-1">
+                        <p className="text-[0.9375rem] text-neutral-600 mt-1">
                           {body}
                         </p>
                       )}
@@ -312,19 +312,19 @@ export default function DestinationDetailPage({
             </div>
 
             {/* CTA */}
-            <div className="rounded-lg bg-bg-primary p-6 text-center">
+            <div className="rounded-lg bg-bg-primary p-6">
               <h3
-                className="text-xl font-bold text-white mb-2"
+                className="text-xl font-medium text-white mb-2"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                Ready to Go?
+                Save {dest.name} for later
               </h3>
-              <p className="text-sm text-white/80 mb-4">
-                Add {dest.name} to your trip planner.
+              <p className="text-[0.9375rem] text-white/80 mb-4">
+                Send it to your trip planner in one click.
               </p>
               <Link
                 href="/planner"
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-link-strong font-medium text-sm hover:bg-neutral-50 transition-colors"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-link-strong font-medium text-[0.9375rem] hover:bg-neutral-50 transition-colors"
               >
                 Plan Your Trip
               </Link>
@@ -335,7 +335,7 @@ export default function DestinationDetailPage({
         {/* More destinations */}
         <div className="mt-20 pt-12 border-t border-neutral-200">
           <h2
-            className="text-2xl font-bold mb-8"
+            className="text-[1.75rem] font-medium mb-8"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             More Destinations
@@ -347,7 +347,7 @@ export default function DestinationDetailPage({
                 href={`/destinations/${d.slug}`}
                 className="group block"
               >
-                <div className="relative rounded-lg overflow-hidden aspect-[3/2] mb-3">
+                <div className="relative rounded-lg overflow-hidden aspect-[3/2] mb-4">
                   <DestinationImage
                     src={d.image}
                     fallbackSrc={d.gallery[0]}
@@ -357,10 +357,13 @@ export default function DestinationDetailPage({
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <h3 className="font-bold text-neutral-900 group-hover:text-link-strong transition-colors">
+                <h3
+                  className="text-[1.25rem] font-medium text-neutral-900 mb-1 group-hover:text-link-strong transition-colors"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
                   {d.name}
                 </h3>
-                <p className="text-sm text-neutral-500">{d.tagline}</p>
+                <p className="text-[0.9375rem] text-neutral-500">{d.tagline}</p>
               </Link>
             ))}
           </div>
