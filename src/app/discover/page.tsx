@@ -36,7 +36,7 @@ export default function DiscoverPage() {
       <Section>
         <Container>
           <motion.h1
-            className="text-4xl md:text-5xl font-medium text-white mb-4"
+            className="text-[2.5rem] md:text-[3.75rem] font-medium text-white mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function DiscoverPage() {
             Explore the Globe
           </motion.h1>
           <motion.p
-            className="text-neutral-400 text-base max-w-xl"
+            className="text-neutral-200 text-[1.0625rem] max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           >
@@ -110,7 +110,7 @@ export default function DiscoverPage() {
                 </div>
                 <div className="p-6">
                   <h3
-                    className="text-white font-bold text-xl mb-1"
+                    className="text-white font-medium text-xl mb-1"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {selected.name}
@@ -118,12 +118,12 @@ export default function DiscoverPage() {
                   <p className="text-text-on-inverse-muted text-xs font-medium mb-3">
                     {selected.tagline}
                   </p>
-                  <p className="text-neutral-400 text-sm mb-4 line-clamp-3">
+                  <p className="text-neutral-300 text-[0.9375rem] mb-4 line-clamp-3">
                     {selected.description}
                   </p>
                   <Link
                     href={`/destinations/${selected.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-text-on-inverse-link hover:text-text-on-inverse-link-hover transition-colors"
+                    className="inline-flex items-center gap-2 text-[0.9375rem] font-medium text-text-on-inverse-link hover:text-text-on-inverse-link-hover transition-colors"
                   >
                     View full guide <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -132,7 +132,7 @@ export default function DiscoverPage() {
             ) : (
               <div className="bg-neutral-900/50 rounded-lg border border-neutral-800 p-12 text-center">
                 <Compass className="w-10 h-10 text-neutral-700 mx-auto mb-3" />
-                <p className="text-neutral-400 text-sm">
+                <p className="text-neutral-300 text-[0.9375rem]">
                   Click any pin on the globe to explore a destination
                 </p>
               </div>
@@ -146,7 +146,7 @@ export default function DiscoverPage() {
       <Section className="bg-bg-surface-inverse">
         <Container>
           <motion.h2
-            className="text-3xl font-medium text-white mb-2"
+            className="text-[1.75rem] font-medium text-white mb-2"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ export default function DiscoverPage() {
           >
             Hidden Gems
           </motion.h2>
-          <p className="text-neutral-400 mb-12">
+          <p className="text-neutral-300 text-[0.9375rem] mb-12">
             Off-the-beaten-path destinations most travelers overlook.
           </p>
 
@@ -186,7 +186,7 @@ export default function DiscoverPage() {
                       {dest.country}
                     </div>
                   </div>
-                  <h3 className="font-bold text-white group-hover:text-text-on-inverse-link transition-colors text-sm">
+                  <h3 className="font-medium text-white group-hover:text-text-on-inverse-link transition-colors text-[0.9375rem]">
                     {dest.name}
                   </h3>
                   <p className="text-xs text-neutral-400 line-clamp-1">
@@ -200,7 +200,7 @@ export default function DiscoverPage() {
           <div className="mt-12 text-center">
             <Link
               href="/destinations"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-medium text-sm hover:bg-bg-primary-hover transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-medium text-[0.9375rem] hover:bg-bg-primary-hover transition-colors"
             >
               Browse all destinations <ArrowRight className="w-4 h-4" />
             </Link>
