@@ -62,11 +62,11 @@ export function Navbar() {
               type="button"
               onClick={openSearch}
               aria-label="Search destinations"
-              className="hidden md:inline-flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-full border border-neutral-200 text-sm text-neutral-500 hover:text-neutral-700 hover:border-neutral-300 transition-colors min-w-[200px]"
+              className="hidden md:inline-flex items-center gap-2 pl-3 pr-2 py-2 rounded-full border border-neutral-200 text-sm text-neutral-500 hover:text-neutral-700 hover:border-neutral-300 transition-colors min-w-[200px]"
             >
               <Search className="w-4 h-4" />
               <span className="flex-1 text-left">Search destinations</span>
-              <kbd className="text-xs font-mono px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-500 border border-neutral-200">
+              <kbd className="text-xs font-mono px-2 py-1 rounded bg-neutral-100 text-neutral-500 border border-neutral-200">
                 {isMac ? "⌘K" : "Ctrl K"}
               </kbd>
             </button>
@@ -89,7 +89,7 @@ export function Navbar() {
             </button>
             <button
               onClick={() => setSignUpOpen(true)}
-              className="hidden md:inline-flex items-center px-3.5 py-1.5 rounded-full bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
+              className="hidden md:inline-flex items-center px-4 py-2 rounded-full bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
             >
               Sign up
             </button>

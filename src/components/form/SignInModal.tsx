@@ -77,7 +77,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
               type="button"
               onClick={handleClose}
               aria-label="Close"
-              className="absolute top-3 right-3 p-1.5 rounded-full hover:bg-neutral-100 text-neutral-500 transition-colors"
+              className="absolute top-3 right-3 p-2 rounded-full hover:bg-neutral-100 text-neutral-500 transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
@@ -100,7 +100,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="w-full py-2.5 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
+                  className="w-full py-3 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
                 >
                   Continue
                 </button>
@@ -118,7 +118,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                 </p>
 
                 {/* Email */}
-                <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                <label className="block text-xs font-medium text-neutral-600 mb-2">
                   Email
                 </label>
                 <div className="relative mb-4">
@@ -128,7 +128,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                     autoComplete="email"
                     placeholder="you@example.com"
                     {...register("email")}
-                    className="w-full pl-10 pr-3 py-2.5 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none transition-colors"
+                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none transition-colors"
                   />
                 </div>
                 {formState.errors.email && (
@@ -138,7 +138,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                 )}
 
                 {/* Password */}
-                <div className="flex items-center justify-between mb-1.5">
+                <div className="flex items-center justify-between mb-2">
                   <label className="block text-xs font-medium text-neutral-600">
                     Password
                   </label>
@@ -160,7 +160,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                     autoComplete="current-password"
                     placeholder="At least 6 characters"
                     {...register("password")}
-                    className="w-full pl-10 pr-3 py-2.5 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none transition-colors"
+                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none transition-colors"
                   />
                 </div>
                 {formState.errors.password && (
@@ -171,14 +171,14 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
 
                 <button
                   type="submit"
-                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
+                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
                 >
                   Sign in
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
                 {onSwitchToSignUp && (
-                  <p className="mt-5 text-center text-sm text-neutral-600">
+                  <p className="mt-6 text-center text-sm text-neutral-600">
                     New here?{" "}
                     <button
                       type="button"

@@ -164,7 +164,7 @@ export default function HomePage() {
             >
               <button
                 onClick={() => setSignUpOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors shadow-lg shadow-brand-600/20"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors shadow-lg shadow-brand-600/20"
               >
                 Sign Up!
               </button>
@@ -188,7 +188,7 @@ export default function HomePage() {
       {/* ── Destinations Carousel ──────────────────── */}
       <Section className="bg-white">
         <Container>
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-12">
             <div>
               <motion.h2
                 className="text-3xl font-medium tracking-tight"
@@ -225,7 +225,7 @@ export default function HomePage() {
 
         <div
           ref={carouselRef}
-          className="flex gap-5 overflow-x-auto pb-4 px-6 md:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]"
+          className="flex gap-6 overflow-x-auto pb-4 px-6 md:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           onMouseEnter={() => setIsHoveringCarousel(true)}
           onMouseLeave={() => setIsHoveringCarousel(false)}
@@ -254,7 +254,7 @@ export default function HomePage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
                     <p className="text-white/70 text-xs font-medium uppercase tracking-wider mb-1 flex items-center gap-1">
                       <MapPin className="w-3 h-3" />
                       {dest.country}
@@ -289,7 +289,7 @@ export default function HomePage() {
       {/* ── Discover Teaser ──────────────────────── */}
       <Section className="bg-bg-surface-inverse">
         <Container>
-          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
             <div className="md:w-1/2">
               <motion.p
                 className="text-brand-300 text-sm font-semibold uppercase tracking-widest mb-3"
@@ -355,7 +355,7 @@ export default function HomePage() {
       {/* ── Why Wayfarer — split layout with hover image ── */}
       <Section className="bg-bg-surface-ground">
         <Container>
-          <div className="mb-14">
+          <div className="mb-16">
             <motion.p
               className="text-brand-600 text-sm font-semibold uppercase tracking-widest mb-3"
               initial={{ opacity: 0, y: 10 }}
@@ -403,7 +403,7 @@ export default function HomePage() {
 
                     {/* Content */}
                     <div>
-                      <div className="flex items-center gap-2.5 mb-2">
+                      <div className="flex items-center gap-3 mb-2">
                         <benefit.icon className={`w-5 h-5 transition-colors duration-300 ${
                           hoveredBenefit === i ? "text-brand-600" : "text-neutral-500"
                         }`} />
@@ -495,7 +495,7 @@ export default function HomePage() {
             supports your journey
           </motion.h2>
           <motion.p
-            className="text-base text-white/70 mb-10 max-w-xl mx-auto"
+            className="text-base text-white/70 mb-12 max-w-xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -505,7 +505,7 @@ export default function HomePage() {
           </motion.p>
           <motion.button
             onClick={() => setSignUpOpen(true)}
-            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-bg-primary text-white font-medium text-base hover:bg-bg-primary-hover transition-colors shadow-xl shadow-brand-600/30"
+            className="inline-flex items-center justify-center px-12 py-4 rounded-lg bg-bg-primary text-white font-medium text-base hover:bg-bg-primary-hover transition-colors shadow-xl shadow-brand-600/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

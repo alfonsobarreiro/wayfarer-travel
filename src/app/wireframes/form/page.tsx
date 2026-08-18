@@ -225,7 +225,7 @@ export default function FormWireframePage() {
 
       <Container className="py-12">
         {/* Title */}
-        <div className="mb-10">
+        <div className="mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-2">
             Wayfarer Travel
           </p>
@@ -308,7 +308,7 @@ export default function FormWireframePage() {
                   </div>
 
                   {/* Progress bar */}
-                  <div className="flex gap-1.5 mb-1">
+                  <div className="flex gap-2 mb-1">
                     {steps.map((_, i) => (
                       <div
                         key={i}
@@ -323,8 +323,8 @@ export default function FormWireframePage() {
                   </div>
 
                   {/* Step heading */}
-                  <div className="mb-5">
-                    <div className="text-sm font-medium text-neutral-800 mb-0.5">
+                  <div className="mb-6">
+                    <div className="text-sm font-medium text-neutral-800 mb-1">
                       {steps[activeStep].title}
                     </div>
                     <div className="text-xs text-neutral-400">
@@ -426,7 +426,7 @@ export default function FormWireframePage() {
                           <Placeholder w="w-40" h="h-2" />
                         </ReviewCard>
                         <ReviewCard label="Travel Preferences">
-                          <div className="flex gap-1.5 flex-wrap">
+                          <div className="flex gap-2 flex-wrap">
                             {["Solo Explorer", "Mid-Range", "Just Me"].map((t) => (
                               <div
                                 key={t}
@@ -438,7 +438,7 @@ export default function FormWireframePage() {
                           </div>
                         </ReviewCard>
                         <ReviewCard label="Interests">
-                          <div className="flex gap-1.5 flex-wrap">
+                          <div className="flex gap-2 flex-wrap">
                             {["Beaches & Islands", "Food & Culinary", "Wildlife & Nature"].map((t) => (
                               <div
                                 key={t}
@@ -450,7 +450,7 @@ export default function FormWireframePage() {
                           </div>
                         </ReviewCard>
                         <ReviewCard label="Dream Destinations">
-                          <div className="flex gap-1.5 flex-wrap">
+                          <div className="flex gap-2 flex-wrap">
                             {["Tokyo", "Marrakech"].map((t) => (
                               <div
                                 key={t}
@@ -478,7 +478,7 @@ export default function FormWireframePage() {
                       Back
                     </div>
                     <div
-                      className="flex items-center gap-1 px-5 py-2 rounded-md bg-neutral-800 text-white text-xs font-medium cursor-pointer"
+                      className="flex items-center gap-1 px-6 py-2 rounded-md bg-neutral-800 text-white text-xs font-medium cursor-pointer"
                       onClick={() =>
                         activeStep < steps.length - 1
                           ? setActiveStep(activeStep + 1)
@@ -545,7 +545,7 @@ export default function FormWireframePage() {
         </div>
 
         {/* Design notes */}
-        <div className="max-w-[780px] mx-auto mt-10 bg-white border border-neutral-200 rounded-lg p-6">
+        <div className="max-w-[780px] mx-auto mt-12 bg-white border border-neutral-200 rounded-lg p-6">
           <h3
             className="text-sm font-bold text-neutral-900 mb-3"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -606,7 +606,7 @@ export default function FormWireframePage() {
             ].map(([tech, use]) => (
               <div key={tech} className="p-3 rounded-md bg-neutral-50 border border-neutral-100">
                 <div className="font-medium text-neutral-800">{tech}</div>
-                <div className="text-neutral-500 mt-0.5">{use}</div>
+                <div className="text-neutral-500 mt-1">{use}</div>
               </div>
             ))}
           </div>

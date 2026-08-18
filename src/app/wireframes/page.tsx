@@ -19,7 +19,7 @@ function WireBlock({
 }) {
   return (
     <div
-      className={`relative border-2 border-dashed rounded-lg p-5 ${
+      className={`relative border-2 border-dashed rounded-lg p-6 ${
         dark
           ? "border-neutral-500 bg-neutral-800"
           : "border-neutral-300 bg-white"
@@ -180,7 +180,7 @@ export default function WireframesPage() {
           <div className="flex items-center gap-1 bg-neutral-100 rounded-lg p-1">
             <button
               onClick={() => setViewport("desktop")}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+              className={`flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-colors ${
                 isDesktop
                   ? "bg-white text-neutral-900 shadow-sm"
                   : "text-neutral-500 hover:text-neutral-700"
@@ -191,7 +191,7 @@ export default function WireframesPage() {
             </button>
             <button
               onClick={() => setViewport("mobile")}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+              className={`flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-colors ${
                 !isDesktop
                   ? "bg-white text-neutral-900 shadow-sm"
                   : "text-neutral-500 hover:text-neutral-700"
@@ -206,7 +206,7 @@ export default function WireframesPage() {
 
       {/* Wireframe canvas */}
       <Container className="py-12">
-        <div className="mb-10">
+        <div className="mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-2">
             Wayfarer Travel
           </p>
@@ -230,7 +230,7 @@ export default function WireframesPage() {
           }`}
         >
           {/* Browser chrome */}
-          <div className="h-8 bg-neutral-200 flex items-center px-3 gap-1.5">
+          <div className="h-8 bg-neutral-200 flex items-center px-3 gap-2">
             <div className="w-2.5 h-2.5 rounded-full bg-neutral-400" />
             <div className="w-2.5 h-2.5 rounded-full bg-neutral-400" />
             <div className="w-2.5 h-2.5 rounded-full bg-neutral-400" />
@@ -239,7 +239,7 @@ export default function WireframesPage() {
 
           <div className="bg-white">
             {/* ── Navbar ─────────────────────── */}
-            <div className="flex items-center justify-between px-5 py-3 border-b border-neutral-100">
+            <div className="flex items-center justify-between px-6 py-3 border-b border-neutral-100">
               <Placeholder w="w-24" h="h-5" />
               {isDesktop ? (
                 <div className="flex gap-4">
@@ -383,7 +383,7 @@ export default function WireframesPage() {
                             <span className="text-xs font-medium text-neutral-300 w-6 flex-shrink-0">
                               {item.split(" — ")[0]}
                             </span>
-                            <div className="space-y-1.5 flex-1">
+                            <div className="space-y-2 flex-1">
                               <Placeholder w="w-3/4" h="h-3" />
                               <Placeholder w="w-full" h="h-2" />
                               <Placeholder w="w-5/6" h="h-2" />
@@ -425,7 +425,7 @@ export default function WireframesPage() {
             </div>
 
             {/* ── Footer ─────────────────────── */}
-            <div className="px-5 py-6 border-t border-neutral-100">
+            <div className="px-6 py-6 border-t border-neutral-100">
               <div
                 className={`flex ${
                   isDesktop ? "flex-row justify-between" : "flex-col gap-4"
@@ -444,7 +444,7 @@ export default function WireframesPage() {
         </div>
 
         {/* Legend */}
-        <div className="mt-10 max-w-[900px] mx-auto">
+        <div className="mt-12 max-w-[900px] mx-auto">
           <h3
             className="text-sm font-bold text-neutral-900 mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -472,7 +472,7 @@ export default function WireframesPage() {
         </div>
 
         {/* Design notes */}
-        <div className="mt-10 max-w-[900px] mx-auto bg-white border border-neutral-200 rounded-lg p-6">
+        <div className="mt-12 max-w-[900px] mx-auto bg-white border border-neutral-200 rounded-lg p-6">
           <h3
             className="text-sm font-bold text-neutral-900 mb-3"
             style={{ fontFamily: "var(--font-heading)" }}

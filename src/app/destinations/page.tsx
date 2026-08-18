@@ -106,7 +106,7 @@ export default function DestinationsPage() {
           >
             <Search className="w-4 h-4 text-white/70" />
             <span className="flex-1 text-left">Search a country, region, or interest</span>
-            <kbd className="text-xs font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
+            <kbd className="text-xs font-mono px-2 py-1 rounded bg-white/15 text-white/80 border border-white/20">
               ⌘K
             </kbd>
           </motion.button>
@@ -158,7 +158,7 @@ export default function DestinationsPage() {
                     {selected.tagline}
                   </p>
                   {isNatureDest(selected.categories) && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-[11px] font-medium">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-[11px] font-medium">
                       <Leaf className="w-3 h-3" />
                       Nature
                     </span>
@@ -184,7 +184,7 @@ export default function DestinationsPage() {
       <Section>
         <Container>
         {/* Filter bar */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <h2
               className="text-3xl font-bold"
@@ -204,7 +204,7 @@ export default function DestinationsPage() {
               <button
                 key={c}
                 onClick={() => setActiveContinent(c)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                className={`px-3 py-2 rounded-full text-xs font-medium transition-all ${
                   activeContinent === c
                     ? "bg-bg-primary text-white shadow-sm"
                     : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
@@ -246,14 +246,14 @@ export default function DestinationsPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-4 left-4 flex items-center gap-1.5 text-white">
+                    <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white">
                       <MapPin className="w-4 h-4" />
                       <span className="text-sm font-medium">
                         {dest.country}
                       </span>
                     </div>
                     {isNatureDest(dest.categories) && (
-                      <div className="absolute top-3 left-3 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-xs font-medium">
+                      <div className="absolute top-3 left-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-xs font-medium">
                         <Leaf className="w-3 h-3" />
                         Nature
                       </div>

@@ -121,7 +121,7 @@ export function SearchOverlay() {
             transition={{ duration: 0.18 }}
           >
             {/* Input row */}
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-neutral-200">
+            <div className="flex items-center gap-3 px-6 py-4 border-b border-neutral-200">
               <SearchIcon className="w-5 h-5 text-neutral-400 flex-shrink-0" />
               <input
                 ref={inputRef}
@@ -132,7 +132,7 @@ export function SearchOverlay() {
                 className="flex-1 bg-transparent outline-none text-base text-neutral-900 placeholder:text-neutral-400"
                 aria-label="Search input"
               />
-              <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-neutral-200 text-xs font-mono text-neutral-500 bg-neutral-50">
+              <kbd className="hidden sm:inline-flex items-center px-2 py-1 rounded border border-neutral-200 text-xs font-mono text-neutral-500 bg-neutral-50">
                 Esc
               </kbd>
               <button
@@ -153,7 +153,7 @@ export function SearchOverlay() {
               ) : (
                 <>
                   {!query.trim() && (
-                    <p className="px-5 pt-4 pb-2 text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                    <p className="px-6 pt-4 pb-2 text-xs font-semibold uppercase tracking-wider text-neutral-400">
                       Suggested
                     </p>
                   )}
@@ -166,7 +166,7 @@ export function SearchOverlay() {
                             href={`/destinations/${r.d.slug}`}
                             onClick={close}
                             onMouseEnter={() => setActiveIdx(i)}
-                            className={`flex items-center gap-4 px-5 py-3 transition-colors ${
+                            className={`flex items-center gap-4 px-6 py-3 transition-colors ${
                               active ? "bg-brand-50" : "hover:bg-neutral-50"
                             }`}
                           >
@@ -202,20 +202,20 @@ export function SearchOverlay() {
             </div>
 
             {/* Footer hint */}
-            <div className="hidden sm:flex items-center justify-between px-5 py-3 border-t border-neutral-200 bg-neutral-50 text-xs text-neutral-500">
+            <div className="hidden sm:flex items-center justify-between px-6 py-3 border-t border-neutral-200 bg-neutral-50 text-xs text-neutral-500">
               <div className="flex items-center gap-3">
                 <span>
-                  <kbd className="px-1.5 py-0.5 rounded border border-neutral-300 font-mono">&uarr;&darr;</kbd>{" "}
+                  <kbd className="px-2 py-1 rounded border border-neutral-300 font-mono">&uarr;&darr;</kbd>{" "}
                   navigate
                 </span>
                 <span>
-                  <kbd className="px-1.5 py-0.5 rounded border border-neutral-300 font-mono">&crarr;</kbd>{" "}
+                  <kbd className="px-2 py-1 rounded border border-neutral-300 font-mono">&crarr;</kbd>{" "}
                   open
                 </span>
               </div>
               <span>
                 {destinations.length} destinations &middot;{" "}
-                <kbd className="px-1.5 py-0.5 rounded border border-neutral-300 font-mono">&#8984;K</kbd>
+                <kbd className="px-2 py-1 rounded border border-neutral-300 font-mono">&#8984;K</kbd>
               </span>
             </div>
           </motion.div>

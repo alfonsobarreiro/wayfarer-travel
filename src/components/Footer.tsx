@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-bg-surface-inverse text-neutral-200">
       <Container className="py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
             <h3

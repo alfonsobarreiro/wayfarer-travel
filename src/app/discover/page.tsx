@@ -69,7 +69,7 @@ export default function DiscoverPage() {
           >
             <Search className="w-4 h-4 text-white/70" />
             <span className="flex-1 text-left">Search a country, region, or interest</span>
-            <kbd className="text-xs font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
+            <kbd className="text-xs font-mono px-2 py-1 rounded bg-white/15 text-white/80 border border-white/20">
               ⌘K
             </kbd>
           </motion.button>
@@ -79,7 +79,7 @@ export default function DiscoverPage() {
       {/* Globe + Selected Card */}
       <section className="pb-16">
         <Container>
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Left — map + adjacent instructional caption */}
           <div className="lg:w-3/5 w-full">
             <DestinationMap
@@ -112,12 +112,12 @@ export default function DiscoverPage() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-5 flex items-center gap-1.5 text-white/70 text-xs font-medium">
+                  <div className="absolute bottom-4 left-5 flex items-center gap-2 text-white/70 text-xs font-medium">
                     <MapPin className="w-3.5 h-3.5" />
                     {selected.country}
                   </div>
                 </div>
-                <div className="p-5">
+                <div className="p-6">
                   <h3
                     className="text-white font-bold text-xl mb-1"
                     style={{ fontFamily: "var(--font-heading)" }}
@@ -139,7 +139,7 @@ export default function DiscoverPage() {
                 </div>
               </motion.div>
             ) : (
-              <div className="bg-neutral-900/50 rounded-lg border border-neutral-800 p-10 text-center">
+              <div className="bg-neutral-900/50 rounded-lg border border-neutral-800 p-12 text-center">
                 <Compass className="w-10 h-10 text-neutral-700 mx-auto mb-3" />
                 <p className="text-neutral-400 text-sm">
                   Click any pin on the globe to explore a destination
@@ -163,7 +163,7 @@ export default function DiscoverPage() {
           >
             Hidden Gems
           </motion.h2>
-          <p className="text-neutral-400 mb-10">
+          <p className="text-neutral-400 mb-12">
             Off-the-beaten-path destinations most travelers overlook.
           </p>
 
@@ -190,7 +190,7 @@ export default function DiscoverPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-white/80 text-xs">
+                    <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white/80 text-xs">
                       <MapPin className="w-3.5 h-3.5" />
                       {dest.country}
                     </div>
@@ -206,7 +206,7 @@ export default function DiscoverPage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-12 text-center">
             <Link
               href="/destinations"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-medium text-sm hover:bg-bg-primary-hover transition-colors"

@@ -44,9 +44,9 @@ const VARIANT: Record<ButtonVariant, string> = {
 };
 
 const SIZE: Record<ButtonSize, string> = {
-  sm: "px-3   py-1.5 text-xs   rounded-md gap-1.5",
-  md: "px-5   py-2.5 text-sm   rounded-lg gap-2",
-  lg: "px-7   py-3.5 text-base rounded-lg gap-2",
+  sm: "px-3   py-2 text-xs   rounded-md gap-2",
+  md: "px-6   py-3 text-sm   rounded-lg gap-2",
+  lg: "px-8   py-4 text-base rounded-lg gap-2",
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

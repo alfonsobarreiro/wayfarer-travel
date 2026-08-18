@@ -180,7 +180,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
 
           {/* Modal */}
           <motion.div
-            className="relative z-10 w-full max-w-3xl bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh]"
+            className="relative z-10 w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh]"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
@@ -220,7 +220,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
               {/* Close */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-neutral-100 transition-colors"
+                className="absolute top-4 right-4 p-2 rounded-full hover:bg-neutral-100 transition-colors"
                 aria-label="Close"
               >
                 <X className="w-5 h-5 text-neutral-500" />
@@ -279,7 +279,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                           <div className="space-y-4">
                             <div className="grid grid-cols-2 gap-4">
                               <div>
-                                <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                                <label className="block text-xs font-medium text-neutral-600 mb-2">
                                   First Name
                                 </label>
                                 <input
@@ -294,7 +294,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                 )}
                               </div>
                               <div>
-                                <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                                <label className="block text-xs font-medium text-neutral-600 mb-2">
                                   Last Name
                                 </label>
                                 <input
@@ -310,7 +310,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                               </div>
                             </div>
                             <div>
-                              <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                              <label className="block text-xs font-medium text-neutral-600 mb-2">
                                 Email Address
                               </label>
                               <input
@@ -332,7 +332,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                         {step === 1 && (
                           <div className="space-y-4">
                             <div>
-                              <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                              <label className="block text-xs font-medium text-neutral-600 mb-2">
                                 Travel Style
                               </label>
                               <div className="grid grid-cols-2 gap-3">
@@ -362,7 +362,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                               )}
                             </div>
                             <div>
-                              <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                              <label className="block text-xs font-medium text-neutral-600 mb-2">
                                 Budget Range
                               </label>
                               <div className="grid grid-cols-2 gap-3">
@@ -384,7 +384,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                       }`}
                                     >
                                       <span className="block tabular-nums">{b.range}</span>
-                                      <span className={`block text-xs font-normal mt-0.5 ${active ? "text-brand-700" : "text-neutral-500"}`}>
+                                      <span className={`block text-xs font-normal mt-1 ${active ? "text-brand-700" : "text-neutral-500"}`}>
                                         {b.note}
                                       </span>
                                     </button>
@@ -398,7 +398,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                               )}
                             </div>
                             <div>
-                              <label className="block text-xs font-medium text-neutral-600 mb-1.5">
+                              <label className="block text-xs font-medium text-neutral-600 mb-2">
                                 Group Size
                               </label>
                               <div className="grid grid-cols-2 gap-3">
@@ -450,7 +450,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                     }`}
                                   >
                                     {selected && (
-                                      <Check className="w-3.5 h-3.5 inline mr-1.5" />
+                                      <Check className="w-3.5 h-3.5 inline mr-2" />
                                     )}
                                     {interest}
                                   </button>
@@ -485,7 +485,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                     }`}
                                   >
                                     {selected && (
-                                      <Check className="w-3.5 h-3.5 inline mr-1.5" />
+                                      <Check className="w-3.5 h-3.5 inline mr-2" />
                                     )}
                                     {dest}
                                   </button>
@@ -543,17 +543,17 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                 </button>
                               </div>
                               <div className="flex flex-wrap gap-2">
-                                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-brand-50 text-brand-800 border border-brand-200">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-brand-50 text-brand-800 border border-brand-200">
                                   {form2.getValues("travelStyle") || "—"}
                                 </span>
-                                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200">
                                   {(() => {
                                     const v = form2.getValues("budget");
                                     const match = budgets.find((b) => b.value === v);
                                     return match ? `${match.range} / day` : "—";
                                   })()}
                                 </span>
-                                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200">
                                   {form2.getValues("groupSize") || "—"}
                                 </span>
                               </div>
@@ -574,12 +574,12 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                   Edit
                                 </button>
                               </div>
-                              <div className="flex flex-wrap gap-1.5">
+                              <div className="flex flex-wrap gap-2">
                                 {(form3.getValues("interests") || []).map(
                                   (interest) => (
                                     <span
                                       key={interest}
-                                      className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-brand-50 text-brand-800 border border-brand-200"
+                                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-brand-50 text-brand-800 border border-brand-200"
                                     >
                                       <Check className="w-3 h-3 mr-1" />
                                       {interest}
@@ -604,12 +604,12 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                   Edit
                                 </button>
                               </div>
-                              <div className="flex flex-wrap gap-1.5">
+                              <div className="flex flex-wrap gap-2">
                                 {(form4.getValues("destinations") || []).map(
                                   (dest) => (
                                     <span
                                       key={dest}
-                                      className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-brand-50 text-brand-800 border border-brand-200"
+                                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-brand-50 text-brand-800 border border-brand-200"
                                     >
                                       <Check className="w-3 h-3 mr-1" />
                                       {dest}
@@ -629,7 +629,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                     <button
                       onClick={handleBack}
                       disabled={step === 0}
-                      className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+                      className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                         step === 0
                           ? "text-neutral-300 cursor-not-allowed"
                           : "text-neutral-600 hover:text-neutral-800"
@@ -640,7 +640,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                     </button>
                     <button
                       onClick={handleNext}
-                      className="flex items-center gap-1.5 px-6 py-2.5 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
+                      className="flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
                     >
                       {step === totalSteps - 1 ? "Confirm & Join" : "Continue"}
                       <ChevronRight className="w-4 h-4" />
@@ -669,7 +669,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                   </p>
                   <button
                     onClick={handleClose}
-                    className="px-6 py-2.5 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
+                    className="px-6 py-3 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
                   >
                     Start Exploring
                   </button>

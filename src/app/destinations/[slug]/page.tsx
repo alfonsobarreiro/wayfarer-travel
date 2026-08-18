@@ -93,7 +93,7 @@ export default function DestinationDetailPage({
           <Container className="pb-12 w-full">
             <Link
               href="/destinations"
-              className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm mb-4 transition-colors"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mb-4 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> All Destinations
             </Link>
@@ -104,12 +104,12 @@ export default function DestinationDetailPage({
             >
               {/* Editorial eyebrow — cognac accent gives Guide pages a
                   recurring visual signature distinct from brand navy. */}
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-500/25 backdrop-blur-sm text-accent-100 border border-accent-300/40 text-xs font-medium uppercase tracking-[0.14em]">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/25 backdrop-blur-sm text-accent-100 border border-accent-300/40 text-xs font-medium uppercase tracking-[0.14em]">
                 <BadgeCheck className="w-3.5 h-3.5" />
                 Destination Guide
               </span>
               {isNature && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-sage-500/25 backdrop-blur-sm text-sage-100 border border-sage-300/40 text-xs font-medium">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-sage-500/25 backdrop-blur-sm text-sage-100 border border-sage-300/40 text-xs font-medium">
                   <Leaf className="w-3 h-3" />
                   Nature
                 </span>
@@ -239,14 +239,14 @@ export default function DestinationDetailPage({
                 type. Supporting rows step down to a calmer hierarchy. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
-                className="text-xl font-bold mb-5"
+                className="text-xl font-bold mb-6"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Quick Info
               </h3>
 
               {/* Best Time — promoted row */}
-              <div className="-mx-6 px-6 py-4 mb-5 bg-brand-50/60 border-y border-brand-100">
+              <div className="-mx-6 px-6 py-4 mb-6 bg-brand-50/60 border-y border-brand-100">
                 <div className="flex items-start gap-3">
                   <Calendar className="w-5 h-5 text-brand-700 mt-1 flex-shrink-0" />
                   <div className="min-w-0">
@@ -323,7 +323,7 @@ export default function DestinationDetailPage({
               </p>
               <Link
                 href="/planner"
-                className="inline-flex items-center px-6 py-2.5 rounded-lg bg-white text-brand-700 font-medium text-sm hover:bg-neutral-50 transition-colors"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-brand-700 font-medium text-sm hover:bg-neutral-50 transition-colors"
               >
                 Plan Your Trip
               </Link>

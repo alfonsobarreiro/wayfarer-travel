@@ -392,7 +392,7 @@ export default function PlannerPage() {
                 <button
                   onClick={handlePrint}
                   disabled={segments.length === 0}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >
                   <Printer className="w-4 h-4" />
                   Export
@@ -400,7 +400,7 @@ export default function PlannerPage() {
                 <button
                   onClick={handleShare}
                   disabled={segments.length === 0}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >
                   <Share2 className="w-4 h-4" />
                   Share
@@ -411,12 +411,12 @@ export default function PlannerPage() {
                 <span
                   title="Hand off the trip to a booking partner. Coming next."
                   aria-label="Send to booking. Coming next."
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-sm font-medium text-neutral-400 cursor-not-allowed select-none"
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-sm font-medium text-neutral-400 cursor-not-allowed select-none"
                 >
                   <Ticket className="w-4 h-4" />
                   <span className="hidden sm:inline">Send to booking</span>
                   <span className="sm:hidden">Booking</span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-1.5 py-0.5 rounded">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2 py-1 rounded">
                     Soon
                   </span>
                 </span>
@@ -429,7 +429,7 @@ export default function PlannerPage() {
           <button
             type="button"
             onClick={() => setModelHelpOpen((v) => !v)}
-            className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium text-brand-700 hover:text-brand-800 print:hidden"
+            className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-brand-700 hover:text-brand-800 print:hidden"
           >
             <Info className="w-3.5 h-3.5" />
             How the three primitives work
@@ -467,7 +467,7 @@ export default function PlannerPage() {
       </section>
 
       {/* ── Body ──────────────────────────────────────────── */}
-      <section className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
+      <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
         {/* ── Trip outline (segments) ─────────────────── */}
         <div>
           {segments.length === 0 ? (
@@ -509,7 +509,7 @@ export default function PlannerPage() {
                   setPickerMode("segment");
                   setPickerOpen(true);
                 }}
-                className="mt-5 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-neutral-300 text-neutral-600 font-medium text-sm hover:border-brand-400 hover:text-brand-700 hover:bg-white transition-colors print:hidden"
+                className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-neutral-300 text-neutral-600 font-medium text-sm hover:border-brand-400 hover:text-brand-700 hover:bg-white transition-colors print:hidden"
               >
                 <Plus className="w-4 h-4" />
                 Add another segment
@@ -599,7 +599,7 @@ export default function PlannerPage() {
                         setPickerMode("saved");
                         setPickerOpen(true);
                       }}
-                      className="w-full inline-flex items-center justify-center gap-1.5 py-2 rounded-md border border-neutral-200 text-xs font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-2 py-2 rounded-md border border-neutral-200 text-xs font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       Save a destination
@@ -665,7 +665,7 @@ export default function PlannerPage() {
               </div>
 
               {filteredPicker.length === 0 ? (
-                <p className="py-10 text-center text-sm text-neutral-500">
+                <p className="py-12 text-center text-sm text-neutral-500">
                   No destinations match &ldquo;{pickerQuery}&rdquo;.
                 </p>
               ) : (
@@ -698,7 +698,7 @@ export default function PlannerPage() {
 
               <button
                 onClick={() => setPickerOpen(false)}
-                className="w-full mt-4 py-2.5 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-600 hover:bg-neutral-50 transition-colors"
+                className="w-full mt-4 py-3 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-600 hover:bg-neutral-50 transition-colors"
               >
                 Cancel
               </button>
@@ -714,7 +714,7 @@ export default function PlannerPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{    opacity: 0, y: 12 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-neutral-900 text-white text-sm font-medium shadow-lg flex items-center gap-2"
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-full bg-neutral-900 text-white text-sm font-medium shadow-lg flex items-center gap-2"
           >
             <Check className="w-4 h-4" />
             Link copied. Share away.
@@ -764,7 +764,7 @@ function EmptyState({ onAdd }: { onAdd: () => void }) {
       </p>
       <button
         onClick={onAdd}
-        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors"
       >
         <Plus className="w-4 h-4" />
         Add your first segment
@@ -781,7 +781,7 @@ function TravelLinkRow({ link }: { link: TravelLink }) {
   return (
     <div className="flex items-center gap-3 my-2 pl-12 print:pl-6">
       <span className="w-px flex-shrink-0 h-4 bg-neutral-300" aria-hidden />
-      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-medium text-neutral-600">
+      <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-medium text-neutral-600">
         <Icon className="w-3.5 h-3.5" />
         <span>{link.label}</span>
         <span className="text-neutral-400">·</span>
@@ -824,7 +824,7 @@ function SegmentCard({
       value={segment}
       className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden print:shadow-none print:border-neutral-300"
     >
-      <div className="p-5">
+      <div className="p-6">
         <div className="flex items-start gap-3">
           {/* Drag handle */}
           <div className="mt-1 cursor-grab active:cursor-grabbing text-neutral-300 hover:text-neutral-500 transition-colors print:hidden">
@@ -863,7 +863,7 @@ function SegmentCard({
                     {segment.destination.name}
                   </h3>
                 </Link>
-                <p className="text-xs text-neutral-500 flex items-center gap-1 mt-0.5">
+                <p className="text-xs text-neutral-500 flex items-center gap-1 mt-1">
                   <MapPin className="w-3 h-3" />
                   {segment.destination.country}
                 </p>
@@ -871,7 +871,7 @@ function SegmentCard({
               <button
                 onClick={onRemove}
                 aria-label="Remove segment"
-                className="p-1.5 rounded-md text-neutral-400 hover:text-text-danger hover:bg-bg-danger-muted transition-colors print:hidden"
+                className="p-2 rounded-md text-neutral-400 hover:text-text-danger hover:bg-bg-danger-muted transition-colors print:hidden"
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -879,7 +879,7 @@ function SegmentCard({
 
             {/* Flexible duration + when */}
             <div className="mt-3 flex flex-wrap items-center gap-2 print:gap-3">
-              <label className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-50 border border-brand-100 text-xs font-medium text-brand-800">
+              <label className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-xs font-medium text-brand-800">
                 <CalendarRange className="w-3.5 h-3.5" />
                 <input
                   type="number"
@@ -894,7 +894,7 @@ function SegmentCard({
                 />
                 <span>day{segment.duration !== 1 ? "s" : ""}</span>
               </label>
-              <label className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-medium text-neutral-700">
+              <label className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-medium text-neutral-700">
                 <span className="text-neutral-500">When:</span>
                 <input
                   type="text"
@@ -910,11 +910,11 @@ function SegmentCard({
         </div>
 
         {/* Activities grouped by category */}
-        <div className="mt-5 pl-12 print:pl-6 space-y-3">
+        <div className="mt-6 pl-12 print:pl-6 space-y-3">
           {presentCategories.map((cat) => (
             <div key={cat}>
               <CategoryHeader category={cat} />
-              <ul className="mt-1.5 space-y-1.5">
+              <ul className="mt-2 space-y-2">
                 <AnimatePresence>
                   {grouped[cat].map((a) => (
                     <motion.li
@@ -928,7 +928,7 @@ function SegmentCard({
                       <input
                         value={a.label}
                         onChange={(e) => onUpdateActivity(a.id, e.target.value)}
-                        className="flex-1 text-sm text-neutral-800 bg-transparent border-b border-transparent hover:border-neutral-200 focus:border-brand-400 outline-none py-0.5 transition-colors"
+                        className="flex-1 text-sm text-neutral-800 bg-transparent border-b border-transparent hover:border-neutral-200 focus:border-brand-400 outline-none py-1 transition-colors"
                       />
                       <button
                         onClick={() => onRemoveActivity(a.id)}
@@ -948,7 +948,7 @@ function SegmentCard({
           <div className="relative print:hidden">
             <button
               onClick={() => setShowActivityMenu((v) => !v)}
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-brand-700 transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-medium text-neutral-500 hover:text-brand-700 transition-colors"
             >
               <Plus className="w-3.5 h-3.5" />
               Add activity
@@ -959,7 +959,7 @@ function SegmentCard({
                   initial={{ opacity: 0, y: -4 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{    opacity: 0, y: -4 }}
-                  className="absolute z-10 mt-1.5 bg-white rounded-lg border border-neutral-200 shadow-lg p-1 flex flex-wrap gap-1 min-w-[280px]"
+                  className="absolute z-10 mt-2 bg-white rounded-lg border border-neutral-200 shadow-lg p-1 flex flex-wrap gap-1 min-w-[280px]"
                 >
                   {CATEGORY_ORDER.map((c) => {
                     const meta = CATEGORY_META[c];
@@ -971,7 +971,7 @@ function SegmentCard({
                           onAddActivity(c);
                           setShowActivityMenu(false);
                         }}
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md hover:bg-neutral-50 text-xs font-medium text-neutral-700"
+                        className="inline-flex items-center gap-2 px-3 py-2 rounded-md hover:bg-neutral-50 text-xs font-medium text-neutral-700"
                       >
                         <Icon className="w-3.5 h-3.5 text-neutral-500" />
                         {meta.label}
@@ -993,7 +993,7 @@ function CategoryHeader({ category }: { category: ActivityCategory }) {
   const Icon = meta.icon;
   return (
     <div className="flex items-center gap-2">
-      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wider border ${meta.tone}`}>
+      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold uppercase tracking-wider border ${meta.tone}`}>
         <Icon className="w-3 h-3" />
         {meta.label}
       </span>
