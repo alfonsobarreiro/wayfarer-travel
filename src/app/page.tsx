@@ -438,7 +438,7 @@ export default function HomePage() {
             backgroundSize: "cover",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Container aligns the section's outer gutter with the rest of the
             homepage; the inner `max-w-3xl mx-auto text-center` is the centered
@@ -458,7 +458,7 @@ export default function HomePage() {
             Interactive planning.
           </motion.h2>
           <motion.p
-            className="text-base text-white/70 mb-12 max-w-xl mx-auto"
+            className="text-[1.0625rem] text-white/90 mb-12 max-w-xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
