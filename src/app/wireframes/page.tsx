@@ -153,7 +153,7 @@ export default function WireframesPage() {
   const isDesktop = viewport === "desktop";
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-bg-surface-ground">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
         <Container className="h-16 flex items-center justify-between">

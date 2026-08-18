@@ -164,7 +164,7 @@ export default function HomePage() {
             >
               <button
                 onClick={() => setSignUpOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors shadow-lg shadow-brand-600/20"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors shadow-lg shadow-brand-600/20"
               >
                 Sign Up!
               </button>
@@ -287,7 +287,7 @@ export default function HomePage() {
       </Section>
 
       {/* ── Discover Teaser ──────────────────────── */}
-      <Section className="bg-neutral-900">
+      <Section className="bg-bg-surface-inverse">
         <Container>
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="md:w-1/2">
@@ -315,7 +315,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/discover"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-medium text-sm hover:bg-bg-primary-hover transition-colors"
               >
                 Open the Globe
                 <ArrowRight className="w-4 h-4" />
@@ -353,7 +353,7 @@ export default function HomePage() {
       </Section>
 
       {/* ── Why Wayfarer — split layout with hover image ── */}
-      <Section className="bg-neutral-50">
+      <Section className="bg-bg-surface-ground">
         <Container>
           <div className="mb-14">
             <motion.p
@@ -505,7 +505,7 @@ export default function HomePage() {
           </motion.p>
           <motion.button
             onClick={() => setSignUpOpen(true)}
-            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-brand-600 text-white font-medium text-base hover:bg-brand-700 transition-colors shadow-xl shadow-brand-600/30"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-bg-primary text-white font-medium text-base hover:bg-bg-primary-hover transition-colors shadow-xl shadow-brand-600/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

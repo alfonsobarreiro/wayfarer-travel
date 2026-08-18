@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-900 text-neutral-200">
+    <footer className="bg-bg-surface-inverse text-neutral-200">
       <Container className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}

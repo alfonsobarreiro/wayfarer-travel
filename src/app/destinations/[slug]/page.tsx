@@ -311,7 +311,7 @@ export default function DestinationDetailPage({
             </div>
 
             {/* CTA */}
-            <div className="rounded-lg bg-brand-600 p-6 text-center">
+            <div className="rounded-lg bg-bg-primary p-6 text-center">
               <h3
                 className="text-xl font-bold text-white mb-2"
                 style={{ fontFamily: "var(--font-heading)" }}

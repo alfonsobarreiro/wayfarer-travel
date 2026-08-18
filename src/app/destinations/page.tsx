@@ -67,7 +67,7 @@ export default function DestinationsPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <Section className="bg-neutral-900 text-white">
+      <Section className="bg-bg-surface-inverse text-white">
         <Container>
           {/* Editorial eyebrow — cognac accent is Wayfarer's Guide-page
               signature; used sparingly (one per zone). */}
@@ -206,7 +206,7 @@ export default function DestinationsPage() {
                 onClick={() => setActiveContinent(c)}
                 className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                   activeContinent === c
-                    ? "bg-brand-600 text-white shadow-sm"
+                    ? "bg-bg-primary text-white shadow-sm"
                     : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
                 }`}
               >

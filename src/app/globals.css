@@ -74,26 +74,39 @@
   --color-neutral-700: #3F3D3B;
   --color-neutral-800: #2E2E30;
   --color-neutral-900: #1C1C1E;
+  --color-neutral-950: #0E0E10;
 
   /* ----------------------------------------------------------
      SEMANTIC: Background
+
+     Interactive primary (CTAs) anchors on brand-600 rather than
+     brand-500 so hover/active have real headroom without walking
+     off the ramp. Surface roles are named by altitude — ground is
+     the off-white page rest state, raised is the muted band that
+     sits above it, inverse is the ink surface. Map tokens keep
+     the globe / marker colors in the same alias layer as the UI
+     so a single palette swap moves both together.
   ---------------------------------------------------------- */
-  --color-bg-page:            #FFFFFF;
-  --color-bg-surface:         var(--color-neutral-50);
-  --color-bg-surface-raised:  #FFFFFF;
-  --color-bg-surface-invert:  var(--color-neutral-900);
-  --color-bg-subtle:          var(--color-neutral-100);
-  --color-bg-muted:           var(--color-neutral-200);
-  --color-bg-primary:         var(--color-brand-500);
-  --color-bg-primary-hover:   var(--color-brand-700);
-  --color-bg-primary-active:  var(--color-brand-600);
-  --color-bg-primary-muted:   var(--color-brand-50);
-  --color-bg-accent:          var(--color-accent-500);
-  --color-bg-accent-hover:    var(--color-accent-600);
-  --color-bg-accent-muted:    var(--color-accent-50);
-  --color-bg-success:         var(--color-sage-500);
-  --color-bg-success-muted:   var(--color-sage-100);
-  --color-bg-danger-muted:    #FEEFEF;
+  --color-bg-page:              #FFFFFF;
+  --color-bg-surface:           var(--color-neutral-50);
+  --color-bg-surface-ground:    var(--color-neutral-50);
+  --color-bg-surface-raised:    var(--color-neutral-100);
+  --color-bg-surface-inverse:   var(--color-neutral-950);
+  --color-bg-surface-invert:    var(--color-neutral-900);
+  --color-bg-subtle:            var(--color-neutral-100);
+  --color-bg-muted:             var(--color-neutral-200);
+  --color-bg-primary:           var(--color-brand-600);
+  --color-bg-primary-hover:     var(--color-brand-700);
+  --color-bg-primary-active:    var(--color-brand-800);
+  --color-bg-primary-muted:     var(--color-brand-100);
+  --color-bg-accent:            var(--color-accent-500);
+  --color-bg-accent-hover:      var(--color-accent-600);
+  --color-bg-accent-muted:      var(--color-accent-50);
+  --color-bg-success:           var(--color-sage-500);
+  --color-bg-success-muted:     var(--color-sage-100);
+  --color-bg-danger-muted:      #FEEFEF;
+  --color-bg-map-marker:        var(--color-accent-500);
+  --color-bg-map-atmosphere:    var(--color-brand-100);
 
   /* ----------------------------------------------------------
      SEMANTIC: Text
@@ -106,8 +119,8 @@
   --color-text-primary:     var(--color-brand-500);
   --color-text-on-primary:  #FFFFFF;
   --color-text-accent:      var(--color-accent-700);
-  --color-text-link:        var(--color-brand-500);
-  --color-text-link-hover:  var(--color-brand-700);
+  --color-text-link:        var(--color-brand-600);
+  --color-text-link-hover:  var(--color-brand-800);
   /* State text — cross-brand hex kept identical to MSR signal-error to
      preserve one universal danger hue; sage-800 gives success enough
      contrast against sage-100 muted backgrounds. */

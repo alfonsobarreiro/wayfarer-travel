@@ -100,7 +100,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="w-full py-2.5 rounded-lg bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition-colors"
+                  className="w-full py-2.5 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
                 >
                   Continue
                 </button>
@@ -171,7 +171,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
 
                 <button
                   type="submit"
-                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition-colors"
+                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
                 >
                   Sign in
                   <ArrowRight className="w-4 h-4" />

@@ -197,7 +197,7 @@ export default function FormWireframePage() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-bg-surface-ground">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
         <Container className="h-16 flex items-center justify-between">
@@ -250,7 +250,7 @@ export default function FormWireframePage() {
               onClick={() => setActiveStep(s.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-colors flex-shrink-0 ${
                 activeStep === s.id
-                  ? "bg-brand-600 text-white"
+                  ? "bg-bg-primary text-white"
                   : "bg-white text-neutral-500 border border-neutral-200 hover:border-neutral-300"
               }`}
             >

@@ -362,7 +362,7 @@ export default function PlannerPage() {
   /* ── Render ───────────────────────────────────────────────── */
 
   return (
-    <div className="pt-16 min-h-screen bg-neutral-50 print:bg-white">
+    <div className="pt-16 min-h-screen bg-bg-surface-ground print:bg-white">
       {/* ── Header ────────────────────────────────────────── */}
       <section className="bg-white border-b border-neutral-200 py-8 print:py-4">
         <div className="max-w-6xl mx-auto px-6">
@@ -400,7 +400,7 @@ export default function PlannerPage() {
                 <button
                   onClick={handleShare}
                   disabled={segments.length === 0}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >
                   <Share2 className="w-4 h-4" />
                   Share
@@ -764,7 +764,7 @@ function EmptyState({ onAdd }: { onAdd: () => void }) {
       </p>
       <button
         onClick={onAdd}
-        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors"
       >
         <Plus className="w-4 h-4" />
         Add your first segment

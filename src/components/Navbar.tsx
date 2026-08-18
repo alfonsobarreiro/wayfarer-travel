@@ -89,7 +89,7 @@ export function Navbar() {
             </button>
             <button
               onClick={() => setSignUpOpen(true)}
-              className="hidden md:inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition-colors"
+              className="hidden md:inline-flex items-center px-3.5 py-1.5 rounded-full bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
             >
               Sign up
             </button>
@@ -146,7 +146,7 @@ export function Navbar() {
                   setSignUpOpen(true);
                   setMobileOpen(false);
                 }}
-                className="flex-1 py-2 rounded-full bg-brand-600 text-white text-sm font-semibold"
+                className="flex-1 py-2 rounded-full bg-bg-primary text-white text-sm font-semibold"
               >
                 Sign up
               </button>

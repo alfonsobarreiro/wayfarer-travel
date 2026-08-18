@@ -18,15 +18,20 @@ import { cn } from "@/lib/cn";
  * same rule the global :focus-visible baseline uses, restated on the
  * button so :focus-visible works even when the global rule is overridden.
  *
- * Uses ramp tokens (bg-brand-500 etc.) today. Bundle 2 will re-token to
- * semantic role names (bg-interactive-primary) once those exist.
+ * Primary routes through the semantic alias layer (bg-bg-primary,
+ * bg-bg-primary-hover, bg-bg-primary-active — the `bg-bg-*` shape
+ * comes from Tailwind v4 turning the `--color-bg-*` token names
+ * into utilities as-is) added in Bundle 2 so every
+ * CTA in the app hangs off one Navy anchor and hover/active never
+ * walks off the ramp. Secondary/ghost still use ramp tokens for
+ * the outlined-border and tinted-hover treatments.
  */
 export type ButtonVariant = "primary" | "secondary" | "ghost";
 export type ButtonSize    = "sm" | "md" | "lg";
 
 const VARIANT: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand-500 text-white hover:bg-brand-700 active:bg-brand-600 " +
+    "bg-bg-primary text-white hover:bg-bg-primary-hover active:bg-bg-primary-active " +
     "disabled:bg-neutral-200 disabled:text-neutral-400",
   secondary:
     "bg-transparent text-brand-700 border border-brand-500 " +

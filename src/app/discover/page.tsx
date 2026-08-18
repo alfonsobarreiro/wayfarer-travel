@@ -30,7 +30,7 @@ export default function DiscoverPage() {
   ).slice(0, 6);
 
   return (
-    <div className="pt-16 min-h-screen bg-neutral-950">
+    <div className="pt-16 min-h-screen bg-bg-surface-inverse">
       {/* Hero */}
       <Section>
         <Container>
@@ -100,7 +100,7 @@ export default function DiscoverPage() {
                 key={selected.slug}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden"
+                className="bg-bg-surface-inverse rounded-lg border border-neutral-800 overflow-hidden"
               >
                 <div className="relative aspect-[16/9]">
                   <DestinationImage
@@ -152,7 +152,7 @@ export default function DiscoverPage() {
       </section>
 
       {/* Hidden Gems — discovery-focused section */}
-      <Section className="bg-neutral-900">
+      <Section className="bg-bg-surface-inverse">
         <Container>
           <motion.h2
             className="text-3xl font-medium text-white mb-2"
@@ -209,7 +209,7 @@ export default function DiscoverPage() {
           <div className="mt-10 text-center">
             <Link
               href="/destinations"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-medium text-sm hover:bg-bg-primary-hover transition-colors"
             >
               Browse all destinations <ArrowRight className="w-4 h-4" />
             </Link>

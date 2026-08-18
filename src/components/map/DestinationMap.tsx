@@ -28,6 +28,18 @@ export function DestinationMap({
 
     mapboxgl.accessToken = MAPBOX_TOKEN;
 
+    // Read marker + text colors from the semantic alias layer so a
+    // palette swap in globals.css moves the map with the rest of the
+    // UI. --color-bg-map-marker anchors the pin (accent-500), and
+    // --color-accent-700 the hover state. Fallback hexes keep the
+    // globe alive if the vars ever fail to resolve.
+    const rootStyles = getComputedStyle(document.documentElement);
+    const readVar = (name: string, fallback: string) =>
+      (rootStyles.getPropertyValue(name).trim() || fallback);
+    const ACCENT       = readVar("--color-bg-map-marker", "#D27A5E");
+    const ACCENT_HOVER = readVar("--color-accent-700",    "#8F4A37");
+    const POPUP_MUTED  = readVar("--color-text-muted",    "#6B6560");
+
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/outdoors-v12",
@@ -61,10 +73,6 @@ export function DestinationMap({
         // IMPORTANT: No `transform` on this element — Mapbox owns `transform`
         // for marker positioning. Setting it causes pins to jump to 0,0.
         // Hover feedback uses only background + box-shadow changes.
-        // Brand: accent-500 = Terra Cotta per brief ("secondary icons in terra cotta").
-        // Hover: accent-700 for darker active feedback.
-        const ACCENT = "#D27A5E";
-        const ACCENT_HOVER = "#8F4A37";
         el.style.cssText = `
           width: 32px;
           height: 32px;
@@ -113,7 +121,7 @@ export function DestinationMap({
         }).setHTML(`
           <div style="font-family: system-ui; padding: 4px;">
             <strong style="font-size: 14px;">${dest.name}</strong>
-            <p style="font-size: 12px; color: #666; margin: 4px 0 0;">${dest.tagline}</p>
+            <p style="font-size: 12px; color: ${POPUP_MUTED}; margin: 4px 0 0;">${dest.tagline}</p>
           </div>
         `);
 

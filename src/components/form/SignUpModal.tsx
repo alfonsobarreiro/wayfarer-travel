@@ -232,7 +232,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                   <div
                     key={i}
                     className={`h-1 flex-1 rounded-full transition-colors duration-300 ${
-                      i <= step ? "bg-brand-600" : "bg-neutral-200"
+                      i <= step ? "bg-bg-primary" : "bg-neutral-200"
                     }`}
                   />
                 ))}
@@ -640,7 +640,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                     </button>
                     <button
                       onClick={handleNext}
-                      className="flex items-center gap-1.5 px-6 py-2.5 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
+                      className="flex items-center gap-1.5 px-6 py-2.5 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
                     >
                       {step === totalSteps - 1 ? "Confirm & Join" : "Continue"}
                       <ChevronRight className="w-4 h-4" />
@@ -669,7 +669,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                   </p>
                   <button
                     onClick={handleClose}
-                    className="px-6 py-2.5 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
+                    className="px-6 py-2.5 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
                   >
                     Start Exploring
                   </button>
