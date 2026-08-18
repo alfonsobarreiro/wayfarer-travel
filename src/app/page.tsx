@@ -155,9 +155,10 @@ export default function HomePage() {
                   Medium 500 weight ceiling per constraint list; text-[0.9375rem] = 15px on-scale. */}
               <button
                 onClick={() => setSignUpOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bg-primary text-white font-medium text-[0.9375rem] hover:bg-bg-primary-hover transition-colors shadow-primary"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-bg-primary text-white font-medium text-[0.9375rem] hover:bg-bg-primary-hover transition-colors shadow-primary"
               >
-                Sign Up!
+                Sign Up
+                <ArrowRight className="w-4 h-4" />
               </button>
             </motion.div>
           </motion.div>
