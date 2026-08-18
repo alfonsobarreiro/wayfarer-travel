@@ -126,7 +126,7 @@ export default function HomePage() {
             animate="visible"
           >
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-neutral-900 mb-6"
+              className="text-5xl md:text-6xl font-medium tracking-tight text-neutral-900 mb-6"
               style={{ fontFamily: "var(--font-heading)" }}
               variants={fadeUp}
               custom={0}
@@ -139,7 +139,7 @@ export default function HomePage() {
             </motion.h1>
 
             <motion.p
-              className="text-lg text-neutral-600 mb-4 max-w-md"
+              className="text-base text-neutral-600 mb-4 max-w-md"
               variants={fadeUp}
               custom={1}
             >
@@ -189,7 +189,7 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-10">
             <div>
               <motion.h2
-                className="text-3xl md:text-4xl font-bold tracking-tight"
+                className="text-3xl font-medium tracking-tight"
                 style={{ fontFamily: "var(--font-heading)" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -276,7 +276,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 mt-8 flex justify-end">
           <Link
             href="/destinations"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"
           >
             View all destinations
             <ArrowRight className="w-4 h-4" />
@@ -298,7 +298,7 @@ export default function HomePage() {
                 Interactive
               </motion.p>
               <motion.h2
-                className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4"
+                className="text-3xl font-medium text-white tracking-tight mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -306,14 +306,14 @@ export default function HomePage() {
               >
                 Explore the Globe
               </motion.h2>
-              <p className="text-neutral-400 mb-8 leading-relaxed max-w-md">
+              <p className="text-neutral-400 mb-8 max-w-md">
                 Spin a 3D globe, click any pin, and discover destinations that
                 match your curiosity, not an algorithm. {destinations.length}+
                 places, all in your hands.
               </p>
               <Link
                 href="/discover"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-colors"
               >
                 Open the Globe
                 <ArrowRight className="w-4 h-4" />
@@ -340,7 +340,7 @@ export default function HomePage() {
                   <p className="text-white/60 text-xs font-medium uppercase tracking-widest mb-1">
                     {destinations.length}+ destinations
                   </p>
-                  <p className="text-white text-sm font-semibold">
+                  <p className="text-white text-sm font-medium">
                     Spin. Click. Discover.
                   </p>
                 </div>
@@ -363,7 +363,7 @@ export default function HomePage() {
               Why Wayfarer
             </motion.p>
             <motion.h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight"
+              className="text-3xl font-medium text-neutral-900 tracking-tight"
               style={{ fontFamily: "var(--font-heading)" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -391,7 +391,7 @@ export default function HomePage() {
                   <div className="flex gap-6">
                     {/* Number */}
                     <span
-                      className={`text-3xl md:text-4xl font-bold transition-colors duration-300 flex-shrink-0 w-12 ${
+                      className={`text-2xl md:text-3xl font-medium transition-colors duration-300 flex-shrink-0 w-12 ${
                         hoveredBenefit === i ? "text-brand-500" : "text-neutral-200"
                       }`}
                       style={{ fontFamily: "var(--font-heading)" }}
@@ -406,13 +406,13 @@ export default function HomePage() {
                           hoveredBenefit === i ? "text-brand-600" : "text-neutral-500"
                         }`} />
                         <h3
-                          className="text-lg md:text-xl font-bold text-neutral-900"
+                          className="text-xl md:text-xl font-bold text-neutral-900"
                           style={{ fontFamily: "var(--font-heading)" }}
                         >
                           {benefit.title}
                         </h3>
                       </div>
-                      <p className="text-neutral-500 leading-relaxed text-sm md:text-base">
+                      <p className="text-neutral-500 text-sm md:text-base">
                         {benefit.description}
                       </p>
                     </div>
@@ -443,7 +443,7 @@ export default function HomePage() {
                     {benefits[hoveredBenefit].number}
                   </p>
                   <p
-                    className="text-white text-xl font-bold"
+                    className="text-white text-xl font-medium"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {benefits[hoveredBenefit].title}
@@ -479,7 +479,7 @@ export default function HomePage() {
             Your next adventure starts here
           </motion.p>
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -490,7 +490,7 @@ export default function HomePage() {
             supports your journey
           </motion.h2>
           <motion.p
-            className="text-lg text-white/70 mb-10 max-w-xl mx-auto"
+            className="text-base text-white/70 mb-10 max-w-xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -500,7 +500,7 @@ export default function HomePage() {
           </motion.p>
           <motion.button
             onClick={() => setSignUpOpen(true)}
-            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-brand-600 text-white font-semibold text-base hover:bg-brand-700 transition-colors shadow-xl shadow-brand-600/30"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-brand-600 text-white font-medium text-base hover:bg-brand-700 transition-colors shadow-xl shadow-brand-600/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

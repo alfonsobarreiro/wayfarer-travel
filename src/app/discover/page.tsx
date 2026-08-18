@@ -41,7 +41,7 @@ export default function DiscoverPage() {
             Interactive Explorer
           </motion.div>
           <motion.h1
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-4xl md:text-5xl font-medium text-white mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function DiscoverPage() {
             Discover Your Next Adventure
           </motion.h1>
           <motion.p
-            className="text-neutral-400 text-lg max-w-xl"
+            className="text-neutral-400 text-base max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           >
@@ -67,7 +67,7 @@ export default function DiscoverPage() {
           >
             <Search className="w-4 h-4 text-white/70" />
             <span className="flex-1 text-left">Search a country, region, or interest</span>
-            <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
+            <kbd className="text-xs font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
               ⌘K
             </kbd>
           </motion.button>
@@ -124,12 +124,12 @@ export default function DiscoverPage() {
                   <p className="text-brand-300 text-xs font-medium mb-3">
                     {selected.tagline}
                   </p>
-                  <p className="text-neutral-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-neutral-400 text-sm mb-4 line-clamp-3">
                     {selected.description}
                   </p>
                   <Link
                     href={`/destinations/${selected.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-400 hover:text-brand-300 transition-colors"
                   >
                     View full guide <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -151,7 +151,7 @@ export default function DiscoverPage() {
       <section className="bg-neutral-900 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
-            className="text-3xl font-bold text-white mb-2"
+            className="text-3xl font-medium text-white mb-2"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -205,7 +205,7 @@ export default function DiscoverPage() {
           <div className="mt-10 text-center">
             <Link
               href="/destinations"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-colors"
             >
               Browse all destinations <ArrowRight className="w-4 h-4" />
             </Link>

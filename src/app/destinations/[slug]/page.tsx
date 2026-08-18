@@ -83,7 +83,7 @@ export default function DestinationDetailPage({
               <ArrowLeft className="w-4 h-4" /> All Destinations
             </Link>
             <motion.div
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-semibold mb-4"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
@@ -91,7 +91,7 @@ export default function DestinationDetailPage({
               Curated Experience
             </motion.div>
             <motion.h1
-              className="text-4xl md:text-6xl font-bold text-white mb-2"
+              className="text-4xl md:text-6xl font-medium text-white mb-2"
               style={{ fontFamily: "var(--font-heading)" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
@@ -99,7 +99,7 @@ export default function DestinationDetailPage({
               {dest.name}
             </motion.h1>
             <motion.p
-              className="text-lg text-white/80 flex items-center gap-2"
+              className="text-base text-white/80 flex items-center gap-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
             >
@@ -126,7 +126,7 @@ export default function DestinationDetailPage({
               >
                 About {dest.name}
               </h2>
-              <p className="text-neutral-600 leading-relaxed text-base">
+              <p className="text-neutral-600 text-base">
                 {dest.longDescription}
               </p>
             </motion.div>
@@ -186,7 +186,7 @@ export default function DestinationDetailPage({
                     <span className="text-xs font-mono text-neutral-400 tabular-nums w-5 flex-shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-base leading-relaxed">{h}</span>
+                    <span className="text-base">{h}</span>
                   </li>
                 ))}
               </ol>
@@ -214,7 +214,7 @@ export default function DestinationDetailPage({
                 type. Supporting rows step down to a calmer hierarchy. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
-                className="text-lg font-bold mb-5"
+                className="text-xl font-bold mb-5"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Quick Info
@@ -225,10 +225,10 @@ export default function DestinationDetailPage({
                 <div className="flex items-start gap-3">
                   <Calendar className="w-5 h-5 text-brand-700 mt-1 flex-shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-700 mb-1">
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-700 mb-1">
                       Best Time to Visit
                     </p>
-                    <p className="text-base font-semibold text-neutral-900 leading-snug">
+                    <p className="text-base font-medium text-neutral-900">
                       {dest.bestTimeToVisit}
                     </p>
                   </div>
@@ -241,7 +241,7 @@ export default function DestinationDetailPage({
                   <div key={item.label} className="flex items-start gap-3">
                     <item.icon className="w-4 h-4 text-neutral-400 mt-1 flex-shrink-0" />
                     <div className="min-w-0">
-                      <dt className="text-[11px] font-medium text-neutral-500 uppercase tracking-wider">
+                      <dt className="text-xs font-medium text-neutral-500 uppercase tracking-wider">
                         {item.label}
                       </dt>
                       <dd className="text-sm font-medium text-neutral-900">
@@ -258,7 +258,7 @@ export default function DestinationDetailPage({
                 natural separator; body = the rest. */}
             <div className="rounded-lg border border-neutral-200 p-6">
               <h3
-                className="text-lg font-bold mb-4 flex items-center gap-2"
+                className="text-xl font-bold mb-4 flex items-center gap-2"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 <Lightbulb className="w-5 h-5 text-brand-600" />
@@ -269,11 +269,11 @@ export default function DestinationDetailPage({
                   const { title, body } = parseTip(tip);
                   return (
                     <li key={i} className="pl-4 border-l-2 border-brand-200">
-                      <p className="text-sm font-semibold text-neutral-900 leading-snug">
+                      <p className="text-sm font-medium text-neutral-900">
                         {title}
                       </p>
                       {body && (
-                        <p className="text-sm text-neutral-600 leading-relaxed mt-1">
+                        <p className="text-sm text-neutral-600 mt-1">
                           {body}
                         </p>
                       )}
@@ -286,7 +286,7 @@ export default function DestinationDetailPage({
             {/* CTA */}
             <div className="rounded-lg bg-brand-600 p-6 text-center">
               <h3
-                className="text-lg font-bold text-white mb-2"
+                className="text-xl font-bold text-white mb-2"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Ready to Go?
@@ -296,7 +296,7 @@ export default function DestinationDetailPage({
               </p>
               <Link
                 href="/planner"
-                className="inline-flex items-center px-6 py-2.5 rounded-lg bg-white text-brand-700 font-semibold text-sm hover:bg-neutral-50 transition-colors"
+                className="inline-flex items-center px-6 py-2.5 rounded-lg bg-white text-brand-700 font-medium text-sm hover:bg-neutral-50 transition-colors"
               >
                 Plan Your Trip
               </Link>

@@ -66,7 +66,7 @@ export function Navbar() {
             >
               <Search className="w-4 h-4" />
               <span className="flex-1 text-left">Search destinations</span>
-              <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-500 border border-neutral-200">
+              <kbd className="text-xs font-mono px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-500 border border-neutral-200">
                 {isMac ? "⌘K" : "Ctrl K"}
               </kbd>
             </button>

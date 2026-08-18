@@ -51,7 +51,7 @@ export default function DestinationsPage() {
       <section className="bg-neutral-900 text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-medium mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export default function DestinationsPage() {
             Top Spots
           </motion.h1>
           <motion.p
-            className="text-neutral-400 text-lg max-w-xl"
+            className="text-neutral-400 text-base max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           >
@@ -78,7 +78,7 @@ export default function DestinationsPage() {
           >
             <Search className="w-4 h-4 text-white/70" />
             <span className="flex-1 text-left">Search a country, region, or interest</span>
-            <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
+            <kbd className="text-xs font-mono px-1.5 py-0.5 rounded bg-white/15 text-white/80 border border-white/20">
               ⌘K
             </kbd>
           </motion.button>
@@ -130,7 +130,7 @@ export default function DestinationsPage() {
                 </p>
                 <Link
                   href={`/destinations/${selected.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800 transition-colors"
                 >
                   View full guide <ArrowRight className="w-4 h-4" />
                 </Link>

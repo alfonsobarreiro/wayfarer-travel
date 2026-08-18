@@ -132,7 +132,7 @@ export function SearchOverlay() {
                 className="flex-1 bg-transparent outline-none text-base text-neutral-900 placeholder:text-neutral-400"
                 aria-label="Search input"
               />
-              <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-neutral-200 text-[10px] font-mono text-neutral-500 bg-neutral-50">
+              <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-neutral-200 text-xs font-mono text-neutral-500 bg-neutral-50">
                 Esc
               </kbd>
               <button
@@ -153,7 +153,7 @@ export function SearchOverlay() {
               ) : (
                 <>
                   {!query.trim() && (
-                    <p className="px-5 pt-4 pb-2 text-[11px] font-semibold uppercase tracking-wider text-neutral-400">
+                    <p className="px-5 pt-4 pb-2 text-xs font-semibold uppercase tracking-wider text-neutral-400">
                       Suggested
                     </p>
                   )}
@@ -181,7 +181,7 @@ export function SearchOverlay() {
                               />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <p className="text-sm font-semibold text-neutral-900 truncate">
+                              <p className="text-sm font-medium text-neutral-900 truncate">
                                 {r.d.name}
                               </p>
                               <p className="text-xs text-neutral-500 truncate flex items-center gap-1">
@@ -189,7 +189,7 @@ export function SearchOverlay() {
                                 {r.d.country} &middot; {r.d.continent}
                               </p>
                             </div>
-                            <span className="hidden sm:inline text-[10px] font-medium uppercase tracking-wider text-neutral-400">
+                            <span className="hidden sm:inline text-xs font-medium uppercase tracking-wider text-neutral-400">
                               {r.d.categories[0]}
                             </span>
                           </Link>
@@ -202,7 +202,7 @@ export function SearchOverlay() {
             </div>
 
             {/* Footer hint */}
-            <div className="hidden sm:flex items-center justify-between px-5 py-3 border-t border-neutral-200 bg-neutral-50 text-[11px] text-neutral-500">
+            <div className="hidden sm:flex items-center justify-between px-5 py-3 border-t border-neutral-200 bg-neutral-50 text-xs text-neutral-500">
               <div className="flex items-center gap-3">
                 <span>
                   <kbd className="px-1.5 py-0.5 rounded border border-neutral-300 font-mono">&uarr;&darr;</kbd>{" "}

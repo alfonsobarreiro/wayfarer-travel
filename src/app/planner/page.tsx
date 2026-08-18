@@ -369,7 +369,7 @@ export default function PlannerPage() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <h1
-                className="text-3xl md:text-4xl font-bold text-neutral-900"
+                className="text-4xl font-bold text-neutral-900"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Trip Planner
@@ -416,7 +416,7 @@ export default function PlannerPage() {
                   <Ticket className="w-4 h-4" />
                   <span className="hidden sm:inline">Send to booking</span>
                   <span className="sm:hidden">Booking</span>
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-1.5 py-0.5 rounded">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-1.5 py-0.5 rounded">
                     Soon
                   </span>
                 </span>
@@ -528,7 +528,7 @@ export default function PlannerPage() {
             >
               <div className="flex items-center gap-2">
                 <Bookmark className="w-4 h-4 text-brand-600" />
-                <span className="text-sm font-semibold text-neutral-900">Saved</span>
+                <span className="text-sm font-medium text-neutral-900">Saved</span>
                 <span className="text-xs text-neutral-500">{savedCount}</span>
               </div>
               {savedOpen ? <ChevronDown className="w-4 h-4 text-neutral-400" /> : <ChevronRight className="w-4 h-4 text-neutral-400" />}
@@ -543,7 +543,7 @@ export default function PlannerPage() {
                 >
                   <div className="p-3">
                     {saved.length === 0 ? (
-                      <p className="text-xs text-neutral-500 leading-relaxed mb-3">
+                      <p className="text-xs text-neutral-500 mb-3">
                         Bookmark destinations you&apos;re curious about but not
                         ready to commit. Promote them to a segment when the trip
                         firms up.
@@ -566,10 +566,10 @@ export default function PlannerPage() {
                               />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <p className="text-xs font-semibold text-neutral-900 truncate">
+                              <p className="text-xs font-medium text-neutral-900 truncate">
                                 {item.destination.name}
                               </p>
-                              <p className="text-[11px] text-neutral-500 truncate">
+                              <p className="text-xs text-neutral-500 truncate">
                                 {item.destination.country}
                               </p>
                             </div>
@@ -578,7 +578,7 @@ export default function PlannerPage() {
                                 onClick={() => promoteToSegment(item.id)}
                                 aria-label="Promote to segment"
                                 title="Promote to segment"
-                                className="text-[10px] font-semibold text-brand-700 hover:text-brand-800"
+                                className="text-xs font-semibold text-brand-700 hover:text-brand-800"
                               >
                                 Add
                               </button>
@@ -657,7 +657,7 @@ export default function PlannerPage() {
                   <button
                     type="button"
                     onClick={() => setPickerQuery("")}
-                    className="text-[11px] font-medium text-neutral-500 hover:text-neutral-700"
+                    className="text-xs font-medium text-neutral-500 hover:text-neutral-700"
                   >
                     Clear
                   </button>
@@ -686,10 +686,10 @@ export default function PlannerPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/70 transition-colors" />
                       <div className="absolute bottom-2.5 left-3 right-3">
-                        <p className="text-white font-bold text-sm leading-tight">
+                        <p className="text-white font-medium text-sm">
                           {dest.name}
                         </p>
-                        <p className="text-white/70 text-[11px]">{dest.country}</p>
+                        <p className="text-white/70 text-xs">{dest.country}</p>
                       </div>
                     </button>
                   ))}
@@ -730,8 +730,8 @@ export default function PlannerPage() {
 function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div>
-      <p className="text-2xl font-bold text-brand-700 tabular-nums">{value}</p>
-      <p className="text-[11px] text-neutral-500 uppercase tracking-wider">{label}</p>
+      <p className="text-2xl font-medium text-brand-700 tabular-nums">{value}</p>
+      <p className="text-xs text-neutral-500 uppercase tracking-wider">{label}</p>
     </div>
   );
 }
@@ -743,7 +743,7 @@ function PrimitiveCard({ icon: Icon, title, body }: { icon: typeof Sun; title: s
         <Icon className="w-4 h-4 text-brand-600" />
         <h3 className="text-xs font-semibold text-neutral-900">{title}</h3>
       </div>
-      <p className="text-[11px] text-neutral-600 leading-relaxed">{body}</p>
+      <p className="text-xs text-neutral-600">{body}</p>
     </div>
   );
 }
@@ -781,7 +781,7 @@ function TravelLinkRow({ link }: { link: TravelLink }) {
   return (
     <div className="flex items-center gap-3 my-2 pl-12 print:pl-6">
       <span className="w-px flex-shrink-0 h-4 bg-neutral-300" aria-hidden />
-      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-[11px] font-medium text-neutral-600">
+      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-medium text-neutral-600">
         <Icon className="w-3.5 h-3.5" />
         <span>{link.label}</span>
         <span className="text-neutral-400">·</span>
@@ -832,7 +832,7 @@ function SegmentCard({
           </div>
 
           {/* Index marker — replaces "Day N" with "Segment N" framing */}
-          <div className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-bold tabular-nums">
+          <div className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-medium tabular-nums">
             {String(index + 1).padStart(2, "0")}
           </div>
 
@@ -857,7 +857,7 @@ function SegmentCard({
                   className="inline-block group"
                 >
                   <h3
-                    className="text-lg font-bold text-neutral-900 leading-tight group-hover:text-brand-700 transition-colors"
+                    className="text-xl font-bold text-neutral-900 group-hover:text-brand-700 transition-colors"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {segment.destination.name}
@@ -879,7 +879,7 @@ function SegmentCard({
 
             {/* Flexible duration + when */}
             <div className="mt-3 flex flex-wrap items-center gap-2 print:gap-3">
-              <label className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-50 border border-brand-100 text-xs font-semibold text-brand-800">
+              <label className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-50 border border-brand-100 text-xs font-medium text-brand-800">
                 <CalendarRange className="w-3.5 h-3.5" />
                 <input
                   type="number"
@@ -993,7 +993,7 @@ function CategoryHeader({ category }: { category: ActivityCategory }) {
   const Icon = meta.icon;
   return (
     <div className="flex items-center gap-2">
-      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider border ${meta.tone}`}>
+      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wider border ${meta.tone}`}>
         <Icon className="w-3 h-3" />
         {meta.label}
       </span>

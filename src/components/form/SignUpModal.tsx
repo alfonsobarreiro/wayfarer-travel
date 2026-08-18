@@ -377,7 +377,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                           shouldValidate: true,
                                         })
                                       }
-                                      className={`p-3 rounded-lg border text-sm font-semibold transition-all text-left ${
+                                      className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
                                         active
                                           ? "border-brand-600 bg-brand-50 text-brand-800"
                                           : "border-neutral-200 text-neutral-700 hover:border-neutral-300"

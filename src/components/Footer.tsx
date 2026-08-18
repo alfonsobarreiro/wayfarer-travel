@@ -8,12 +8,12 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3
-              className="text-white text-lg font-bold mb-3"
+              className="text-white text-xl font-bold mb-3"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Wayfarer
             </h3>
-            <p className="text-sm leading-relaxed text-neutral-300">
+            <p className="text-sm text-neutral-300">
               A travel discovery platform for curious explorers. Find
               authentic destinations matched to how you actually travel.
             </p>
@@ -48,7 +48,7 @@ export function Footer() {
             <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
               Project
             </h4>
-            <p className="text-sm text-neutral-300 leading-relaxed">
+            <p className="text-sm text-neutral-300">
               Wayfarer is a concept project designed by Alfonso Barreiro.
               Built with Next.js, Mapbox, and Framer Motion.
             </p>

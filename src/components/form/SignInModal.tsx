@@ -186,14 +186,14 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                         onClose();
                         onSwitchToSignUp();
                       }}
-                      className="font-semibold text-brand-700 hover:text-brand-800"
+                      className="font-medium text-brand-700 hover:text-brand-800"
                     >
                       Create an account
                     </button>
                   </p>
                 )}
 
-                <p className="mt-6 text-center text-[11px] text-neutral-400">
+                <p className="mt-6 text-center text-xs text-neutral-400">
                   Concept project. No real authentication.
                 </p>
               </form>

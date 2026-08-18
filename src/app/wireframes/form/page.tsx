@@ -50,7 +50,7 @@ function ImageBox({ className = "" }: { className?: string }) {
 function InputBlock({ label, half = false }: { label: string; half?: boolean }) {
   return (
     <div className={half ? "flex-1" : "w-full"}>
-      <div className="text-[9px] font-semibold uppercase tracking-wider text-neutral-400 mb-1">
+      <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1">
         {label}
       </div>
       <div className="h-8 rounded-md border-2 border-dashed border-neutral-300 bg-neutral-50" />
@@ -75,7 +75,7 @@ function ChipGrid({
       {items.map((item, i) => (
         <div
           key={i}
-          className={`h-9 rounded-md border-2 flex items-center justify-center text-[10px] font-medium transition-colors ${
+          className={`h-9 rounded-md border-2 flex items-center justify-center text-xs font-medium transition-colors ${
             i === activeIndex
               ? "border-brand-500 bg-brand-50 text-brand-700 border-solid"
               : "border-neutral-300 border-dashed text-neutral-400"
@@ -105,7 +105,7 @@ function MultiChipGrid({
       {items.map((item, i) => (
         <div
           key={i}
-          className={`h-9 rounded-md border-2 flex items-center gap-1 justify-center text-[10px] font-medium ${
+          className={`h-9 rounded-md border-2 flex items-center gap-1 justify-center text-xs font-medium ${
             activeIndices.includes(i)
               ? "border-brand-500 bg-brand-50 text-brand-700 border-solid"
               : "border-neutral-300 border-dashed text-neutral-400"
@@ -167,7 +167,7 @@ function Annotation({ text, className = "" }: { text: string; className?: string
   return (
     <div className={`flex items-start gap-2 ${className}`}>
       <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1 flex-shrink-0" />
-      <span className="text-[11px] text-brand-600 font-medium leading-tight">
+      <span className="text-xs text-brand-600 font-medium">
         {text}
       </span>
     </div>
@@ -179,10 +179,10 @@ function ReviewCard({ label, children }: { label: string; children: React.ReactN
   return (
     <div className="rounded-md border-2 border-dashed border-neutral-300 p-3">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-[9px] font-bold uppercase tracking-widest text-neutral-400">
+        <span className="text-xs font-bold uppercase tracking-widest text-neutral-400">
           {label}
         </span>
-        <span className="text-[9px] font-semibold text-brand-500 uppercase tracking-wider">
+        <span className="text-xs font-semibold text-brand-500 uppercase tracking-wider">
           Edit
         </span>
       </div>
@@ -254,7 +254,7 @@ export default function FormWireframePage() {
               }`}
             >
               <span
-                className={`w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center ${
+                className={`w-5 h-5 rounded-full text-xs font-medium flex items-center justify-center ${
                   activeStep === s.id
                     ? "bg-white/20 text-white"
                     : "bg-neutral-100 text-neutral-400"
@@ -271,7 +271,7 @@ export default function FormWireframePage() {
         <div className="max-w-[780px] mx-auto">
           {/* Backdrop hint */}
           <div className="bg-neutral-200/60 rounded-xl p-3">
-            <div className="text-[10px] text-neutral-400 font-medium text-center mb-2">
+            <div className="text-xs text-neutral-400 font-medium text-center mb-2">
               Backdrop — click to close
             </div>
 
@@ -283,10 +283,10 @@ export default function FormWireframePage() {
                   <ImageBox className="w-full h-full min-h-[480px] !rounded-none !border-0" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-none" />
                   <div className="absolute bottom-5 left-5 right-5 space-y-1">
-                    <div className="text-[9px] font-bold uppercase tracking-widest text-white/60">
+                    <div className="text-xs font-bold uppercase tracking-widest text-white/60">
                       Step {activeStep + 1} of {steps.length}
                     </div>
-                    <div className="text-xs font-semibold text-white/90">
+                    <div className="text-xs font-medium text-white/90">
                       {steps[activeStep].caption}
                     </div>
                   </div>
@@ -301,7 +301,7 @@ export default function FormWireframePage() {
                 <div className="flex-1 p-6 flex flex-col">
                   {/* Close button */}
                   <div className="flex justify-end mb-1">
-                    <div className="w-7 h-7 rounded-full border-2 border-dashed border-neutral-300 flex items-center justify-center text-neutral-400 text-[10px]">
+                    <div className="w-7 h-7 rounded-full border-2 border-dashed border-neutral-300 flex items-center justify-center text-neutral-400 text-xs">
                       &times;
                     </div>
                   </div>
@@ -317,16 +317,16 @@ export default function FormWireframePage() {
                       />
                     ))}
                   </div>
-                  <div className="text-[9px] text-neutral-400 mb-4 md:hidden">
+                  <div className="text-xs text-neutral-400 mb-4 md:hidden">
                     Step {activeStep + 1} of {steps.length}
                   </div>
 
                   {/* Step heading */}
                   <div className="mb-5">
-                    <div className="text-sm font-bold text-neutral-800 mb-0.5">
+                    <div className="text-sm font-medium text-neutral-800 mb-0.5">
                       {steps[activeStep].title}
                     </div>
-                    <div className="text-[11px] text-neutral-400">
+                    <div className="text-xs text-neutral-400">
                       {steps[activeStep].subtitle}
                     </div>
                   </div>
@@ -349,7 +349,7 @@ export default function FormWireframePage() {
                     {activeStep === 1 && (
                       <div className="space-y-4">
                         <div>
-                          <div className="text-[9px] font-semibold uppercase tracking-wider text-neutral-400 mb-2">
+                          <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">
                             Travel Style
                           </div>
                           <ChipGrid
@@ -358,7 +358,7 @@ export default function FormWireframePage() {
                           />
                         </div>
                         <div>
-                          <div className="text-[9px] font-semibold uppercase tracking-wider text-neutral-400 mb-2">
+                          <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">
                             Budget Range
                           </div>
                           <ChipGrid
@@ -367,7 +367,7 @@ export default function FormWireframePage() {
                           />
                         </div>
                         <div>
-                          <div className="text-[9px] font-semibold uppercase tracking-wider text-neutral-400 mb-2">
+                          <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">
                             Group Size
                           </div>
                           <ChipGrid
@@ -429,7 +429,7 @@ export default function FormWireframePage() {
                             {["Solo Explorer", "Mid-Range", "Just Me"].map((t) => (
                               <div
                                 key={t}
-                                className="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-[9px] font-medium text-brand-700"
+                                className="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-xs font-medium text-brand-700"
                               >
                                 {t}
                               </div>
@@ -441,7 +441,7 @@ export default function FormWireframePage() {
                             {["Beaches & Islands", "Food & Culinary", "Wildlife & Nature"].map((t) => (
                               <div
                                 key={t}
-                                className="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-[9px] font-medium text-brand-700"
+                                className="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-xs font-medium text-brand-700"
                               >
                                 {t}
                               </div>
@@ -453,7 +453,7 @@ export default function FormWireframePage() {
                             {["Tokyo", "Marrakech"].map((t) => (
                               <div
                                 key={t}
-                                className="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-[9px] font-medium text-brand-700"
+                                className="px-2 py-1 rounded-full bg-brand-50 border border-brand-200 text-xs font-medium text-brand-700"
                               >
                                 {t}
                               </div>
@@ -468,7 +468,7 @@ export default function FormWireframePage() {
                   {/* Navigation */}
                   <div className="flex items-center justify-between pt-4 mt-4 border-t border-dashed border-neutral-200">
                     <div
-                      className={`flex items-center gap-1 text-[11px] font-medium ${
+                      className={`flex items-center gap-1 text-xs font-medium ${
                         activeStep === 0 ? "text-neutral-300" : "text-neutral-500 cursor-pointer"
                       }`}
                       onClick={() => activeStep > 0 && setActiveStep(activeStep - 1)}
@@ -477,7 +477,7 @@ export default function FormWireframePage() {
                       Back
                     </div>
                     <div
-                      className="flex items-center gap-1 px-5 py-2 rounded-md bg-neutral-800 text-white text-[11px] font-semibold cursor-pointer"
+                      className="flex items-center gap-1 px-5 py-2 rounded-md bg-neutral-800 text-white text-xs font-medium cursor-pointer"
                       onClick={() =>
                         activeStep < steps.length - 1
                           ? setActiveStep(activeStep + 1)
@@ -514,14 +514,14 @@ export default function FormWireframePage() {
                   }`}
                 >
                   <span
-                    className={`text-[10px] font-bold ${
+                    className={`text-xs font-medium ${
                       activeStep === s.id ? "text-brand-600" : "text-neutral-400"
                     }`}
                   >
                     Step {s.id + 1}
                   </span>
                   <span
-                    className={`text-[9px] font-medium ${
+                    className={`text-xs font-medium ${
                       activeStep === s.id ? "text-brand-800" : "text-neutral-500"
                     }`}
                   >
@@ -538,7 +538,7 @@ export default function FormWireframePage() {
               <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
               </svg>
-              <span className="text-[9px] font-medium text-green-700">Success</span>
+              <span className="text-xs font-medium text-green-700">Success</span>
             </div>
           </div>
         </div>
@@ -551,7 +551,7 @@ export default function FormWireframePage() {
           >
             Design Decisions
           </h3>
-          <div className="space-y-3 text-sm text-neutral-600 leading-relaxed">
+          <div className="space-y-3 text-sm text-neutral-600">
             <p>
               <strong className="text-neutral-800">Split-panel modal.</strong>{" "}
               Image on the left provides visual reward and contextual cue for
@@ -594,7 +594,7 @@ export default function FormWireframePage() {
           >
             Technical Implementation
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-[11px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs">
             {[
               ["React Hook Form", "Per-step form instances"],
               ["Zod", "Schema validation per step"],
@@ -604,7 +604,7 @@ export default function FormWireframePage() {
               ["Next.js App Router", "Client component in modal pattern"],
             ].map(([tech, use]) => (
               <div key={tech} className="p-3 rounded-md bg-neutral-50 border border-neutral-100">
-                <div className="font-semibold text-neutral-800">{tech}</div>
+                <div className="font-medium text-neutral-800">{tech}</div>
                 <div className="text-neutral-500 mt-0.5">{use}</div>
               </div>
             ))}

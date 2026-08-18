@@ -25,7 +25,7 @@ function WireBlock({
       } ${className}`}
     >
       <span
-        className={`absolute -top-3 left-4 px-2 text-[10px] font-bold uppercase tracking-widest ${
+        className={`absolute -top-3 left-4 px-2 text-xs font-bold uppercase tracking-widest ${
           dark ? "bg-neutral-800 text-neutral-400" : "bg-white text-neutral-400"
         }`}
       >
@@ -88,7 +88,7 @@ function ImageBox({
       </svg>
       {label && (
         <span
-          className={`ml-2 text-[10px] font-medium ${
+          className={`ml-2 text-xs font-medium ${
             dark ? "text-neutral-500" : "text-neutral-400"
           }`}
         >
@@ -110,7 +110,7 @@ function ButtonBlock({
 }) {
   return (
     <div
-      className={`${w} h-9 rounded-md flex items-center justify-center text-[10px] font-semibold uppercase tracking-wider ${
+      className={`${w} h-9 rounded-md flex items-center justify-center text-xs font-semibold uppercase tracking-wider ${
         dark
           ? "bg-neutral-500 text-neutral-300"
           : "bg-neutral-800 text-white"
@@ -130,7 +130,7 @@ function Annotation({ text, side = "right" }: { text: string; side?: "left" | "r
       }`}
     >
       {side === "left" && (
-        <span className="text-[11px] text-brand-500 font-medium leading-tight max-w-[160px] text-right">
+        <span className="text-xs text-brand-500 font-medium max-w-[160px] text-right">
           {text}
         </span>
       )}
@@ -138,7 +138,7 @@ function Annotation({ text, side = "right" }: { text: string; side?: "left" | "r
         className={`w-8 h-px bg-brand-400 ${side === "left" ? "" : ""}`}
       />
       {side === "right" && (
-        <span className="text-[11px] text-brand-500 font-medium leading-tight max-w-[160px]">
+        <span className="text-xs text-brand-500 font-medium max-w-[160px]">
           {text}
         </span>
       )}
@@ -349,7 +349,7 @@ export default function WireframesPage() {
                   </div>
                   <div className={`${isDesktop ? "w-1/2" : "w-full"} flex justify-center`}>
                     <div className="w-40 h-40 rounded-full border-2 border-dashed border-neutral-500 flex items-center justify-center">
-                      <span className="text-neutral-500 text-[10px] font-medium">3D Globe</span>
+                      <span className="text-neutral-500 text-xs font-medium">3D Globe</span>
                     </div>
                   </div>
                 </div>
@@ -379,7 +379,7 @@ export default function WireframesPage() {
                           }`}
                         >
                           <div className="flex gap-3">
-                            <span className="text-xs font-bold text-neutral-300 w-6 flex-shrink-0">
+                            <span className="text-xs font-medium text-neutral-300 w-6 flex-shrink-0">
                               {item.split(" — ")[0]}
                             </span>
                             <div className="space-y-1.5 flex-1">
@@ -450,7 +450,7 @@ export default function WireframesPage() {
           >
             Legend
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-[11px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
             <div className="flex items-center gap-2">
               <div className="w-8 h-5 rounded bg-neutral-200" />
               <span className="text-neutral-600">Text / heading placeholder</span>
@@ -478,7 +478,7 @@ export default function WireframesPage() {
           >
             Design Decisions
           </h3>
-          <div className="space-y-3 text-sm text-neutral-600 leading-relaxed">
+          <div className="space-y-3 text-sm text-neutral-600">
             <p>
               <strong className="text-neutral-800">Single scroll path.</strong>{" "}
               Every section drives toward one goal — get the user exploring
