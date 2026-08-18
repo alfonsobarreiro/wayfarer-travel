@@ -25,13 +25,11 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
   const close  = useCallback(() => setIsOpen(false), []);
   const toggle = useCallback(() => setIsOpen((v) => !v), []);
 
-  // Global ⌘K / Ctrl+K shortcut
+  // Escape closes the overlay (needed for modal a11y). No Cmd/K
+  // global shortcut — the search entry point is a nav link + hero button;
+  // no need for a power-user keybind on a concept marketing site.
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        setIsOpen((v) => !v);
-      }
       if (e.key === "Escape") setIsOpen(false);
     }
     window.addEventListener("keydown", onKeyDown);

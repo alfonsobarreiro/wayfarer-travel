@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 import { SignInModal } from "@/components/form/SignInModal";
@@ -11,12 +11,6 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [signInOpen, setSignInOpen] = useState(false);
   const { open: openSearch } = useSearch();
-  const [isMac, setIsMac] = useState(false);
-
-  // Cmd/K vs Ctrl K hint lives in the title tooltip only.
-  useEffect(() => {
-    setIsMac(typeof navigator !== "undefined" && /Mac|iPhone|iPad/i.test(navigator.platform));
-  }, []);
 
   return (
     <>
@@ -56,16 +50,14 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Right side — Search + Sign in as nav-link peers (no border, no
-              placeholder, no visible Kbd hint). Matches barreiro + MSR restraint:
-              search reads as a fifth nav item, not a widget. Cmd/K still fires
-              via SearchContext; the keybind hint lives only in the title tooltip. */}
+          {/* Right side — Search + Sign in as nav-link peers (no border,
+              no placeholder, no kbd, no title tooltip). Matches barreiro +
+              MSR restraint: search reads as a fifth nav item, not a widget. */}
           <div className="flex items-center gap-8">
             <button
               type="button"
               onClick={openSearch}
               aria-label="Search destinations"
-              title={isMac ? "Search  (⌘K)" : "Search  (Ctrl K)"}
               className="hidden md:inline-flex items-center gap-2 text-[0.9375rem] font-medium text-neutral-600 hover:text-link-strong transition-colors"
             >
               <Search className="w-4 h-4" />

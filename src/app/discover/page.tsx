@@ -52,19 +52,17 @@ export default function DiscoverPage() {
             by hand.
           </motion.p>
 
-          {/* In-page search affordance */}
+          {/* Search — icon + text link, matches the nav pattern; no pill,
+              no placeholder, no keyboard-shortcut chip. */}
           <motion.button
             type="button"
             onClick={openSearch}
-            className="mt-6 inline-flex items-center gap-2 pl-3 pr-2 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 text-sm text-white/90 transition-colors min-w-[280px]"
+            className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-white/80 hover:text-white transition-colors"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
           >
-            <Search className="w-4 h-4 text-white/70" />
-            <span className="flex-1 text-left">Search a country, region, or interest</span>
-            <kbd className="text-xs font-mono px-2 py-1 rounded bg-white/15 text-white/80 border border-white/20">
-              ⌘K
-            </kbd>
+            <Search className="w-4 h-4" />
+            <span>Search destinations</span>
           </motion.button>
         </Container>
       </Section>
