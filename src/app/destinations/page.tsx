@@ -88,7 +88,7 @@ export default function DestinationsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
             >
-              Top Spots
+              Destinations
             </motion.h1>
             <motion.p
               className="text-neutral-100 text-[1.0625rem] max-w-xl mb-6"

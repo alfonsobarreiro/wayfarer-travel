@@ -25,7 +25,7 @@ export function Navbar() {
             <WayfarerLogo className="h-7 w-auto" />
           </Link>
 
-          {/* Desktop Nav — Top Spots / Discover / Plan share the same treatment
+          {/* Desktop Nav — Destinations / Discover / Plan share the same treatment
               as Search and Sign in on the right cluster (one shared class, five
               equal-weight text items) per DS simplify-first defaults. 15px is
               on-scale from the DS type ramp; text-sm (14) is off-scale drift. */}
@@ -34,7 +34,7 @@ export function Navbar() {
               href="/destinations"
               className="text-[0.9375rem] font-medium text-neutral-600 hover:text-link-strong transition-colors"
             >
-              Top Spots
+              Destinations
             </Link>
             <Link
               href="/discover"
@@ -103,7 +103,7 @@ export function Navbar() {
               className="block text-[0.9375rem] font-medium text-neutral-700"
               onClick={() => setMobileOpen(false)}
             >
-              Top Spots
+              Destinations
             </Link>
             <Link
               href="/discover"
