@@ -120,103 +120,78 @@ export function SearchOverlay() {
             exit={{    y: -8, opacity: 0 }}
             transition={{ duration: 0.18 }}
           >
-            {/* Input row */}
+            {/* Input row — magnifier tints to brand Navy, no Esc kbd chrome,
+                close X always visible so users have a mouse escape route. */}
             <div className="flex items-center gap-3 px-6 py-4 border-b border-neutral-200">
-              <SearchIcon className="w-5 h-5 text-neutral-400 flex-shrink-0" />
+              <SearchIcon className="w-5 h-5 text-brand-500 flex-shrink-0" />
               <input
                 ref={inputRef}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={onKeyDown}
                 placeholder="Search destinations, regions, or interests"
-                className="flex-1 bg-transparent outline-none text-base text-neutral-900 placeholder:text-neutral-400"
+                className="flex-1 bg-transparent outline-none text-[1.0625rem] text-neutral-900 placeholder:text-neutral-400"
                 aria-label="Search input"
               />
-              <kbd className="hidden sm:inline-flex items-center px-2 py-1 rounded border border-neutral-200 text-xs font-mono text-neutral-500 bg-neutral-50">
-                Esc
-              </kbd>
               <button
                 onClick={close}
                 aria-label="Close"
-                className="sm:hidden p-1 text-neutral-500 hover:text-neutral-700"
+                className="p-1 text-neutral-400 hover:text-neutral-700 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Results */}
+            {/* Results — one row per destination. No "Suggested" eyebrow, no
+                right-side ALL-CAPS category chip. Titles carry Wayfarer's
+                display face (Space Grotesk) so the palette reads branded. */}
             <div className="max-h-[60vh] overflow-y-auto">
               {results.length === 0 ? (
-                <div className="py-12 text-center text-sm text-neutral-500">
+                <div className="py-12 text-center text-[0.9375rem] text-neutral-500">
                   No destinations match &ldquo;{query}&rdquo;. Try a country, continent, or interest.
                 </div>
               ) : (
-                <>
-                  {!query.trim() && (
-                    <p className="px-6 pt-4 pb-2 text-xs font-semibold uppercase tracking-wider text-neutral-400">
-                      Suggested
-                    </p>
-                  )}
-                  <ul className="py-2">
-                    {results.map((r, i) => {
-                      const active = i === activeIdx;
-                      return (
-                        <li key={r.d.slug}>
-                          <Link
-                            href={`/destinations/${r.d.slug}`}
-                            onClick={close}
-                            onMouseEnter={() => setActiveIdx(i)}
-                            className={`flex items-center gap-4 px-6 py-3 transition-colors ${
-                              active ? "bg-brand-50" : "hover:bg-neutral-50"
-                            }`}
-                          >
-                            <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0">
-                              <DestinationImage
-                                src={r.d.image}
-                                fallbackSrc={r.d.gallery[0]}
-                                alt={r.d.name}
-                                fill
-                                sizes="48px"
-                                className="object-cover"
-                              />
-                            </div>
-                            <div className="min-w-0 flex-1">
-                              <p className="text-sm font-medium text-neutral-900 truncate">
-                                {r.d.name}
-                              </p>
-                              <p className="text-xs text-neutral-500 truncate flex items-center gap-1">
-                                <MapPin className="w-3 h-3" />
-                                {r.d.country} &middot; {r.d.continent}
-                              </p>
-                            </div>
-                            <span className="hidden sm:inline text-xs font-medium uppercase tracking-wider text-neutral-400">
-                              {r.d.categories[0]}
-                            </span>
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </>
+                <ul className="py-2">
+                  {results.map((r, i) => {
+                    const active = i === activeIdx;
+                    return (
+                      <li key={r.d.slug}>
+                        <Link
+                          href={`/destinations/${r.d.slug}`}
+                          onClick={close}
+                          onMouseEnter={() => setActiveIdx(i)}
+                          className={`flex items-center gap-4 px-6 py-3 transition-colors ${
+                            active ? "bg-brand-50" : "hover:bg-neutral-50"
+                          }`}
+                        >
+                          <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0">
+                            <DestinationImage
+                              src={r.d.image}
+                              fallbackSrc={r.d.gallery[0]}
+                              alt={r.d.name}
+                              fill
+                              sizes="48px"
+                              className="object-cover"
+                            />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p
+                              className="text-[0.9375rem] font-medium text-neutral-900 truncate"
+                              style={{ fontFamily: "var(--font-heading)" }}
+                            >
+                              {r.d.name}
+                            </p>
+                            <p className="text-xs text-neutral-500 truncate flex items-center gap-1">
+                              <MapPin className="w-3 h-3" />
+                              {r.d.country} &middot; {r.d.continent}
+                            </p>
+                          </div>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               )}
-            </div>
-
-            {/* Footer hint */}
-            <div className="hidden sm:flex items-center justify-between px-6 py-3 border-t border-neutral-200 bg-neutral-50 text-xs text-neutral-500">
-              <div className="flex items-center gap-3">
-                <span>
-                  <kbd className="px-2 py-1 rounded border border-neutral-300 font-mono">&uarr;&darr;</kbd>{" "}
-                  navigate
-                </span>
-                <span>
-                  <kbd className="px-2 py-1 rounded border border-neutral-300 font-mono">&crarr;</kbd>{" "}
-                  open
-                </span>
-              </div>
-              <span>
-                {destinations.length} destinations &middot;{" "}
-                <kbd className="px-2 py-1 rounded border border-neutral-300 font-mono">&#8984;K</kbd>
-              </span>
             </div>
           </motion.div>
         </motion.div>
