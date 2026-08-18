@@ -285,13 +285,13 @@
     letter-spacing: var(--tracking-heading);
   }
 
-  a {
-    color: var(--color-text-link);
-  }
-
-  a:hover {
-    color: var(--color-text-link-hover);
-  }
+  /* Anchors: color and text-decoration inherit from parent (Tailwind
+     Preflight default). Prose-style links opt in explicitly via the
+     `text-link` / `hover:text-link-hover` utilities (semantic aliases
+     still defined above at --color-link / --color-link-hover /
+     --color-link-strong). This stops non-prose anchors — nav items,
+     footer links, card wrappers — from silently rendering Navy on
+     dark surfaces when they forget to set their own color. */
 }
 
 /* Skeleton loading shimmer for images */
