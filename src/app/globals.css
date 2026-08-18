@@ -279,8 +279,16 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--color-text-default);
+    /* Weight defaults to Medium 500 per DS ceiling; override per-heading
+       with font-bold only when a specific role calls for it (rare — the
+       constraint list keeps 500 as the working ceiling). */
+    font-weight: 500;
+    /* Color inherits from surface so headings on Section bg="inverse" or
+       any dark surface pick up parent text-white instead of silently
+       rendering dark ink (same trap the anchor doctrine fix removed for
+       links). Prose contexts inherit from body which still sets
+       --color-text-default. */
+    color: inherit;
     line-height: var(--leading-heading);
     letter-spacing: var(--tracking-heading);
   }

@@ -4,8 +4,9 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, ArrowRight, Globe, SlidersHorizontal, Leaf } from "lucide-react";
+import { MapPin, ArrowRight, Globe, SlidersHorizontal, Search, Leaf } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
+import { useSearch } from "@/components/search/SearchContext";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import {
@@ -47,6 +48,7 @@ const continents = [
 export default function DestinationsPage() {
   const [selected, setSelected] = useState<Destination | null>(initialDestination);
   const [activeContinent, setActiveContinent] = useState("All");
+  const { open: openSearch } = useSearch();
 
   const filtered = useMemo(() => {
     if (activeContinent === "All") return destinations;
@@ -76,7 +78,7 @@ export default function DestinationsPage() {
             Top Spots
           </motion.h1>
           <motion.p
-            className="text-neutral-400 text-[1.0625rem] max-w-xl"
+            className="text-neutral-300 text-[1.0625rem] max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           >
@@ -84,8 +86,20 @@ export default function DestinationsPage() {
             {Object.keys(counts).length - 1} continents. Filter by region or
             click any pin on the globe.
           </motion.p>
-          {/* Nav Search sits one click away in the sticky header; no second
-              search affordance here to avoid duplicated CTA per DS restraint. */}
+
+          {/* Search as a text-and-icon link, matching the nav's simple
+              pattern (icon + "Search" text, no pill / no placeholder /
+              no Kbd chip). Colors adapted to the dark hero surface. */}
+          <motion.button
+            type="button"
+            onClick={openSearch}
+            className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-white/80 hover:text-white transition-colors"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
+          >
+            <Search className="w-4 h-4" />
+            <span>Search destinations</span>
+          </motion.button>
         </Container>
       </Section>
 
