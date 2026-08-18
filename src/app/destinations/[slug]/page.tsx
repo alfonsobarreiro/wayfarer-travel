@@ -11,7 +11,6 @@ import {
   Globe,
   Banknote,
   Clock,
-  MapPin,
   Lightbulb,
   Leaf,
 } from "lucide-react";
@@ -122,12 +121,11 @@ export default function DestinationDetailPage({
               {dest.name}
             </motion.h1>
             <motion.p
-              className="text-neutral-100 text-[1.0625rem] flex items-center gap-2"
+              className="text-neutral-100 text-[1.0625rem]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
             >
-              <MapPin className="w-4 h-4" />
-              {dest.country} &middot; {dest.tagline}
+              {dest.tagline}
             </motion.p>
           </Container>
         </div>
