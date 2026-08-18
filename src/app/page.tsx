@@ -440,10 +440,12 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* Centered-CTA is the intent here — mx-auto stays because this
-            content is a page-wide centered column, not a prose-in-Container
-            column (that pattern is the "one left rail" bug). */}
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        {/* Container aligns the section's outer gutter with the rest of the
+            homepage; the inner `max-w-3xl mx-auto text-center` is the centered
+            CTA column intent (a page-wide centered stack, distinct from the
+            "one left rail" prose pattern). */}
+        <Container className="relative z-10 text-center">
+          <div className="max-w-3xl mx-auto">
           <motion.h2
             className="text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -473,7 +475,8 @@ export default function HomePage() {
           >
             Get Started Free
           </motion.button>
-        </div>
+          </div>
+        </Container>
       </Section>
 
       <SignUpModal open={signUpOpen} onClose={() => setSignUpOpen(false)} />

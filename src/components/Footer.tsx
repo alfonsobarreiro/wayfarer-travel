@@ -29,17 +29,17 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-[0.9375rem]">
               <li>
-                <Link href="/destinations" className="hover:text-white transition-colors">
+                <Link href="/destinations" className="text-neutral-300 hover:text-white transition-colors">
                   Destinations
                 </Link>
               </li>
               <li>
-                <Link href="/discover" className="hover:text-white transition-colors">
+                <Link href="/discover" className="text-neutral-300 hover:text-white transition-colors">
                   Explore the Globe
                 </Link>
               </li>
               <li>
-                <Link href="/planner" className="hover:text-white transition-colors">
+                <Link href="/planner" className="text-neutral-300 hover:text-white transition-colors">
                   Trip Planner
                 </Link>
               </li>
@@ -55,7 +55,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://www.barreiro.com/work/wayfarer"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   Read the Case Study
                 </a>
@@ -63,7 +63,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://www.barreiro.com"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   More Work by Alfonso Barreiro
                 </a>
@@ -71,7 +71,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://www.linkedin.com/in/alfonso-barreiro/"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   LinkedIn
                 </a>
