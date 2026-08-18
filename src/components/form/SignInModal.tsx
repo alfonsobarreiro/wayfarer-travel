@@ -132,7 +132,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                   />
                 </div>
                 {formState.errors.email && (
-                  <p className="text-xs text-red-500 -mt-3 mb-3">
+                  <p className="text-xs text-text-danger -mt-3 mb-3">
                     {formState.errors.email.message}
                   </p>
                 )}
@@ -164,7 +164,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                   />
                 </div>
                 {formState.errors.password && (
-                  <p className="text-xs text-red-500 -mt-3 mb-3">
+                  <p className="text-xs text-text-danger -mt-3 mb-3">
                     {formState.errors.password.message}
                   </p>
                 )}

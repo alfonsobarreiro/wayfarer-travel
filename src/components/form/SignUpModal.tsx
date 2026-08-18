@@ -158,7 +158,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
 
   const inputClass =
     "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-800 placeholder:text-neutral-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all";
-  const errorClass = "text-xs text-red-500 mt-1";
+  const errorClass = "text-xs text-text-danger mt-1";
 
   return (
     <AnimatePresence>
@@ -654,8 +654,8 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                 >
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                    <Check className="w-8 h-8 text-green-600" />
+                  <div className="w-16 h-16 rounded-full bg-bg-success-muted flex items-center justify-center mb-4">
+                    <Check className="w-8 h-8 text-text-success" />
                   </div>
                   <h2
                     className="text-2xl font-bold text-neutral-900 mb-2"

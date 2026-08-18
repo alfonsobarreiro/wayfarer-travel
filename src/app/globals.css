@@ -92,7 +92,8 @@
   --color-bg-accent-hover:    var(--color-accent-600);
   --color-bg-accent-muted:    var(--color-accent-50);
   --color-bg-success:         var(--color-sage-500);
-  --color-bg-success-muted:   var(--color-sage-50);
+  --color-bg-success-muted:   var(--color-sage-100);
+  --color-bg-danger-muted:    #FEEFEF;
 
   /* ----------------------------------------------------------
      SEMANTIC: Text
@@ -107,6 +108,11 @@
   --color-text-accent:      var(--color-accent-700);
   --color-text-link:        var(--color-brand-500);
   --color-text-link-hover:  var(--color-brand-700);
+  /* State text — cross-brand hex kept identical to MSR signal-error to
+     preserve one universal danger hue; sage-800 gives success enough
+     contrast against sage-100 muted backgrounds. */
+  --color-text-danger:      #B54444;
+  --color-text-success:     var(--color-sage-800);
 
   /* ----------------------------------------------------------
      SEMANTIC: Border

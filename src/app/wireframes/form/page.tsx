@@ -534,11 +534,11 @@ export default function FormWireframePage() {
               </div>
             ))}
             <ArrowRight className="w-4 h-4 text-neutral-300 mx-1 flex-shrink-0" />
-            <div className="w-24 h-20 rounded-lg border-2 border-green-300 bg-green-50 flex flex-col items-center justify-center gap-1 flex-shrink-0">
-              <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="w-24 h-20 rounded-lg border-2 border-sage-300 bg-bg-success-muted flex flex-col items-center justify-center gap-1 flex-shrink-0">
+              <svg className="w-5 h-5 text-text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
               </svg>
-              <span className="text-xs font-medium text-green-700">Success</span>
+              <span className="text-xs font-medium text-text-success">Success</span>
             </div>
           </div>
         </div>

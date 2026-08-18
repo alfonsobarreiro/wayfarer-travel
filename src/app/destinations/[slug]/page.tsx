@@ -14,7 +14,20 @@ import {
   MapPin,
   Lightbulb,
   BadgeCheck,
+  Leaf,
 } from "lucide-react";
+
+// Categories that earn a sage nature chip. Kept local to this page so the
+// list can drift from the /destinations index without touching that file.
+const NATURE_CATEGORIES = new Set([
+  "nature",
+  "mountains",
+  "geothermal",
+  "waterfalls",
+  "arctic",
+  "rewilding",
+  "landscape",
+]);
 import { getDestinationBySlug, allDestinations as destinations } from "@/data/destinations";
 import { DestinationMap } from "@/components/map/DestinationMap";
 import { notFound } from "next/navigation";
@@ -28,6 +41,7 @@ export default function DestinationDetailPage({
   const dest = getDestinationBySlug(slug);
   if (!dest) notFound();
 
+  const isNature = dest.categories.some((c) => NATURE_CATEGORIES.has(c));
   const otherDests = destinations.filter((d) => d.slug !== slug).slice(0, 3);
 
   const infoItems = [
@@ -83,12 +97,22 @@ export default function DestinationDetailPage({
               <ArrowLeft className="w-4 h-4" /> All Destinations
             </Link>
             <motion.div
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-medium mb-4"
+              className="flex items-center gap-2 mb-4 flex-wrap"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <BadgeCheck className="w-3.5 h-3.5" />
-              Curated Experience
+              {/* Editorial eyebrow — cognac accent gives Guide pages a
+                  recurring visual signature distinct from brand navy. */}
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-500/25 backdrop-blur-sm text-accent-100 border border-accent-300/40 text-xs font-medium uppercase tracking-[0.14em]">
+                <BadgeCheck className="w-3.5 h-3.5" />
+                Destination Guide
+              </span>
+              {isNature && (
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-sage-500/25 backdrop-blur-sm text-sage-100 border border-sage-300/40 text-xs font-medium">
+                  <Leaf className="w-3 h-3" />
+                  Nature
+                </span>
+              )}
             </motion.div>
             <motion.h1
               className="text-4xl md:text-6xl font-medium text-white mb-2"
@@ -261,7 +285,9 @@ export default function DestinationDetailPage({
                 className="text-xl font-bold mb-4 flex items-center gap-2"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                <Lightbulb className="w-5 h-5 text-brand-600" />
+                {/* Cognac accent on tips reads as editorial supporting
+                    voice next to navy primary chrome. */}
+                <Lightbulb className="w-5 h-5 text-accent-600" />
                 Travel Tips
               </h3>
               <ul className="space-y-4">

@@ -585,7 +585,7 @@ export default function PlannerPage() {
                               <button
                                 onClick={() => removeSaved(item.id)}
                                 aria-label="Remove"
-                                className="text-neutral-400 hover:text-red-500"
+                                className="text-neutral-400 hover:text-text-danger"
                               >
                                 <Trash2 className="w-3.5 h-3.5" />
                               </button>
@@ -871,7 +871,7 @@ function SegmentCard({
               <button
                 onClick={onRemove}
                 aria-label="Remove segment"
-                className="p-1.5 rounded-md text-neutral-400 hover:text-red-500 hover:bg-red-50 transition-colors print:hidden"
+                className="p-1.5 rounded-md text-neutral-400 hover:text-text-danger hover:bg-bg-danger-muted transition-colors print:hidden"
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -933,7 +933,7 @@ function SegmentCard({
                       <button
                         onClick={() => onRemoveActivity(a.id)}
                         aria-label="Remove activity"
-                        className="opacity-0 group-hover:opacity-100 p-1 text-neutral-300 hover:text-red-500 transition-all print:hidden"
+                        className="opacity-0 group-hover:opacity-100 p-1 text-neutral-300 hover:text-text-danger transition-all print:hidden"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
                       </button>

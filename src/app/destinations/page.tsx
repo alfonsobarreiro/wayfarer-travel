@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, ArrowRight, Globe, SlidersHorizontal, Search } from "lucide-react";
+import { MapPin, ArrowRight, Globe, SlidersHorizontal, Search, Leaf } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
 import { useSearch } from "@/components/search/SearchContext";
 import {
@@ -15,6 +15,23 @@ import {
 // Preselect Bhutan so the map is alive on first load.
 const initialDestination =
   destinations.find((d) => d.slug === "bhutan") ?? destinations[0];
+
+// Nature-themed categories flag destinations that earn a sage "Nature" pill.
+// Sage is the secondary brand color and its explicit UI role in Wayfarer is
+// this tag family + success states — so it stays legible as a signal.
+const NATURE_CATEGORIES = new Set([
+  "nature",
+  "mountains",
+  "geothermal",
+  "waterfalls",
+  "arctic",
+  "rewilding",
+  "landscape",
+]);
+
+function isNatureDest(cats: string[]): boolean {
+  return cats.some((c) => NATURE_CATEGORIES.has(c));
+}
 
 const continents = [
   "All",
@@ -50,11 +67,20 @@ export default function DestinationsPage() {
       {/* Hero */}
       <section className="bg-neutral-900 text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
+          {/* Editorial eyebrow — cognac accent is Wayfarer's Guide-page
+              signature; used sparingly (one per zone). */}
+          <motion.p
+            className="text-xs font-semibold uppercase tracking-[0.16em] text-accent-300 mb-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            Curated Selection
+          </motion.p>
           <motion.h1
             className="text-4xl md:text-5xl font-medium mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
           >
             Top Spots
           </motion.h1>
@@ -122,9 +148,17 @@ export default function DestinationsPage() {
                 >
                   {selected.name}
                 </h3>
-                <p className="text-sm text-brand-600 font-medium mb-2">
-                  {selected.tagline}
-                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <p className="text-sm text-brand-600 font-medium">
+                    {selected.tagline}
+                  </p>
+                  {isNatureDest(selected.categories) && (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-[11px] font-medium">
+                      <Leaf className="w-3 h-3" />
+                      Nature
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm text-neutral-500 mb-4">
                   {selected.description}
                 </p>
@@ -211,6 +245,12 @@ export default function DestinationsPage() {
                         {dest.country}
                       </span>
                     </div>
+                    {isNatureDest(dest.categories) && (
+                      <div className="absolute top-3 left-3 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-xs font-medium">
+                        <Leaf className="w-3 h-3" />
+                        Nature
+                      </div>
+                    )}
                   </div>
                   <h3
                     className="text-xl font-bold text-neutral-900 mb-1 group-hover:text-brand-700 transition-colors"
