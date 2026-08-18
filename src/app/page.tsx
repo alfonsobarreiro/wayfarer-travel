@@ -15,6 +15,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { SignUpModal } from "@/components/form/SignUpModal";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { allDestinations as destinations } from "@/data/destinations";
 
 const benefits = [
@@ -100,7 +102,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <Section variant="hero" className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <DestinationImage
             src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1600&q=80"
@@ -119,7 +121,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
+        <Container className="relative z-10 pt-32 pb-20 w-full">
           <motion.div
             className="max-w-2xl"
             initial="hidden"
@@ -171,7 +173,7 @@ export default function HomePage() {
               </p>
             </motion.div>
           </motion.div>
-        </div>
+        </Container>
 
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-400"
@@ -181,11 +183,11 @@ export default function HomePage() {
           <span className="text-xs font-medium">Scroll to explore</span>
           <ChevronDown className="w-5 h-5" />
         </motion.div>
-      </section>
+      </Section>
 
       {/* ── Destinations Carousel ──────────────────── */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <Section className="bg-white">
+        <Container>
           <div className="flex items-end justify-between mb-10">
             <div>
               <motion.h2
@@ -219,7 +221,7 @@ export default function HomePage() {
               </button>
             </div>
           </div>
-        </div>
+        </Container>
 
         <div
           ref={carouselRef}
@@ -273,7 +275,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 mt-8 flex justify-end">
+        <Container className="mt-8 flex justify-end">
           <Link
             href="/destinations"
             className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"
@@ -281,12 +283,12 @@ export default function HomePage() {
             View all destinations
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* ── Discover Teaser ──────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-900">
-        <div className="max-w-7xl mx-auto px-6">
+      <Section className="bg-neutral-900">
+        <Container>
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="md:w-1/2">
               <motion.p
@@ -347,12 +349,12 @@ export default function HomePage() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* ── Why Wayfarer — split layout with hover image ── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <Section className="bg-neutral-50">
+        <Container>
           <div className="mb-14">
             <motion.p
               className="text-brand-600 text-sm font-semibold uppercase tracking-widest mb-3"
@@ -452,11 +454,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* ── CTA — Parallax ─────────────────────────── */}
-      <section className="relative py-32 md:py-44 overflow-hidden">
+      <Section variant="hero" className="relative overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
@@ -469,6 +471,9 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black/50" />
 
+        {/* Centered-CTA is the intent here — mx-auto stays because this
+            content is a page-wide centered column, not a prose-in-Container
+            column (that pattern is the "one left rail" bug). */}
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <motion.p
             className="text-brand-300 text-sm font-semibold uppercase tracking-widest mb-4"
@@ -508,7 +513,7 @@ export default function HomePage() {
             Get Started Free
           </motion.button>
         </div>
-      </section>
+      </Section>
 
       <SignUpModal open={signUpOpen} onClose={() => setSignUpOpen(false)} />
     </>

@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { MapPin, ArrowRight, Compass, Search, MousePointerClick } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
 import { useSearch } from "@/components/search/SearchContext";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { allDestinations as destinations, type Destination } from "@/data/destinations";
 
 // Preselect Bhutan so the globe is alive on first load and the detail card
@@ -30,8 +32,8 @@ export default function DiscoverPage() {
   return (
     <div className="pt-16 min-h-screen bg-neutral-950">
       {/* Hero */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <Section>
+        <Container>
           <motion.div
             className="flex items-center gap-2 text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3"
             initial={{ opacity: 0, y: 10 }}
@@ -71,11 +73,12 @@ export default function DiscoverPage() {
               ⌘K
             </kbd>
           </motion.button>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Globe + Selected Card */}
-      <section className="max-w-7xl mx-auto px-6 pb-16">
+      <section className="pb-16">
+        <Container>
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           {/* Left — map + adjacent instructional caption */}
           <div className="lg:w-3/5 w-full">
@@ -145,11 +148,12 @@ export default function DiscoverPage() {
             )}
           </div>
         </div>
+        </Container>
       </section>
 
       {/* Hidden Gems — discovery-focused section */}
-      <section className="bg-neutral-900 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <Section className="bg-neutral-900">
+        <Container>
           <motion.h2
             className="text-3xl font-medium text-white mb-2"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -210,8 +214,8 @@ export default function DiscoverPage() {
               Browse all destinations <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

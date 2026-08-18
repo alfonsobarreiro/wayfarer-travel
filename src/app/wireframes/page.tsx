@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Layers, Monitor, Smartphone } from "lucide-react";
+import { Container } from "@/components/ui/Container";
 
 /* ── Wireframe block helper ─────────────────────────── */
 function WireBlock({
@@ -155,7 +156,7 @@ export default function WireframesPage() {
     <div className="min-h-screen bg-neutral-50">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <Container className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
               href="/"
@@ -200,11 +201,11 @@ export default function WireframesPage() {
               Mobile
             </button>
           </div>
-        </div>
+        </Container>
       </div>
 
       {/* Wireframe canvas */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <Container className="py-12">
         <div className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-2">
             Wayfarer Travel
@@ -503,7 +504,7 @@ export default function WireframesPage() {
             </p>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

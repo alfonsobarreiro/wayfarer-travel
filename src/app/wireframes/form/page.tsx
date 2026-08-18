@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Layers, ArrowRight } from "lucide-react";
+import { Container } from "@/components/ui/Container";
 
 /* ── Shared wireframe primitives ───────────────────── */
 function Placeholder({
@@ -199,7 +200,7 @@ export default function FormWireframePage() {
     <div className="min-h-screen bg-neutral-50">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <Container className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
               href="/wireframes"
@@ -219,10 +220,10 @@ export default function FormWireframePage() {
               </h1>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <Container className="py-12">
         {/* Title */}
         <div className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-2">
@@ -610,7 +611,7 @@ export default function FormWireframePage() {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, ArrowRight, Globe, SlidersHorizontal, Search, Leaf } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
 import { useSearch } from "@/components/search/SearchContext";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import {
   allDestinations as destinations,
   type Destination,
@@ -65,8 +67,8 @@ export default function DestinationsPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="bg-neutral-900 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <Section className="bg-neutral-900 text-white">
+        <Container>
           {/* Editorial eyebrow — cognac accent is Wayfarer's Guide-page
               signature; used sparingly (one per zone). */}
           <motion.p
@@ -108,28 +110,31 @@ export default function DestinationsPage() {
               ⌘K
             </kbd>
           </motion.button>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Map */}
-      <section className="max-w-7xl mx-auto px-6 -mt-8 relative z-10">
-        <DestinationMap
-          onSelectDestination={setSelected}
-          selectedSlug={selected?.slug}
-          className="h-[500px] shadow-xl"
-        />
+      <section className="-mt-8 relative z-10">
+        <Container>
+          <DestinationMap
+            onSelectDestination={setSelected}
+            selectedSlug={selected?.slug}
+            className="h-[500px] shadow-xl"
+          />
+        </Container>
       </section>
 
       {/* Selected destination quick card */}
       <AnimatePresence>
         {selected && (
           <motion.section
-            className="max-w-7xl mx-auto px-6 mt-8"
+            className="mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             key={selected.slug}
           >
+            <Container>
             <div className="bg-white rounded-lg border border-neutral-200 p-6 flex flex-col md:flex-row gap-6 items-center shadow-sm">
               <div className="relative w-full md:w-48 h-32 rounded-lg overflow-hidden flex-shrink-0 img-skeleton">
                 <DestinationImage
@@ -170,12 +175,14 @@ export default function DestinationsPage() {
                 </Link>
               </div>
             </div>
+            </Container>
           </motion.section>
         )}
       </AnimatePresence>
 
       {/* Filter + Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <Section>
+        <Container>
         {/* Filter bar */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div>
@@ -276,7 +283,8 @@ export default function DestinationsPage() {
             </p>
           </div>
         )}
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

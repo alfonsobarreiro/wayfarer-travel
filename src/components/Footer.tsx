@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { Container } from "@/components/ui/Container";
 
 export function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-200">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <Container className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
@@ -63,7 +64,7 @@ export function Footer() {
             Designed with intention.
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

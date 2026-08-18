@@ -30,6 +30,7 @@ const NATURE_CATEGORIES = new Set([
 ]);
 import { getDestinationBySlug, allDestinations as destinations } from "@/data/destinations";
 import { DestinationMap } from "@/components/map/DestinationMap";
+import { Container } from "@/components/ui/Container";
 import { notFound } from "next/navigation";
 
 export default function DestinationDetailPage({
@@ -89,7 +90,7 @@ export default function DestinationDetailPage({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-end">
-          <div className="max-w-7xl mx-auto px-6 pb-12 w-full">
+          <Container className="pb-12 w-full">
             <Link
               href="/destinations"
               className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm mb-4 transition-colors"
@@ -130,12 +131,12 @@ export default function DestinationDetailPage({
               <MapPin className="w-4 h-4" />
               {dest.country} &middot; {dest.tagline}
             </motion.p>
-          </div>
+          </Container>
         </div>
       </section>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+      <Container className="py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-12">
@@ -363,7 +364,7 @@ export default function DestinationDetailPage({
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
