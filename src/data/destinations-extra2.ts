@@ -10,7 +10,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Pastel-colored villages perched on rugged coastal cliffs with terraced vineyards.",
     longDescription:
-      "Five UNESCO-protected fishing villages stacked impossibly on the Ligurian cliffs. Connected by steep hiking trails, these villages — Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore — offer dramatic views, fresh seafood, and the essence of coastal Italy. The Via dell'Amore trail hugs the cliffsides with Mediterranean Sea vistas at every turn.",
+      "Five UNESCO-protected fishing villages stacked impossibly on the Ligurian cliffs. Connected by steep hiking trails, these villages, Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore, offer dramatic views, fresh seafood, and the essence of coastal Italy. The Via dell'Amore trail hugs the cliffsides with Mediterranean Sea vistas at every turn.",
     coordinates: { lat: 43.1184, lng: 12.4567 },
     image:
       "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80",
@@ -34,7 +34,7 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+1",
     travelTips: [
       "Book train tickets in advance; many tourists use the scenic rail route",
-      "Hiking trails can be crowded — start early",
+      "Hiking trails can be crowded. Start early",
       "Cinque Terre Card provides train and trail access",
       "No cars allowed in villages; pack light",
     ],
@@ -72,10 +72,10 @@ export const extraDestinations2: Destination[] = [
     currency: "Canadian Dollar (CAD)",
     timezone: "UTC-7",
     travelTips: [
-      "Arrive early at popular lake viewpoints — parking fills quickly",
+      "Arrive early at popular lake viewpoints, parking fills quickly",
       "Park pass valid for all Rocky Mountain parks",
       "Many trails are snow-covered before June",
-      "Wildlife sightings are common — keep safe distances",
+      "Wildlife sightings are common, keep safe distances",
     ],
     categories: ["mountains", "nature", "adventure"],
   },
@@ -113,7 +113,7 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Avoid summer crowds by visiting in shoulder seasons",
       "Many attractions close on Mondays",
-      "Water canals can feel cramped — book early for boat tours",
+      "Water canals can feel cramped. Book early for boat tours",
       "Parking is limited; use park-and-ride facilities",
     ],
     categories: ["medieval", "culture", "romance"],
@@ -148,9 +148,9 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+1",
     travelTips: [
       "Visit early morning or late afternoon to avoid tour groups",
-      "Public parking fills quickly — use park-and-ride from Salzburg",
+      "Public parking fills quickly. Use park-and-ride from Salzburg",
       "The village is compact and best explored on foot",
-      "Many restaurants cater to tourists — seek local establishments",
+      "Many restaurants cater to tourists, seek local establishments",
     ],
     categories: ["alpine", "scenic", "culture"],
   },
@@ -187,7 +187,7 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Book hot air balloon rides in advance",
       "Wear sturdy hiking boots for cave explorations",
-      "Cave churches can be steep — bring water",
+      "Cave churches can be steep. Bring water",
       "Sunset hikes are spectacular but dehydrating",
     ],
     categories: ["desert", "history", "adventure"],
@@ -201,7 +201,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Cliffside village famous for whitewashed buildings and legendary sunsets.",
     longDescription:
-      "Oia clings dramatically to a volcanic caldera rim. Whitewashed cubic homes with blue-domed roofs seem to cascade down the cliff toward the Aegean. Sunset here is a ritual — the entire town gathers as the sky ignites in reds, oranges, and purples. Beyond the postcard views, narrow alleyways hide tavernas serving fresh seafood, wine bars offering volcanic-grown Assyrtiko wine, and galleries showcasing local art.",
+      "Oia clings dramatically to a volcanic caldera rim. Whitewashed cubic homes with blue-domed roofs seem to cascade down the cliff toward the Aegean. Sunset here is a ritual, the entire town gathers as the sky ignites in reds, oranges, and purples. Beyond the postcard views, narrow alleyways hide tavernas serving fresh seafood, wine bars offering volcanic-grown Assyrtiko wine, and galleries showcasing local art.",
     coordinates: { lat: 36.4172, lng: 25.4615 },
     image:
       "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
@@ -225,8 +225,8 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+2",
     travelTips: [
       "Book sunset dinner reservations days in advance",
-      "Arrive early for prime sunset spots — crowds are intense",
-      "The village is entirely pedestrian — steep stairs and narrow alleys",
+      "Arrive early for prime sunset spots, crowds are intense",
+      "The village is entirely pedestrian, steep stairs and narrow alleys",
       "Water is precious; respect local conservation efforts",
     ],
     categories: ["coastal", "romance", "culture"],
@@ -262,9 +262,9 @@ export const extraDestinations2: Destination[] = [
     currency: "Thai Baht (THB)",
     timezone: "UTC+7",
     travelTips: [
-      "Boat access only — ferries from Phuket or Krabi",
-      "High season brings crowds — consider September for fewer tourists",
-      "Coral is fragile — snorkel respectfully",
+      "Boat access only, ferries from Phuket or Krabi",
+      "High season brings crowds, consider September for fewer tourists",
+      "Coral is fragile, snorkel respectfully",
       "Cash preferred on the islands",
     ],
     categories: ["tropical", "beach", "adventure"],
@@ -300,10 +300,10 @@ export const extraDestinations2: Destination[] = [
     currency: "Philippine Peso (PHP)",
     timezone: "UTC+8",
     travelTips: [
-      "Typhoon season June–November — avoid this period",
+      "Typhoon season June–November. Avoid this period",
       "Island-hopping tours require early morning starts",
       "Bring reef-safe sunscreen",
-      "ATMs limited in remote areas — carry cash",
+      "ATMs limited in remote areas. Carry cash",
     ],
     categories: ["tropical", "adventure", "nature"],
   },
@@ -339,7 +339,7 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+7",
     travelTips: [
       "Book overnight cruises for the best experience",
-      "Choose reputable cruise operators — safety standards vary",
+      "Choose reputable cruise operators, safety standards vary",
       "Bring motion sickness medication if prone",
       "April–September monsoon season brings rough seas",
     ],
@@ -379,7 +379,7 @@ export const extraDestinations2: Destination[] = [
       "Arrive early to beat crowds and enjoy better visibility",
       "The glass walkway can be slippery when wet",
       "Physical fitness required for extensive hiking",
-      "Mist and clouds frequent in summer — visibility varies",
+      "Mist and clouds frequent in summer, visibility varies",
     ],
     categories: ["mountains", "adventure", "nature"],
   },
@@ -415,9 +415,9 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+1",
     travelTips: [
       "Book northern lights tours well in advance",
-      "Dress in extreme layers — temperatures drop to -20°C",
-      "Midnight sun makes sleep difficult in summer — consider blackout curtains",
-      "Winter roads can be icy — use winter tires",
+      "Dress in extreme layers, temperatures drop to -20°C",
+      "Midnight sun makes sleep difficult in summer, consider blackout curtains",
+      "Winter roads can be icy. Use winter tires",
     ],
     categories: ["arctic", "adventure", "nature"],
   },
@@ -430,7 +430,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Isolated volcanic islands with unique wildlife found nowhere else on Earth.",
     longDescription:
-      "The Galápagos Islands are the birthplace of Darwin's theory of evolution. Separated from mainland by 600 miles of ocean, endemic species — Galápagos tortoises, marine iguanas, flightless cormorants, giant finches — evolved in isolation, unchanged for millennia. Snorkeling alongside sea lions and penguins near the equator is surreal. The volcanic landscapes reveal Earth's raw geological power. Every island offers distinct ecosystems and wildlife encounters.",
+      "The Galápagos Islands are the birthplace of Darwin's theory of evolution. Separated from mainland by 600 miles of ocean, endemic species, Galápagos tortoises, marine iguanas, flightless cormorants, giant finches, evolved in isolation, unchanged for millennia. Snorkeling alongside sea lions and penguins near the equator is surreal. The volcanic landscapes reveal Earth's raw geological power. Every island offers distinct ecosystems and wildlife encounters.",
     coordinates: { lat: -0.3734, lng: -90.9365 },
     image:
       "https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=800&q=80",
@@ -453,9 +453,9 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC-6",
     travelTips: [
       "All visitors must register at park control stations",
-      "Single-use plastics are prohibited — bring reusable water bottles",
-      "Book naturalist guides — they unlock the best wildlife encounters",
-      "Seasickness is common on boat tours — take medication in advance",
+      "Single-use plastics are prohibited. Bring reusable water bottles",
+      "Book naturalist guides, they unlock the best wildlife encounters",
+      "Seasickness is common on boat tours. Take medication in advance",
     ],
     categories: ["nature", "wildlife", "adventure"],
   },
@@ -489,8 +489,8 @@ export const extraDestinations2: Destination[] = [
     currency: "Bolivian Boliviano (BOB)",
     timezone: "UTC-4",
     travelTips: [
-      "High altitude (3,656m) — acclimatize in Uyuni first",
-      "Sunscreen is essential — reflection intensifies UV",
+      "High altitude (3,656m). Acclimatize in Uyuni first",
+      "Sunscreen is essential, reflection intensifies UV",
       "Book 4x4 tours locally or in advance",
       "Bring lots of water and warm clothing for evening",
     ],
@@ -505,7 +505,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "16 interconnected lakes with cascading waterfalls and dense forest.",
     longDescription:
-      "Plitvice Lakes National Park is a natural wonder where 16 lakes cascade in tiers, connected by 92 waterfalls. Boardwalks wind through dense beech and spruce forests, offering constant views of crystalline turquoise waters. The geological process creating the lakes — calcium carbonate deposits forming barriers — continues today, making Plitvice a living, changing landscape. Autumn colors reflecting in calm waters create postcard scenes.",
+      "Plitvice Lakes National Park is a natural wonder where 16 lakes cascade in tiers, connected by 92 waterfalls. Boardwalks wind through dense beech and spruce forests, offering constant views of crystalline turquoise waters. The geological process creating the lakes, calcium carbonate deposits forming barriers, continues today, making Plitvice a living, changing landscape. Autumn colors reflecting in calm waters create postcard scenes.",
     coordinates: { lat: 44.9159, lng: 15.5976 },
     image:
       "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80",
@@ -527,10 +527,10 @@ export const extraDestinations2: Destination[] = [
     currency: "Croatian Kuna (HRK)",
     timezone: "UTC+1",
     travelTips: [
-      "Wear water-resistant shoes — boardwalks can be slippery",
+      "Wear water-resistant shoes, boardwalks can be slippery",
       "Arrive early for better photos and fewer crowds",
       "Plan at least 4 hours minimum for the park",
-      "Download offline maps — cell service is spotty",
+      "Download offline maps, cell service is spotty",
     ],
     categories: ["nature", "water", "hiking"],
   },
@@ -543,7 +543,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Vast desert canyon with rust-red sandstone formations and Bedouin culture.",
     longDescription:
-      "Wadi Rum is a landscape of massive simplicity. Towering sandstone monoliths rise from rust-red sand like monuments to ancient gods. The valley is immense — one can drive for hours and feel no closer to the horizon. This is Bedouin country. Jeep expeditions navigate the dunes, camp under stars, and visit Bedouin communities. The color palette shifts from orange to purple to black as light moves across the day. This desert humbles.",
+      "Wadi Rum is a landscape of massive simplicity. Towering sandstone monoliths rise from rust-red sand like monuments to ancient gods. The valley is immense, one can drive for hours and feel no closer to the horizon. This is Bedouin country. Jeep expeditions navigate the dunes, camp under stars, and visit Bedouin communities. The color palette shifts from orange to purple to black as light moves across the day. This desert humbles.",
     coordinates: { lat: 29.5791, lng: 35.4216 },
     image:
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
@@ -566,7 +566,7 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Book jeep tours through lodges or Aqaba",
       "Overnight desert camps offer the best stargazing",
-      "Bring sunscreen and hat — sun is intense",
+      "Bring sunscreen and hat, sun is intense",
       "Respect Bedouin customs and request permission before photographing",
     ],
     categories: ["desert", "adventure", "culture"],
@@ -640,8 +640,8 @@ export const extraDestinations2: Destination[] = [
     currency: "Argentine Peso (ARS)",
     timezone: "UTC-3",
     travelTips: [
-      "Use tour operators for wine tastings — many provide transport",
-      "Altitude can cause soroche (altitude sickness) — take it easy first days",
+      "Use tour operators for wine tastings, many provide transport",
+      "Altitude can cause soroche (altitude sickness). Take it easy first days",
       "Reservations essential for premium wine estates",
       "Sparkling Torrontés is a local specialty worth trying",
     ],
@@ -656,7 +656,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Remote archipelago with world-class diving, marine biodiversity, and pristine islands.",
     longDescription:
-      "Raja Ampat translates to 'Four Kings' — the four main islands dominating an archipelago of 1,800+ islands. The waters are the richest in marine biodiversity on Earth. Diving reveals kaleidoscopic coral gardens, schooling fish in impossible numbers, and megafauna encounters. The islands themselves are covered in dense tropical forest, with white-sand beaches and turquoise lagoons. This is adventure diving for experienced divers willing to tackle challenging conditions.",
+      "Raja Ampat translates to 'Four Kings', the four main islands dominating an archipelago of 1,800+ islands. The waters are the richest in marine biodiversity on Earth. Diving reveals kaleidoscopic coral gardens, schooling fish in impossible numbers, and megafauna encounters. The islands themselves are covered in dense tropical forest, with white-sand beaches and turquoise lagoons. This is adventure diving for experienced divers willing to tackle challenging conditions.",
     coordinates: { lat: -0.2144, lng: 130.2575 },
     image:
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
@@ -677,10 +677,10 @@ export const extraDestinations2: Destination[] = [
     currency: "Indonesian Rupiah (IDR)",
     timezone: "UTC+9",
     travelTips: [
-      "Diving certification required — currents are strong",
+      "Diving certification required, currents are strong",
       "Resort diving is the main option; land accommodation is limited",
-      "Extreme remoteness — pack all medications and essentials",
-      "Weather can change rapidly — be flexible with plans",
+      "Extreme remoteness. Pack all medications and essentials",
+      "Weather can change rapidly, be flexible with plans",
     ],
     categories: ["diving", "tropical", "adventure"],
   },
@@ -693,7 +693,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Northernmost settlement with polar bears, glaciers, and midnight sun.",
     longDescription:
-      "Svalbard is one of the northernmost inhabited territories. The archipelago features towering glaciers, Arctic tundra, and wildlife adapted to extreme cold. Polar bears outnumber humans. Arctic wildlife tours offer encounters with bears, walruses, and Arctic foxes. In summer, the midnight sun bathes the landscape in perpetual daylight. In winter, northern lights dance overhead. The small settlements — Longyearbyen being the main one — feel like frontier outposts.",
+      "Svalbard is one of the northernmost inhabited territories. The archipelago features towering glaciers, Arctic tundra, and wildlife adapted to extreme cold. Polar bears outnumber humans. Arctic wildlife tours offer encounters with bears, walruses, and Arctic foxes. In summer, the midnight sun bathes the landscape in perpetual daylight. In winter, northern lights dance overhead. The small settlements, Longyearbyen being the main one, feel like frontier outposts.",
     coordinates: { lat: 77.9454, lng: 15.6267 },
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
@@ -715,9 +715,9 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+1",
     travelTips: [
       "A rifle may be required for hiking outside settlements for polar bear protection",
-      "Extreme clothing essential — temperatures can drop to -30°C",
+      "Extreme clothing essential, temperatures can drop to -30°C",
       "Book polar bear tours months in advance",
-      "Flights are expensive — budget accordingly",
+      "Flights are expensive, budget accordingly",
     ],
     categories: ["arctic", "wildlife", "adventure"],
   },
@@ -752,9 +752,9 @@ export const extraDestinations2: Destination[] = [
     currency: "Uzbekistani Som (UZS)",
     timezone: "UTC+5",
     travelTips: [
-      "Dress modestly — respect Islamic traditions",
+      "Dress modestly, respect Islamic traditions",
       "Bargaining is standard in bazaars",
-      "Photography permissions vary in madrasahs — ask",
+      "Photography permissions vary in madrasahs, ask",
       "Uzbekistan visa requirements depend on nationality",
     ],
     categories: ["history", "culture", "architecture"],
@@ -792,7 +792,7 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Rent a 4x4 for wadi exploration",
       "Dress modestly away from tourist zones",
-      "Friday is a holy day — many shops close",
+      "Friday is a holy day, many shops close",
       "Driving is on the left",
     ],
     categories: ["desert", "mountains", "culture"],
@@ -828,8 +828,8 @@ export const extraDestinations2: Destination[] = [
     currency: "Faroese Króna (approximates DKK)",
     timezone: "UTC+0",
     travelTips: [
-      "Rent a car — public transport is limited",
-      "Weather changes rapidly — bring waterproof gear",
+      "Rent a car, public transport is limited",
+      "Weather changes rapidly. Bring waterproof gear",
       "Puffin season is May–August",
       "Book accommodation well in advance",
     ],
@@ -844,7 +844,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Australian island with native animals, rugged coastlines, and pristine wilderness.",
     longDescription:
-      "Kangaroo Island, off South Australia's coast, is a wildlife lover's paradise. Koalas, kangaroos, wallabies, and sea lions inhabit the island's protected reserves. The coastline features dramatic granite boulders, sea cliffs, and secluded beaches. Fleurieu Fur Seal Centre offers close encounters with marine mammals. Remarkable Rocks — giant granite formations on the southern coast — are spectacular at sunset. The island feels timeless.",
+      "Kangaroo Island, off South Australia's coast, is a wildlife lover's paradise. Koalas, kangaroos, wallabies, and sea lions inhabit the island's protected reserves. The coastline features dramatic granite boulders, sea cliffs, and secluded beaches. Fleurieu Fur Seal Centre offers close encounters with marine mammals. Remarkable Rocks, giant granite formations on the southern coast, are spectacular at sunset. The island feels timeless.",
     coordinates: { lat: -35.9818, lng: 139.8071 },
     image:
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
@@ -866,7 +866,7 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+9:30",
     travelTips: [
       "Ferry from Adelaide takes 45 minutes",
-      "Rent a car — the island is spread out",
+      "Rent a car, the island is spread out",
       "Spring (September–November) offers the best wildlife viewing",
       "Book accommodation in Kingscote well in advance",
     ],
@@ -904,7 +904,7 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+10",
     travelTips: [
       "Book Overland Track huts 4+ months in advance",
-      "Weather is unpredictable — pack for all conditions",
+      "Weather is unpredictable. Pack for all conditions",
       "Fly to Hobart, then rent a car",
       "Tassie devil spotting requires patience",
     ],
@@ -944,7 +944,7 @@ export const extraDestinations2: Destination[] = [
       "Inter-island flights are frequent and affordable",
       "Whale watching best May–October",
       "Rent a car for island exploration",
-      "Book whale watching tours early — weather-dependent",
+      "Book whale watching tours early, weather-dependent",
     ],
     categories: ["island", "nature", "marine"],
   },
@@ -957,7 +957,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Portuguese island with year-round spring weather and dramatic mountain hikes.",
     longDescription:
-      "Madeira is a subtropical island off Morocco's coast, belonging to Portugal. Mountains rise dramatically from the coast, and hikers follow levada channels — ancient irrigation canals — through misty valleys. The island's eternal spring climate makes it perfect year-round. Funchal, the capital, clings to steep hillsides with pastel-colored buildings. Botanical gardens showcase tropical plants. The island is lush, walkable, and welcoming.",
+      "Madeira is a subtropical island off Morocco's coast, belonging to Portugal. Mountains rise dramatically from the coast, and hikers follow levada channels, ancient irrigation canals, through misty valleys. The island's eternal spring climate makes it perfect year-round. Funchal, the capital, clings to steep hillsides with pastel-colored buildings. Botanical gardens showcase tropical plants. The island is lush, walkable, and welcoming.",
     coordinates: { lat: 32.6832, lng: -17.0012 },
     image:
       "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80",
@@ -979,8 +979,8 @@ export const extraDestinations2: Destination[] = [
     currency: "Euro (EUR)",
     timezone: "UTC+0",
     travelTips: [
-      "Levada trails can be slippery — bring sturdy footwear",
-      "Weather changes rapidly in mountains — bring layers",
+      "Levada trails can be slippery. Bring sturdy footwear",
+      "Weather changes rapidly in mountains. Bring layers",
       "Hire a guide for best levada route selection",
       "Car rental recommended for island exploration",
     ],
@@ -1018,7 +1018,7 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+0",
     travelTips: [
       "Midges (tiny insects) are worst in July–August; bring insect repellent",
-      "Waterproof gear is essential — rain is frequent",
+      "Waterproof gear is essential, rain is frequent",
       "Public transport is limited; rent a car for flexibility",
       "West Highland Way is a famous multi-day trek",
     ],
@@ -1033,7 +1033,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Alpine limestone peaks with dramatic vertical walls and pristine hiking.",
     longDescription:
-      "The Dolomites are among the world's most photogenic mountains. Pale limestone peaks rise almost vertically from green valleys. The famous Tre Cime hike offers views of towering rock walls. The Via Ferrata climbing routes were originally World War One supply paths. Alpine huts dot the landscape, offering rustic hospitality. In autumn, the mountains glow with Larch tree gold. The culture is distinctly Austro-Italian — a blend of two worlds.",
+      "The Dolomites are among the world's most photogenic mountains. Pale limestone peaks rise almost vertically from green valleys. The famous Tre Cime hike offers views of towering rock walls. The Via Ferrata climbing routes were originally World War One supply paths. Alpine huts dot the landscape, offering rustic hospitality. In autumn, the mountains glow with Larch tree gold. The culture is distinctly Austro-Italian, a blend of two worlds.",
     coordinates: { lat: 46.6061, lng: 11.7385 },
     image:
       "https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?w=800&q=80",
@@ -1093,7 +1093,7 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+1",
     travelTips: [
       "Rent a car for maximum flexibility",
-      "Trails in Durmitor can be unmarked — hire a local guide",
+      "Trails in Durmitor can be unmarked. Hire a local guide",
       "Coastal towns get crowded in July–August",
       "Try grilled fish and local wines",
     ],
@@ -1184,7 +1184,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Atlantic coastal town with fortified medina, beaches, and bohemian vibe.",
     longDescription:
-      "Essaouira is Morocco's Atlantic gateway. The 18th-century fortified medina encircles a working harbor where fishing boats bob and nets dry. Ocean breezes funnel through narrow alleys lined with blue and white buildings. The sandy beaches attract surfers and windsurfers. Art galleries and hippie cafes dot the streets. The town feels laid-back, cosmopolitan, and artistic — different from inland Morocco.",
+      "Essaouira is Morocco's Atlantic gateway. The 18th-century fortified medina encircles a working harbor where fishing boats bob and nets dry. Ocean breezes funnel through narrow alleys lined with blue and white buildings. The sandy beaches attract surfers and windsurfers. Art galleries and hippie cafes dot the streets. The town feels laid-back, cosmopolitan, and artistic, different from inland Morocco.",
     coordinates: { lat: 31.5086, lng: -9.7677 },
     image:
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
@@ -1206,8 +1206,8 @@ export const extraDestinations2: Destination[] = [
     currency: "Moroccan Dirham (MAD)",
     timezone: "UTC+1",
     travelTips: [
-      "Wind is constant — bring a light jacket",
-      "Medina can be crowded and confusing — hire a guide initially",
+      "Wind is constant. Bring a light jacket",
+      "Medina can be crowded and confusing. Hire a guide initially",
       "Fresh fish is delicious and affordable",
       "Argan oil products from local women's cooperatives make great gifts",
     ],
@@ -1222,7 +1222,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Northern Laotian town with trekking, ethnic minorities, and pristine wilderness.",
     longDescription:
-      "Luang Namtha sits in northern Laos, gateway to Nam Ha National Protected Area. The region is home to multiple ethnic minority groups — Akha, Lisu, Hmong — maintaining traditional ways. Multi-day jungle treks lead to minority villages for authentic cultural encounters. The jungle itself teems with birds and wildlife. This is off-the-beaten-path Laos, where mass tourism hasn't yet arrived. Treks are challenging but rewarding.",
+      "Luang Namtha sits in northern Laos, gateway to Nam Ha National Protected Area. The region is home to multiple ethnic minority groups, Akha, Lisu, Hmong, maintaining traditional ways. Multi-day jungle treks lead to minority villages for authentic cultural encounters. The jungle itself teems with birds and wildlife. This is off-the-beaten-path Laos, where mass tourism hasn't yet arrived. Treks are challenging but rewarding.",
     coordinates: { lat: 20.9431, lng: 101.3808 },
     image:
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
@@ -1245,7 +1245,7 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Trek guides are mandatory for protected area access",
       "Physical fitness required for multi-day jungle treks",
-      "Respect ethnic minority customs — ask permission before photos",
+      "Respect ethnic minority customs, ask permission before photos",
       "Malaria prophylaxis recommended",
     ],
     categories: ["jungle", "adventure", "culture"],
@@ -1281,8 +1281,8 @@ export const extraDestinations2: Destination[] = [
     currency: "Mozambican Metical (MZN)",
     timezone: "UTC+2",
     travelTips: [
-      "Infrastructure is basic — plan carefully",
-      "Malaria is present — take prophylaxis",
+      "Infrastructure is basic. Plan carefully",
+      "Malaria is present. Take prophylaxis",
       "Travel with organized operators for safety",
       "Portuguese is useful; English is limited",
     ],
@@ -1319,10 +1319,10 @@ export const extraDestinations2: Destination[] = [
     currency: "Malagasy Ariary (MGA)",
     timezone: "UTC+3",
     travelTips: [
-      "Book wildlife guides — they unlock the best sightings",
-      "Infrastructure varies by region — organize tours carefully",
+      "Book wildlife guides, they unlock the best sightings",
+      "Infrastructure varies by region, organize tours carefully",
       "Malaria prophylaxis essential",
-      "Respectfully photograph wildlife — maintain distances",
+      "Respectfully photograph wildlife, maintain distances",
     ],
     categories: ["wildlife", "nature", "adventure"],
   },
@@ -1395,9 +1395,9 @@ export const extraDestinations2: Destination[] = [
     currency: "Russian Ruble (RUB)",
     timezone: "UTC+12",
     travelTips: [
-      "Visa and permits required — organize through tour operators",
-      "Costs are very high — this is remote expedition territory",
-      "Weather is unpredictable — flexibility essential",
+      "Visa and permits required, organize through tour operators",
+      "Costs are very high, this is remote expedition territory",
+      "Weather is unpredictable, flexibility essential",
       "Bear safety protocols are strictly enforced",
     ],
     categories: ["volcano", "wildlife", "adventure"],
@@ -1411,7 +1411,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Terraces of mineral-rich thermal pools creating a white mineral landscape.",
     longDescription:
-      "Pamukkale translates to 'cotton fortress' — white mineral terraces cascade down a hillside like frozen waterfalls. Thermal mineral-rich waters flow from springs above, cooling as they cascade, depositing calcium creating the otherworldly formations. Visitors can hike the terraces and bathe in the mineral pools. The ancient city of Hierapolis sits atop the plateau, with Greco-Roman ruins offering historical context. The landscape is surreal and beautiful.",
+      "Pamukkale translates to 'cotton fortress', white mineral terraces cascade down a hillside like frozen waterfalls. Thermal mineral-rich waters flow from springs above, cooling as they cascade, depositing calcium creating the otherworldly formations. Visitors can hike the terraces and bathe in the mineral pools. The ancient city of Hierapolis sits atop the plateau, with Greco-Roman ruins offering historical context. The landscape is surreal and beautiful.",
     coordinates: { lat: 37.9250, lng: 29.1220 },
     image:
       "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
@@ -1435,7 +1435,7 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Walk barefoot on terraces to protect mineral deposits",
       "Visit at sunrise for best photography light",
-      "The pools are crowded midday — visit early or late",
+      "The pools are crowded midday, visit early or late",
       "Wear water shoes to prevent slipping on travertine",
     ],
     categories: ["geothermal", "nature", "history"],
@@ -1449,7 +1449,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Isolated Pacific island with massive stone moai statues and Polynesian culture.",
     longDescription:
-      "Easter Island sits 3,500 km from Chile, one of the most isolated inhabited places on Earth. The island is famous for its moai — hundreds of massive stone statues carved centuries ago by Polynesian Rapa Nui people. The purpose and fate remain mysteries. Crater lakes dot the volcanic landscape. The culture, despite colonization, remains distinctly Polynesian. The island's isolation makes it feel like stepping onto another world.",
+      "Easter Island sits 3,500 km from Chile, one of the most isolated inhabited places on Earth. The island is famous for its moai, hundreds of massive stone statues carved centuries ago by Polynesian Rapa Nui people. The purpose and fate remain mysteries. Crater lakes dot the volcanic landscape. The culture, despite colonization, remains distinctly Polynesian. The island's isolation makes it feel like stepping onto another world.",
     coordinates: { lat: -27.1127, lng: -109.3521 },
     image:
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
@@ -1472,8 +1472,8 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Flights from mainland Chile take ~6 hours",
       "Book a rental car or organized tours in advance",
-      "Respect sacred sites — stay on designated paths",
-      "The island is expensive — budget accordingly",
+      "Respect sacred sites, stay on designated paths",
+      "The island is expensive, budget accordingly",
     ],
     categories: ["island", "archaeology", "culture"],
   },
@@ -1486,7 +1486,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Remote archipelago with endemic plants and otherworldly desert landscape.",
     longDescription:
-      "Socotra is an island archipelago off Yemen, so isolated that 30% of its plant life exists nowhere else on Earth. Dragon's blood trees — ancient gnarled species with blood-red sap — dot the landscape like something from a fantasy novel. The islands' geology is extreme: steep cliffs, desert plateaus, pristine beaches. The culture is Yemeni but distinct. This is true frontier travel for those who can navigate Yemen's political situation and security.",
+      "Socotra is an island archipelago off Yemen, so isolated that 30% of its plant life exists nowhere else on Earth. Dragon's blood trees, ancient gnarled species with blood-red sap, dot the landscape like something from a fantasy novel. The islands' geology is extreme: steep cliffs, desert plateaus, pristine beaches. The culture is Yemeni but distinct. This is true frontier travel for those who can navigate Yemen's political situation and security.",
     coordinates: { lat: 12.5243, lng: 53.9228 },
     image:
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=80",
@@ -1510,8 +1510,8 @@ export const extraDestinations2: Destination[] = [
     travelTips: [
       "Yemen travel requires careful security assessment",
       "Organize through specialized tour operators",
-      "Yemeni visa complexity — plan well in advance",
-      "Island climate is harsh — bring sun/wind protection",
+      "Yemeni visa complexity. Plan well in advance",
+      "Island climate is harsh. Bring sun/wind protection",
     ],
     categories: ["island", "nature", "adventure"],
   },
@@ -1524,7 +1524,7 @@ export const extraDestinations2: Destination[] = [
     description:
       "Southern African nation with dramatic dunes, desert wildlife, and endless horizons.",
     longDescription:
-      "Namibia is a country of vast emptiness and dramatic beauty. The Namib Desert — the world's oldest — features towering sand dunes that glow red at sunrise. The Skeleton Coast's shipwrecks and sea fogs create an eerie beauty. Etosha National Park teems with African wildlife. The Fish River Canyon rivals the Grand Canyon. Namibia has maintained a strong conservation ethic. Driving this landscape is meditation.",
+      "Namibia is a country of vast emptiness and dramatic beauty. The Namib Desert, the world's oldest, features towering sand dunes that glow red at sunrise. The Skeleton Coast's shipwrecks and sea fogs create an eerie beauty. Etosha National Park teems with African wildlife. The Fish River Canyon rivals the Grand Canyon. Namibia has maintained a strong conservation ethic. Driving this landscape is meditation.",
     coordinates: { lat: -22.9375, lng: 18.6753 },
     image:
       "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80",
@@ -1547,8 +1547,8 @@ export const extraDestinations2: Destination[] = [
     timezone: "UTC+2",
     travelTips: [
       "4x4 rental essential for remote areas",
-      "Distances are vast — plan driving carefully",
-      "Fill fuel tanks when possible — stations are scarce",
+      "Distances are vast. Plan driving carefully",
+      "Fill fuel tanks when possible, stations are scarce",
       "Wildlife viewing requires patience and early starts",
     ],
     categories: ["desert", "safari", "nature"],

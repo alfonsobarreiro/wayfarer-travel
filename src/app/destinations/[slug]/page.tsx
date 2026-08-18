@@ -13,7 +13,6 @@ import {
   Clock,
   MapPin,
   Lightbulb,
-  BadgeCheck,
   Leaf,
 } from "lucide-react";
 
@@ -31,6 +30,7 @@ const NATURE_CATEGORIES = new Set([
 import { getDestinationBySlug, allDestinations as destinations } from "@/data/destinations";
 import { DestinationMap } from "@/components/map/DestinationMap";
 import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { notFound } from "next/navigation";
 
 export default function DestinationDetailPage({
@@ -97,24 +97,22 @@ export default function DestinationDetailPage({
             >
               <ArrowLeft className="w-4 h-4" /> All Destinations
             </Link>
-            <motion.div
-              className="flex items-center gap-2 mb-4 flex-wrap"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              {/* Editorial eyebrow — cognac accent gives Guide pages a
-                  recurring visual signature distinct from brand navy. */}
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/25 backdrop-blur-sm text-accent-100 border border-accent-300/40 text-xs font-medium uppercase tracking-[0.14em]">
-                <BadgeCheck className="w-3.5 h-3.5" />
-                Destination Guide
-              </span>
-              {isNature && (
+            {/* Nature chip is the one load-bearing eyebrow here — the
+                URL, breadcrumb ("All Destinations"), and H1 already
+                establish this is a destination guide, so a "Destination
+                Guide" eyebrow would just echo the H1. */}
+            {isNature && (
+              <motion.div
+                className="flex items-center gap-2 mb-4 flex-wrap"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-sage-500/25 backdrop-blur-sm text-sage-100 border border-sage-300/40 text-xs font-medium">
                   <Leaf className="w-3 h-3" />
                   Nature
                 </span>
-              )}
-            </motion.div>
+              </motion.div>
+            )}
             <motion.h1
               className="text-4xl md:text-6xl font-medium text-white mb-2"
               style={{ fontFamily: "var(--font-heading)" }}
@@ -136,7 +134,8 @@ export default function DestinationDetailPage({
       </section>
 
       {/* Content */}
-      <Container className="py-12 md:py-20">
+      <Section variant="content">
+        <Container>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-12">
@@ -245,12 +244,14 @@ export default function DestinationDetailPage({
                 Quick Info
               </h3>
 
-              {/* Best Time — promoted row */}
-              <div className="-mx-6 px-6 py-4 mb-6 bg-brand-50/60 border-y border-brand-100">
+              {/* Best Time — promoted row (the one load-bearing eyebrow
+                  in this card; supporting rows below use sentence-case
+                  labels so nothing else competes with it). */}
+              <div className="-mx-6 px-6 py-4 mb-6 bg-bg-chip border-y border-border-chip-subtle">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-brand-700 mt-1 flex-shrink-0" />
+                  <Calendar className="w-5 h-5 text-link-strong mt-1 flex-shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-700 mb-1">
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-link-strong mb-1">
                       Best Time to Visit
                     </p>
                     <p className="text-base font-medium text-neutral-900">
@@ -266,7 +267,7 @@ export default function DestinationDetailPage({
                   <div key={item.label} className="flex items-start gap-3">
                     <item.icon className="w-4 h-4 text-neutral-400 mt-1 flex-shrink-0" />
                     <div className="min-w-0">
-                      <dt className="text-xs font-medium text-neutral-500 uppercase tracking-wider">
+                      <dt className="text-xs font-medium text-neutral-500">
                         {item.label}
                       </dt>
                       <dd className="text-sm font-medium text-neutral-900">
@@ -295,7 +296,7 @@ export default function DestinationDetailPage({
                 {dest.travelTips.map((tip, i) => {
                   const { title, body } = parseTip(tip);
                   return (
-                    <li key={i} className="pl-4 border-l-2 border-brand-200">
+                    <li key={i} className="pl-4 border-l-2 border-border-chip">
                       <p className="text-sm font-medium text-neutral-900">
                         {title}
                       </p>
@@ -323,7 +324,7 @@ export default function DestinationDetailPage({
               </p>
               <Link
                 href="/planner"
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-brand-700 font-medium text-sm hover:bg-neutral-50 transition-colors"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-link-strong font-medium text-sm hover:bg-neutral-50 transition-colors"
               >
                 Plan Your Trip
               </Link>
@@ -356,7 +357,7 @@ export default function DestinationDetailPage({
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <h3 className="font-bold text-neutral-900 group-hover:text-brand-700 transition-colors">
+                <h3 className="font-bold text-neutral-900 group-hover:text-link-strong transition-colors">
                   {d.name}
                 </h3>
                 <p className="text-sm text-neutral-500">{d.tagline}</p>
@@ -364,7 +365,8 @@ export default function DestinationDetailPage({
             ))}
           </div>
         </div>
-      </Container>
+        </Container>
+      </Section>
     </div>
   );
 }

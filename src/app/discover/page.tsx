@@ -5,6 +5,7 @@ import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion } from "framer-motion";
 import { MapPin, ArrowRight, Compass, Search, MousePointerClick } from "lucide-react";
+
 import { DestinationMap } from "@/components/map/DestinationMap";
 import { useSearch } from "@/components/search/SearchContext";
 import { Container } from "@/components/ui/Container";
@@ -34,29 +35,21 @@ export default function DiscoverPage() {
       {/* Hero */}
       <Section>
         <Container>
-          <motion.div
-            className="flex items-center gap-2 text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <Compass className="w-4 h-4" />
-            Interactive Explorer
-          </motion.div>
           <motion.h1
             className="text-4xl md:text-5xl font-medium text-white mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Discover Your Next Adventure
+            Explore the Globe
           </motion.h1>
           <motion.p
             className="text-neutral-400 text-base max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           >
-            Spin the globe, click any pin, and explore destinations that match
-            your curiosity, not an algorithm.
+            Spin the globe, click any pin, and browse destinations picked
+            by hand.
           </motion.p>
 
           {/* In-page search affordance */}
@@ -124,7 +117,7 @@ export default function DiscoverPage() {
                   >
                     {selected.name}
                   </h3>
-                  <p className="text-brand-300 text-xs font-medium mb-3">
+                  <p className="text-text-on-inverse-muted text-xs font-medium mb-3">
                     {selected.tagline}
                   </p>
                   <p className="text-neutral-400 text-sm mb-4 line-clamp-3">
@@ -132,7 +125,7 @@ export default function DiscoverPage() {
                   </p>
                   <Link
                     href={`/destinations/${selected.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-400 hover:text-brand-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-text-on-inverse-link hover:text-text-on-inverse-link-hover transition-colors"
                   >
                     View full guide <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -195,7 +188,7 @@ export default function DiscoverPage() {
                       {dest.country}
                     </div>
                   </div>
-                  <h3 className="font-bold text-white group-hover:text-brand-400 transition-colors text-sm">
+                  <h3 className="font-bold text-white group-hover:text-text-on-inverse-link transition-colors text-sm">
                     {dest.name}
                   </h3>
                   <p className="text-xs text-neutral-400 line-clamp-1">

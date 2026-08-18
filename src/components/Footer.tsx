@@ -15,8 +15,8 @@ export function Footer() {
               Wayfarer
             </h3>
             <p className="text-sm text-neutral-300">
-              A travel discovery platform for curious explorers. Find
-              authentic destinations matched to how you actually travel.
+              A travel discovery platform for curious explorers. Authentic
+              destinations matched to how you travel.
             </p>
           </div>
 
@@ -56,12 +56,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-8 border-t border-neutral-700">
           <p className="text-xs text-neutral-300">
             &copy; {new Date().getFullYear()} Alfonso Barreiro. Concept project, not a real product.
-          </p>
-          <p className="text-xs text-neutral-300">
-            Designed with intention.
           </p>
         </div>
       </Container>

@@ -23,7 +23,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Wayfarer · Discover Unforgettable New Destinations",
   description:
-    "Wayfarer helps you discover a world of adventures tailored to how you actually travel. Personalized planning, an interactive globe, and itineraries that hold together.",
+    "Wayfarer helps you discover destinations tailored to how you travel. Personalized planning, an interactive globe, and itineraries that hold together.",
 };
 
 export default function RootLayout({

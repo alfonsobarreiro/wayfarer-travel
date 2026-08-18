@@ -51,6 +51,8 @@ import {
   Moon,
 } from "lucide-react";
 import { allDestinations as destinations, type Destination } from "@/data/destinations";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 
 /* ── Types ──────────────────────────────────────────────────── */
 
@@ -85,10 +87,10 @@ interface SavedLocation {
 /* ── Activity defaults + category metadata ─────────────────── */
 
 const CATEGORY_META: Record<ActivityCategory, { label: string; icon: typeof Sun; tone: string }> = {
-  sightseeing: { label: "Sightseeing", icon: Camera,   tone: "bg-brand-50 text-brand-800 border-brand-100" },
+  sightseeing: { label: "Sightseeing", icon: Camera,   tone: "bg-bg-chip text-text-chip border-border-chip-subtle" },
   food:        { label: "Food",        icon: Utensils, tone: "bg-accent-50 text-accent-800 border-accent-100" },
   adventure:   { label: "Adventure",   icon: Mountain, tone: "bg-sage-50 text-sage-800 border-sage-100" },
-  culture:     { label: "Culture",     icon: Landmark, tone: "bg-brand-50 text-brand-800 border-brand-100" },
+  culture:     { label: "Culture",     icon: Landmark, tone: "bg-bg-chip text-text-chip border-border-chip-subtle" },
   nature:      { label: "Nature",      icon: Sun,      tone: "bg-sage-50 text-sage-800 border-sage-100" },
   rest:        { label: "Rest",        icon: Moon,     tone: "bg-neutral-100 text-neutral-700 border-neutral-200" },
 };
@@ -364,8 +366,8 @@ export default function PlannerPage() {
   return (
     <div className="pt-16 min-h-screen bg-bg-surface-ground print:bg-white">
       {/* ── Header ────────────────────────────────────────── */}
-      <section className="bg-white border-b border-neutral-200 py-8 print:py-4">
-        <div className="max-w-6xl mx-auto px-6">
+      <Section variant="compact" className="bg-white border-b border-neutral-200 print:!py-4">
+        <Container>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <h1
@@ -429,7 +431,7 @@ export default function PlannerPage() {
           <button
             type="button"
             onClick={() => setModelHelpOpen((v) => !v)}
-            className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-brand-700 hover:text-brand-800 print:hidden"
+            className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-link-strong hover:text-link-hover print:hidden"
           >
             <Info className="w-3.5 h-3.5" />
             How the three primitives work
@@ -463,11 +465,13 @@ export default function PlannerPage() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* ── Body ──────────────────────────────────────────── */}
-      <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
+      <Section className="py-12 md:py-12">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
         {/* ── Trip outline (segments) ─────────────────── */}
         <div>
           {segments.length === 0 ? (
@@ -509,7 +513,7 @@ export default function PlannerPage() {
                   setPickerMode("segment");
                   setPickerOpen(true);
                 }}
-                className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-neutral-300 text-neutral-600 font-medium text-sm hover:border-brand-400 hover:text-brand-700 hover:bg-white transition-colors print:hidden"
+                className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-neutral-300 text-neutral-600 font-medium text-sm hover:border-border-focus-subtle hover:text-link-strong hover:bg-white transition-colors print:hidden"
               >
                 <Plus className="w-4 h-4" />
                 Add another segment
@@ -578,7 +582,7 @@ export default function PlannerPage() {
                                 onClick={() => promoteToSegment(item.id)}
                                 aria-label="Promote to segment"
                                 title="Promote to segment"
-                                className="text-xs font-semibold text-brand-700 hover:text-brand-800"
+                                className="text-xs font-semibold text-link-strong hover:text-link-hover"
                               >
                                 Add
                               </button>
@@ -610,7 +614,9 @@ export default function PlannerPage() {
             </AnimatePresence>
           </div>
         </aside>
-      </section>
+          </div>
+        </Container>
+      </Section>
 
       {/* ── Picker modal ─────────────────────────────────── */}
       <AnimatePresence>
@@ -643,7 +649,7 @@ export default function PlannerPage() {
                   : "Bookmark without committing to a duration."}
               </p>
 
-              <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg border border-neutral-200 bg-neutral-50 focus-within:border-brand-400 focus-within:bg-white transition-colors">
+              <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg border border-neutral-200 bg-neutral-50 focus-within:border-border-focus-subtle focus-within:bg-white transition-colors">
                 <Search className="w-4 h-4 text-neutral-400 flex-shrink-0" />
                 <input
                   type="text"
@@ -730,7 +736,7 @@ export default function PlannerPage() {
 function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div>
-      <p className="text-2xl font-medium text-brand-700 tabular-nums">{value}</p>
+      <p className="text-2xl font-medium text-link-strong tabular-nums">{value}</p>
       <p className="text-xs text-neutral-500 uppercase tracking-wider">{label}</p>
     </div>
   );
@@ -832,7 +838,7 @@ function SegmentCard({
           </div>
 
           {/* Index marker — replaces "Day N" with "Segment N" framing */}
-          <div className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-medium tabular-nums">
+          <div className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-100 text-link-strong flex items-center justify-center text-xs font-medium tabular-nums">
             {String(index + 1).padStart(2, "0")}
           </div>
 
@@ -857,7 +863,7 @@ function SegmentCard({
                   className="inline-block group"
                 >
                   <h3
-                    className="text-xl font-bold text-neutral-900 group-hover:text-brand-700 transition-colors"
+                    className="text-xl font-bold text-neutral-900 group-hover:text-link-strong transition-colors"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {segment.destination.name}
@@ -879,7 +885,7 @@ function SegmentCard({
 
             {/* Flexible duration + when */}
             <div className="mt-3 flex flex-wrap items-center gap-2 print:gap-3">
-              <label className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-xs font-medium text-brand-800">
+              <label className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-chip border border-border-chip-subtle text-xs font-medium text-text-chip">
                 <CalendarRange className="w-3.5 h-3.5" />
                 <input
                   type="number"
@@ -928,7 +934,7 @@ function SegmentCard({
                       <input
                         value={a.label}
                         onChange={(e) => onUpdateActivity(a.id, e.target.value)}
-                        className="flex-1 text-sm text-neutral-800 bg-transparent border-b border-transparent hover:border-neutral-200 focus:border-brand-400 outline-none py-1 transition-colors"
+                        className="flex-1 text-sm text-neutral-800 bg-transparent border-b border-transparent hover:border-neutral-200 focus:border-border-focus-subtle outline-none py-1 transition-colors"
                       />
                       <button
                         onClick={() => onRemoveActivity(a.id)}
@@ -948,7 +954,7 @@ function SegmentCard({
           <div className="relative print:hidden">
             <button
               onClick={() => setShowActivityMenu((v) => !v)}
-              className="inline-flex items-center gap-2 text-xs font-medium text-neutral-500 hover:text-brand-700 transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-medium text-neutral-500 hover:text-link-strong transition-colors"
             >
               <Plus className="w-3.5 h-3.5" />
               Add activity

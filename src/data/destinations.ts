@@ -54,7 +54,7 @@ export const destinations: Destination[] = [
       "All tourists must book through a licensed tour operator",
       "A daily Sustainable Development Fee of $100 USD applies",
       "Dress modestly when visiting dzongs and monasteries",
-      "Altitude sickness can be an issue — acclimatize gradually",
+      "Altitude sickness can be an issue. Acclimatize gradually",
     ],
     categories: ["mountains", "culture", "spiritual"],
   },
@@ -65,7 +65,7 @@ export const destinations: Destination[] = [
     continent: "North America",
     tagline: "Edge of the Arctic",
     description:
-      "The world's largest island — a frontier of ice, fjords, and the northern lights.",
+      "The world's largest island, a frontier of ice, fjords, and the northern lights.",
     longDescription:
       "Greenland is a land of extremes. The world's largest island is home to the second-largest ice sheet on Earth, yet its coasts are carved with deep fjords, colorful towns, and a rich Inuit culture stretching back thousands of years. In summer, the midnight sun bathes the landscape in an ethereal glow. In winter, the northern lights dance overhead. From dog-sledding across frozen fjords to kayaking among cathedral-sized icebergs, Greenland is an adventure at the edge of the possible.",
     coordinates: { lat: 71.7069, lng: -42.6043 },
@@ -88,8 +88,8 @@ export const destinations: Destination[] = [
     currency: "Danish Krone (DKK)",
     timezone: "UTC-3 to UTC",
     travelTips: [
-      "There are no roads between towns — travel is by air, boat, or dog sled",
-      "Pack layers — weather changes rapidly",
+      "There are no roads between towns. Travel is by air, boat, or dog sled",
+      "Pack layers, weather changes rapidly",
       "Book accommodations well in advance, especially in summer",
       "Respect wildlife viewing distances, especially around icebergs",
     ],
@@ -104,7 +104,7 @@ export const destinations: Destination[] = [
     description:
       "A dazzling metropolis where ancient temples sit alongside neon-lit skyscrapers.",
     longDescription:
-      "Tokyo is a city of contrasts that somehow harmonize perfectly. Serene Shinto shrines share blocks with towering neon streetscapes. Michelin-starred sushi counters sit steps from bustling ramen alleys. The world's busiest intersection — Shibuya Crossing — pulses with energy, while just minutes away, the Meiji Shrine forest offers meditative quiet. With a transit system that runs like clockwork, world-class cuisine at every price point, and a culture that prizes both innovation and tradition, Tokyo rewards every kind of traveler.",
+      "Tokyo is a city of contrasts that somehow harmonize perfectly. Serene Shinto shrines share blocks with towering neon streetscapes. Michelin-starred sushi counters sit steps from bustling ramen alleys. The world's busiest intersection, Shibuya Crossing, pulses with energy, while just minutes away, the Meiji Shrine forest offers meditative quiet. With a transit system that runs like clockwork, world-class cuisine at every price point, and a culture that prizes both innovation and tradition, Tokyo rewards every kind of traveler.",
     coordinates: { lat: 35.6762, lng: 139.6503 },
     image:
       "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
@@ -130,7 +130,7 @@ export const destinations: Destination[] = [
     travelTips: [
       "Get a Suica/Pasmo IC card for seamless transit",
       "Tipping is not customary and can be considered rude",
-      "Many places are still cash-only — carry yen",
+      "Many places are still cash-only. Carry yen",
       "Learn basic phrases: sumimasen (excuse me), arigatou (thank you)",
     ],
     categories: ["city", "culture", "food"],
@@ -144,7 +144,7 @@ export const destinations: Destination[] = [
     description:
       "Untamed wilderness of glaciers, granite towers, and windswept steppe at the bottom of the world.",
     longDescription:
-      "Patagonia is nature on a scale that humbles. The granite spires of Torres del Paine rise like cathedrals from the steppe. The Perito Moreno Glacier — one of the few advancing glaciers on Earth — cracks and calves with thunderous force. Guanacos roam the plains, condors circle overhead, and the wind is a constant companion. Whether you're trekking the W Circuit, kayaking among icebergs, or riding horseback across the pampas, Patagonia delivers raw, unfiltered adventure.",
+      "Patagonia is nature on a scale that humbles. The granite spires of Torres del Paine rise like cathedrals from the steppe. The Perito Moreno Glacier, one of the few advancing glaciers on Earth, cracks and calves with thunderous force. Guanacos roam the plains, condors circle overhead, and the wind is a constant companion. Whether you're trekking the W Circuit, kayaking among icebergs, or riding horseback across the pampas, Patagonia delivers raw, unfiltered adventure.",
     coordinates: { lat: -50.3402, lng: -72.2648 },
     image:
       "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80",
@@ -168,8 +168,8 @@ export const destinations: Destination[] = [
     timezone: "UTC-3",
     travelTips: [
       "Book refugios months in advance for the W Trek",
-      "Wind is extreme — bring windproof layers",
-      "Distances are vast — plan logistics carefully",
+      "Wind is extreme. Bring windproof layers",
+      "Distances are vast. Plan logistics carefully",
       "Both Argentina and Chile sides are worth visiting",
     ],
     categories: ["mountains", "adventure", "nature"],
@@ -183,7 +183,7 @@ export const destinations: Destination[] = [
     description:
       "A sensory overload of spice-scented souks, ornate riads, and the Atlas Mountains on the horizon.",
     longDescription:
-      "Marrakech is an assault on the senses in the best possible way. The ancient medina — a UNESCO World Heritage site — is a labyrinth of narrow alleys opening onto hidden courtyards, ornate fountains, and centuries-old mosques. The Jemaa el-Fnaa square transforms from a daytime market into a nightly spectacle of food stalls, musicians, and storytellers. Beyond the city walls, the Atlas Mountains rise dramatically, offering trekking, Berber villages, and the gateway to the Sahara.",
+      "Marrakech is an assault on the senses in the best possible way. The ancient medina, a UNESCO World Heritage site, is a labyrinth of narrow alleys opening onto hidden courtyards, ornate fountains, and centuries-old mosques. The Jemaa el-Fnaa square transforms from a daytime market into a nightly spectacle of food stalls, musicians, and storytellers. Beyond the city walls, the Atlas Mountains rise dramatically, offering trekking, Berber villages, and the gateway to the Sahara.",
     coordinates: { lat: 31.6295, lng: -7.9811 },
     image:
       "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80",
@@ -204,9 +204,9 @@ export const destinations: Destination[] = [
     currency: "Moroccan Dirham (MAD)",
     timezone: "UTC+1",
     travelTips: [
-      "Haggling is expected in the souks — start at 30-40% of asking price",
+      "Haggling is expected in the souks. Start at 30-40% of asking price",
       "Dress modestly, especially in the medina",
-      "Hire a local guide for your first medina visit — you will get lost",
+      "Hire a local guide for your first medina visit, you will get lost",
       "Drink only bottled water",
     ],
     categories: ["culture", "food", "desert"],
@@ -216,11 +216,11 @@ export const destinations: Destination[] = [
     name: "New Zealand",
     country: "New Zealand",
     continent: "Oceania",
-    tagline: "Aotearoa — Land of the Long White Cloud",
+    tagline: "Aotearoa, Land of the Long White Cloud",
     description:
       "From volcanic peaks to fjord country, a compact nation packed with every landscape on Earth.",
     longDescription:
-      "New Zealand packs an impossible variety of landscapes into a country smaller than Japan. The North Island offers geothermal wonders, Maori culture, and rolling green hills. The South Island delivers alpine drama: the Southern Alps, Milford Sound's sheer fjord walls, and glaciers that descend into rainforest. The adventure capital of the world — Queenstown — offers bungee jumping, jet boating, and heli-skiing. But it's the people and culture that linger longest: the Maori concept of kaitiakitanga (guardianship) shapes the national identity.",
+      "New Zealand packs an impossible variety of landscapes into a country smaller than Japan. The North Island offers geothermal wonders, Maori culture, and rolling green hills. The South Island delivers alpine drama: the Southern Alps, Milford Sound's sheer fjord walls, and glaciers that descend into rainforest. The adventure capital of the world, Queenstown, offers bungee jumping, jet boating, and heli-skiing. But it's the people and culture that linger longest: the Maori concept of kaitiakitanga (guardianship) shapes the national identity.",
     coordinates: { lat: -44.5638, lng: 168.7125 },
     image:
       "https://images.unsplash.com/photo-1469521669194-babb45599def?w=800&q=80",
@@ -243,8 +243,8 @@ export const destinations: Destination[] = [
     travelTips: [
       "Rent a campervan for maximum flexibility",
       "Book Great Walk huts months in advance",
-      "The UV index is extreme — wear sunscreen year-round",
-      "Drive on the left — roads are winding, take it slow",
+      "The UV index is extreme. Wear sunscreen year-round",
+      "Drive on the left, roads are winding, take it slow",
     ],
     categories: ["adventure", "nature", "mountains"],
   },
@@ -254,7 +254,7 @@ export const destinations: Destination[] = [
 import { extraDestinations } from "./destinations-extra";
 import { extraDestinations2 } from "./destinations-extra2";
 
-// Combine all — deduplicate by slug
+// Combine all, deduplicate by slug
 const allSlugs = new Set(destinations.map((d) => d.slug));
 const merged = [...destinations];
 for (const d of [...extraDestinations, ...extraDestinations2]) {

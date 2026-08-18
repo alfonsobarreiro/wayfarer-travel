@@ -29,11 +29,11 @@ export function DestinationImage({ src, fallbackSrc, alt, className, style, ...r
         className={className}
         style={{
           ...style,
-          background:    "var(--color-neutral-100, #EEEEF0)",
+          background:    "var(--color-neutral-100)",
           display:       "flex",
           alignItems:    "center",
           justifyContent:"center",
-          color:         "var(--color-neutral-400, #8E8B90)",
+          color:         "var(--color-neutral-400)",
           fontSize:      11,
           fontFamily:    "var(--font-body), system-ui, sans-serif",
           letterSpacing: "0.06em",

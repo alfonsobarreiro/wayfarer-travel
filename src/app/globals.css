@@ -110,6 +110,14 @@
 
   /* ----------------------------------------------------------
      SEMANTIC: Text
+
+     `link` / `link-hover` / `link-strong` give link callsites a
+     short utility name (`text-link`, `hover:text-link-hover`) so
+     no page has to re-pick a ramp step. `on-inverse-*` mirrors the
+     same roles on the ink surface (used inside `bg-surface-inverse`
+     sections) — muted body text, links, and their hover state.
+     `wordmark` is the one-off role for the brand logotype so the
+     hue can move without touching component code.
   ---------------------------------------------------------- */
   --color-text-default:     var(--color-neutral-900);
   --color-text-secondary:   var(--color-neutral-700);
@@ -121,6 +129,20 @@
   --color-text-accent:      var(--color-accent-700);
   --color-text-link:        var(--color-brand-600);
   --color-text-link-hover:  var(--color-brand-800);
+  /* Short-name link aliases so utilities read as `text-link` /
+     `hover:text-link-hover` rather than the doubled `text-text-link`. */
+  --color-link:             var(--color-brand-600);
+  --color-link-hover:       var(--color-brand-800);
+  --color-link-strong:      var(--color-brand-700);
+  /* On-inverse text roles for anything sitting inside a dark surface. */
+  --color-text-on-inverse:            #FFFFFF;
+  --color-text-on-inverse-muted:      var(--color-brand-300);
+  --color-text-on-inverse-link:       var(--color-brand-400);
+  --color-text-on-inverse-link-hover: var(--color-brand-300);
+  /* Wordmark ink for the brand logotype. */
+  --color-text-wordmark:    var(--color-brand-900);
+  /* Chip text role — used with bg-chip / border-chip. */
+  --color-text-chip:        var(--color-brand-800);
   /* State text — cross-brand hex kept identical to MSR signal-error to
      preserve one universal danger hue; sage-800 gives success enough
      contrast against sage-100 muted backgrounds. */
@@ -129,14 +151,37 @@
 
   /* ----------------------------------------------------------
      SEMANTIC: Border
+
+     `border-selected` is the outline for a chosen radio/pill (the
+     brand-600 hue Alfonso already picked). `border-focus-subtle`
+     is the tinted brand-400 border used by focus-within inputs
+     that don't warrant the full 2px ring. `border-chip` +
+     `border-chip-subtle` pair with `bg-chip` for pill/tag chrome.
   ---------------------------------------------------------- */
-  --color-border-default: var(--color-neutral-200);
-  --color-border-strong:  var(--color-neutral-300);
-  --color-border-subtle:  var(--color-neutral-100);
-  --color-border-input:   var(--color-neutral-300);
-  --color-border-focus:   var(--color-brand-500);
-  --color-border-primary: var(--color-brand-500);
-  --color-border-accent:  var(--color-accent-500);
+  --color-border-default:      var(--color-neutral-200);
+  --color-border-strong:       var(--color-neutral-300);
+  --color-border-subtle:       var(--color-neutral-100);
+  --color-border-input:        var(--color-neutral-300);
+  --color-border-focus:        var(--color-brand-500);
+  --color-border-focus-subtle: var(--color-brand-400);
+  --color-border-primary:      var(--color-brand-500);
+  --color-border-selected:     var(--color-brand-600);
+  --color-border-accent:       var(--color-accent-500);
+  --color-border-chip:         var(--color-brand-200);
+  --color-border-chip-subtle:  var(--color-brand-100);
+
+  /* ----------------------------------------------------------
+     SEMANTIC: Chip / Pill background
+     Pairs with --color-border-chip + --color-text-chip.
+  ---------------------------------------------------------- */
+  --color-bg-chip:          var(--color-brand-50);
+
+  /* ----------------------------------------------------------
+     SEMANTIC: Focus ring
+     Tokenized so no callsite reaches for a `ring-brand-500/20`.
+  ---------------------------------------------------------- */
+  --color-focus:            var(--color-brand-500);
+  --color-focus-soft:       color-mix(in oklch, var(--color-brand-500) 20%, transparent);
 
   /* ----------------------------------------------------------
      TYPOGRAPHY
@@ -201,6 +246,14 @@
   --shadow-e3: 0 4px 10px -2px rgba(0,0,0,0.16), 0 10px 24px -8px rgba(0,0,0,0.08);
   --shadow-e4: 0 8px 16px -4px rgba(0,0,0,0.16), 0 16px 40px -12px rgba(0,0,0,0.08);
   --shadow-e5: 0 12px 24px -6px rgba(0,0,0,0.16), 0 24px 64px -16px rgba(0,0,0,0.08);
+
+  /* Primary-CTA glow — swaps the opacity-modulated `shadow-brand-600/20`
+     pattern that used to be inlined at CTA callsites. Uses color-mix so a
+     palette swap moves the glow with the rest of the UI. */
+  --shadow-primary:    0 10px 15px -3px color-mix(in oklch, var(--color-brand-600) 20%, transparent),
+                       0 4px 6px -4px  color-mix(in oklch, var(--color-brand-600) 20%, transparent);
+  --shadow-primary-lg: 0 20px 25px -5px color-mix(in oklch, var(--color-brand-600) 30%, transparent),
+                       0 8px 10px -6px  color-mix(in oklch, var(--color-brand-600) 30%, transparent);
 
   /* Focus ring */
   --ring-focus: 0 0 0 2px var(--color-brand-500);

@@ -84,8 +84,8 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
 
             {submitted ? (
               <div className="p-8 text-center">
-                <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-4">
-                  <Check className="w-6 h-6 text-brand-600" />
+                <div className="w-12 h-12 rounded-full bg-bg-chip flex items-center justify-center mx-auto mb-4">
+                  <Check className="w-6 h-6 text-link" />
                 </div>
                 <h2
                   className="text-2xl font-bold mb-1"
@@ -128,7 +128,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                     autoComplete="email"
                     placeholder="you@example.com"
                     {...register("email")}
-                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none transition-colors"
+                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-focus focus:outline-none transition-colors"
                   />
                 </div>
                 {formState.errors.email && (
@@ -148,7 +148,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                       e.preventDefault();
                       // Concept project: stub for future flow
                     }}
-                    className="text-xs font-medium text-brand-600 hover:text-brand-700"
+                    className="text-xs font-medium text-link hover:text-link-strong"
                   >
                     Forgot?
                   </button>
@@ -160,7 +160,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                     autoComplete="current-password"
                     placeholder="At least 6 characters"
                     {...register("password")}
-                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none transition-colors"
+                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-focus focus:outline-none transition-colors"
                   />
                 </div>
                 {formState.errors.password && (
@@ -186,7 +186,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                         onClose();
                         onSwitchToSignUp();
                       }}
-                      className="font-medium text-brand-700 hover:text-brand-800"
+                      className="font-medium text-link-strong hover:text-link-hover"
                     >
                       Create an account
                     </button>

@@ -9,7 +9,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Island of the Gods",
     description: "Tropical paradise with rice terraces, temples, and world-class beaches.",
     longDescription:
-      "Bali captivates with its blend of spiritual culture, lush landscapes, and vibrant energy. Ancient temples perch on cliffsides, rice paddies cascade down hillsides in emerald ribbons, and beaches range from golden to black sand. The spiritual heart beats in Ubud's artistic communities, while coastal towns like Seminyak pulse with nightlife and dining. Hindu traditions animate daily life—elaborate ceremonies, intricate offerings, and a deep connection to nature shape this island's soul.",
+      "Bali captivates with its blend of spiritual culture, lush landscapes, and vibrant energy. Ancient temples perch on cliffsides, rice paddies cascade down hillsides in emerald ribbons, and beaches range from golden to black sand. The spiritual heart beats in Ubud's artistic communities, while coastal towns like Seminyak pulse with nightlife and dining. Hindu traditions animate daily life, elaborate ceremonies, intricate offerings, and a deep connection to nature shape this island's soul.",
     coordinates: { lat: -8.6705, lng: 115.2126 },
     image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
     gallery: [
@@ -31,7 +31,7 @@ export const extraDestinations: Destination[] = [
     timezone: "UTC+8",
     travelTips: [
       "Rent a scooter or hire a driver for exploring",
-      "Respect temple etiquette—wear sarongs",
+      "Respect temple etiquette. Wear sarongs",
       "Visit Ubud in the morning to avoid crowds",
       "Try local warungs for authentic food at great prices",
     ],
@@ -45,7 +45,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Japan's Cultural Heart",
     description: "Ancient capital with over 1,000 temples, gardens, and geisha traditions.",
     longDescription:
-      "Kyoto preserves the soul of old Japan. Thousands of temples and shrines dot the city—from the iconic vermillion gates of Fushimi Inari to the serene Kinkaku-ji's golden pavilion. Geishas still walk the streets of Gion in the evenings. The bamboo groves of Arashiyama whisper with age-old beauty. Tea ceremonies, kaiseki dinners, and ryokan stays connect you to centuries of refined Japanese aesthetics. Each season brings new magic: spring's cherry blossoms, autumn's maple leaves.",
+      "Kyoto preserves the soul of old Japan. Thousands of temples and shrines dot the city, from the iconic vermillion gates of Fushimi Inari to the serene Kinkaku-ji's golden pavilion. Geishas still walk the streets of Gion in the evenings. The bamboo groves of Arashiyama whisper with age-old beauty. Tea ceremonies, kaiseki dinners, and ryokan stays connect you to centuries of refined Japanese aesthetics. Each season brings new magic: spring's cherry blossoms, autumn's maple leaves.",
     coordinates: { lat: 35.0116, lng: 135.7681 },
     image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
     gallery: [
@@ -80,7 +80,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Where East Meets West",
     description: "Historic city straddling two continents, blending Ottoman grandeur with modern energy.",
     longDescription:
-      "Istanbul is a city of layers—literally spanning Europe and Asia across the Bosphorus Strait. The stunning Blue Mosque and Topkapi Palace showcase Ottoman magnificence. The sprawling Grand Bazaar buzzes with merchants and spice aromas. Sufi whirling dervish ceremonies echo with spiritual mystery. Turkish coffee and baklava delight at every corner. The Bosphorus offers respite with sunset cruises. Istanbul pulses with creative energy, ancient history, and a unique cultural fusion that defines modern Turkey.",
+      "Istanbul is a city of layers, literally spanning Europe and Asia across the Bosphorus Strait. The stunning Blue Mosque and Topkapi Palace showcase Ottoman magnificence. The sprawling Grand Bazaar buzzes with merchants and spice aromas. Sufi whirling dervish ceremonies echo with spiritual mystery. Turkish coffee and baklava delight at every corner. The Bosphorus offers respite with sunset cruises. Istanbul pulses with creative energy, ancient history, and a unique cultural fusion that defines modern Turkey.",
     coordinates: { lat: 41.0082, lng: 28.9784 },
     image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
     gallery: [
@@ -99,7 +99,7 @@ export const extraDestinations: Destination[] = [
     currency: "Turkish Lira (TRY)",
     timezone: "UTC+3",
     travelTips: [
-      "Learn basic Turkish phrases—locals appreciate the effort",
+      "Learn basic Turkish phrases, locals appreciate the effort",
       "Negotiate in the Grand Bazaar but stay respectful",
       "Use the tram system for easy Old City access",
       "Try Turkish tea and traditional manti for lunch",
@@ -114,7 +114,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Sunset Over the Aegean",
     description: "Romantic island with white-washed villages, volcanic cliffs, and crystal-clear waters.",
     longDescription:
-      "Santorini is postcard perfection made real. Perched on volcanic caldera cliffs, whitewashed villages tumble toward the sea in an avalanche of beauty. The sunsets are legendary—paint the sky in oranges and pinks while wine-dark waters gleam below. Visit ancient Akrotiri's preserved ruins, hike volcanic trails, or swim in geothermal hot springs. Wineries produce full-bodied reds and crisp whites. Whether you're in the bustling main towns or quiet villages, Santorini delivers romance and Mediterranean magic.",
+      "Santorini is postcard perfection made real. Perched on volcanic caldera cliffs, whitewashed villages tumble toward the sea in an avalanche of beauty. The sunsets are legendary, paint the sky in oranges and pinks while wine-dark waters gleam below. Visit ancient Akrotiri's preserved ruins, hike volcanic trails, or swim in geothermal hot springs. Wineries produce full-bodied reds and crisp whites. Whether you're in the bustling main towns or quiet villages, Santorini delivers romance and Mediterranean magic.",
     coordinates: { lat: 36.4172, lng: 25.4615 },
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
     gallery: [
@@ -137,7 +137,7 @@ export const extraDestinations: Destination[] = [
       "Book restaurants and accommodations months in advance",
       "Visit Oia in early evening for sunset without crowds",
       "Rent an ATV or take ferries to nearby islands",
-      "Pack sunscreen—the sun reflects off white buildings",
+      "Pack sunscreen, the sun reflects off white buildings",
     ],
     categories: ["beach", "romance", "wine"],
   },
@@ -149,7 +149,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Lost City in the Clouds",
     description: "Ancient Incan citadel perched high in the Andes, a wonder of engineering and mystery.",
     longDescription:
-      "Machu Picchu stuns even seasoned travelers. This 15th-century Incan fortress sits at 7,970 feet above sea level, cradled by the Andes' lush peaks. The precision stonework—walls fitted without mortar—reveals advanced engineering. Terraced gardens cascade down mountainsides. The Temple of the Sun aligns perfectly with celestial events. Arrive early to have the site nearly to yourself before crowds overwhelm. Whether you hike the famous Inca Trail or take the train, the first glimpse of these ruins will steal your breath.",
+      "Machu Picchu stuns even seasoned travelers. This 15th-century Incan fortress sits at 7,970 feet above sea level, cradled by the Andes' lush peaks. The precision stonework, walls fitted without mortar, reveals advanced engineering. Terraced gardens cascade down mountainsides. The Temple of the Sun aligns perfectly with celestial events. Arrive early to have the site nearly to yourself before crowds overwhelm. Whether you hike the famous Inca Trail or take the train, the first glimpse of these ruins will steal your breath.",
     coordinates: { lat: -13.1631, lng: -72.5450 },
     image: "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&q=80",
     gallery: [
@@ -172,7 +172,7 @@ export const extraDestinations: Destination[] = [
     travelTips: [
       "Acclimatize in Cusco before attempting the trek",
       "Book the Inca Trail months in advance",
-      "Bring layers—weather changes rapidly at altitude",
+      "Bring layers, weather changes rapidly at altitude",
       "Hire a local guide to unlock the site's history",
     ],
     categories: ["history", "adventure", "mountains"],
@@ -185,7 +185,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Land of Fire and Ice",
     description: "Vibrant capital gateway to Iceland's glaciers, geysers, and golden circle wonders.",
     longDescription:
-      "Reykjavik is a compact, creative capital with a lively cultural scene and café culture. But the true magic lies beyond the city: the Golden Circle's geysers and waterfalls, the Blue Lagoon's geothermal waters, black sand beaches, and glacial valleys. Ice caves glow blue in winter. The northern lights dance overhead in darkness. Waterfalls thunder with power. Hot springs steam in the wilderness. Iceland feels otherworldly—a place where the Earth's raw forces are visible and visceral.",
+      "Reykjavik is a compact, creative capital with a lively cultural scene and café culture. But the true magic lies beyond the city: the Golden Circle's geysers and waterfalls, the Blue Lagoon's geothermal waters, black sand beaches, and glacial valleys. Ice caves glow blue in winter. The northern lights dance overhead in darkness. Waterfalls thunder with power. Hot springs steam in the wilderness. Iceland feels otherworldly, a place where the Earth's raw forces are visible and visceral.",
     coordinates: { lat: 64.1466, lng: -21.9426 },
     image:
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80",
@@ -210,7 +210,7 @@ export const extraDestinations: Destination[] = [
       "Rent a 4WD vehicle for winter driving",
       "Book Blue Lagoon tickets in advance",
       "Dress in warm, waterproof layers",
-      "Drive carefully—conditions change rapidly",
+      "Drive carefully, conditions change rapidly",
     ],
     categories: ["nature", "adventure", "geothermal"],
   },
@@ -222,7 +222,7 @@ export const extraDestinations: Destination[] = [
     tagline: "City of Superlatives",
     description: "Ultra-modern metropolis with iconic architecture, luxury shopping, and desert adventures.",
     longDescription:
-      "Dubai is ambition made manifest—a city of extremes built in the desert. The Burj Khalifa touches the clouds. Palm-shaped islands rise from the sea. Massive shopping malls offer every luxury imaginable. Yet beyond the glitter, traditional souks buzz with merchants, camel races thrill crowds, and desert safaris deliver golden dunes at sunset. Modern hotels blend Arabic architectural elements with cutting-edge design. Dubai represents the future, yet respects its heritage—a city constantly reinventing itself.",
+      "Dubai is ambition made manifest, a city of extremes built in the desert. The Burj Khalifa touches the clouds. Palm-shaped islands rise from the sea. Massive shopping malls offer every luxury imaginable. Yet beyond the glitter, traditional souks buzz with merchants, camel races thrill crowds, and desert safaris deliver golden dunes at sunset. Modern hotels blend Arabic architectural elements with cutting-edge design. Dubai represents the future, yet respects its heritage, a city constantly reinventing itself.",
     coordinates: { lat: 25.2048, lng: 55.2708 },
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     gallery: [
@@ -243,7 +243,7 @@ export const extraDestinations: Destination[] = [
     timezone: "UTC+4",
     travelTips: [
       "Dress modestly outside resorts and shopping malls",
-      "Haggle in traditional souks—it's expected",
+      "Haggle in traditional souks, it's expected",
       "Book desert safaris through reputable operators",
       "Use the efficient metro system to get around",
     ],
@@ -257,7 +257,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The Fairest Cape",
     description: "Cosmopolitan port city backed by Table Mountain with pristine beaches and rich culture.",
     longDescription:
-      "Cape Town is one of the world's most scenic cities, with Table Mountain rising majestically behind the waterfront. The cable car ascends 1,087 meters for panoramic views. Robben Island, where Nelson Mandela was imprisoned, now stands as a symbol of freedom. The winelands beyond the city produce world-class wines. Penguin colonies waddle at Boulders Beach. The Cape offers adventure—surfing, hiking, shark cage diving—alongside cultural experiences and excellent cuisine. It's a city of reinvention and hope.",
+      "Cape Town is one of the world's most scenic cities, with Table Mountain rising majestically behind the waterfront. The cable car ascends 1,087 meters for panoramic views. Robben Island, where Nelson Mandela was imprisoned, now stands as a symbol of freedom. The winelands beyond the city produce world-class wines. Penguin colonies waddle at Boulders Beach. The Cape offers adventure, surfing, hiking, shark cage diving, alongside cultural experiences and excellent cuisine. It's a city of reinvention and hope.",
     coordinates: { lat: -33.9249, lng: 18.4241 },
     image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80",
     gallery: [
@@ -292,7 +292,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Frozen in Time",
     description: "Colorful colonial city where 1950s American cars cruise vintage streets and music fills the air.",
     longDescription:
-      "Havana feels like stepping into a time capsule. The decades-long embargo created a living museum of 1950s architecture and culture. Pastel-colored colonial buildings line cobblestone streets. Vintage Cadillacs and Chevrolets—carefully maintained by their owners—cruise the Malecón waterfront. Live music erupts from doorways: son cubano, salsa, and guaguancó. The air smells of cigars and mojitos. Despite economic hardship, the spirit of Cuba's people shines through their creativity, dance, and warmth. Havana is rapidly changing—visit soon to experience its timeless character.",
+      "Havana feels like stepping into a time capsule. The decades-long embargo created a living museum of 1950s architecture and culture. Pastel-colored colonial buildings line cobblestone streets. Vintage Cadillacs and Chevrolets, carefully maintained by their owners, cruise the Malecón waterfront. Live music erupts from doorways: son cubano, salsa, and guaguancó. The air smells of cigars and mojitos. Despite economic hardship, the spirit of Cuba's people shines through their creativity, dance, and warmth. Havana is rapidly changing, visit soon to experience its timeless character.",
     coordinates: { lat: 23.1291, lng: -82.3794 },
     image: "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80",
     gallery: [
@@ -314,7 +314,7 @@ export const extraDestinations: Destination[] = [
     travelTips: [
       "Hire vintage car tours for authentic experience",
       "Use CUC (tourist currency) for most transactions",
-      "Cash is essential—card acceptance is limited",
+      "Cash is essential, card acceptance is limited",
       "Explore Old Havana on foot early in the morning",
     ],
     categories: ["culture", "history", "music"],
@@ -327,7 +327,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The Rose City",
     description: "Ancient Nabatean carved city hidden in rose-red desert canyons, a wonder of the ancient world.",
     longDescription:
-      "Petra emerges from the desert like a mirage—thousand-year-old structures carved directly from rose-colored sandstone cliffs. The Treasury's ornate facade greets visitors at the canyon entrance, instantly iconic. Beyond lie hidden temples, monasteries, and royal tombs carved with precision by ancient Nabatean craftsmen. The site sprawls across canyons and valleys, rewarding exploration. A sunset hike to the Monastery offers dramatic backlighting. Petra is not just archaeology—it's a testament to human ingenuity and the timeless beauty of desert landscapes.",
+      "Petra emerges from the desert like a mirage, thousand-year-old structures carved directly from rose-colored sandstone cliffs. The Treasury's ornate facade greets visitors at the canyon entrance, instantly iconic. Beyond lie hidden temples, monasteries, and royal tombs carved with precision by ancient Nabatean craftsmen. The site sprawls across canyons and valleys, rewarding exploration. A sunset hike to the Monastery offers dramatic backlighting. Petra is not just archaeology, it's a testament to human ingenuity and the timeless beauty of desert landscapes.",
     coordinates: { lat: 30.3286, lng: 35.4419 },
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
@@ -347,9 +347,9 @@ export const extraDestinations: Destination[] = [
     currency: "Jordanian Dinar (JOD)",
     timezone: "UTC+2",
     travelTips: [
-      "Hire a local guide—they know hidden passages",
+      "Hire a local guide, they know hidden passages",
       "Start early to explore before crowds arrive",
-      "Wear sturdy hiking boots—terrain is rocky",
+      "Wear sturdy hiking boots, terrain is rocky",
       "Bring plenty of water and sun protection",
     ],
     categories: ["history", "desert", "adventure"],
@@ -362,7 +362,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The City of Contrasts",
     description: "Ancient capital with thousand-year history, where tradition thrives amid motorbike-filled streets.",
     longDescription:
-      "Hanoi pulses with energy and layers of history. The Old Quarter's narrow streets buzz with vendors, shops stacked impossibly high, and the aroma of street food everywhere. Traditional water puppet theater echoes with ancient folklore. Serene temples and pagodas offer spiritual refuge. Hoan Kiem Lake reflects the city's soul. The morning tai chi on lakeside paths feels like witnessing daily rituals unchanged for generations. Street food culture is unmatched—pho, banh mi, and egg coffee fuel locals. Despite modernization, Hanoi guards its traditions fiercely.",
+      "Hanoi pulses with energy and layers of history. The Old Quarter's narrow streets buzz with vendors, shops stacked impossibly high, and the aroma of street food everywhere. Traditional water puppet theater echoes with ancient folklore. Serene temples and pagodas offer spiritual refuge. Hoan Kiem Lake reflects the city's soul. The morning tai chi on lakeside paths feels like witnessing daily rituals unchanged for generations. Street food culture is unmatched, pho, banh mi, and egg coffee fuel locals. Despite modernization, Hanoi guards its traditions fiercely.",
     coordinates: { lat: 21.0285, lng: 105.8542 },
     image: "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&q=80",
     gallery: [
@@ -382,7 +382,7 @@ export const extraDestinations: Destination[] = [
     currency: "Vietnamese Dong (VND)",
     timezone: "UTC+7",
     travelTips: [
-      "Navigate traffic carefully—cross confidently, not cautiously",
+      "Navigate traffic carefully, cross confidently, not cautiously",
       "Eat street food where locals eat",
       "Hire a motorbike taxi (Grab) for easy transport",
       "Learn basic Vietnamese phrases",
@@ -397,7 +397,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Where Art Meets Architecture",
     description: "Vibrant Mediterranean city famed for Gaudí's whimsical designs and beachside energy.",
     longDescription:
-      "Barcelona is a feast for the senses. Gaudí's Sagrada Familia rises like a psychedelic cathedral, still under construction after 140+ years. Park Güell offers dreamlike terraces and mosaics overlooking the city. The Gothic Quarter's narrow medieval alleys hide tapas bars and boutiques. Las Ramblas thrums with energy and performers. The beach offers respite with Mediterranean breeze. FC Barcelona's Camp Nou stadium echoes with passion. The city moves to the beat of Catalan culture—proud, creative, and uncompromising.",
+      "Barcelona is a feast for the senses. Gaudí's Sagrada Familia rises like a psychedelic cathedral, still under construction after 140+ years. Park Güell offers dreamlike terraces and mosaics overlooking the city. The Gothic Quarter's narrow medieval alleys hide tapas bars and boutiques. Las Ramblas thrums with energy and performers. The beach offers respite with Mediterranean breeze. FC Barcelona's Camp Nou stadium echoes with passion. The city moves to the beat of Catalan culture, proud, creative, and uncompromising.",
     coordinates: { lat: 41.3851, lng: 2.1734 },
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80",
     gallery: [
@@ -421,7 +421,7 @@ export const extraDestinations: Destination[] = [
       "Book Sagrada Familia and Park Güell tickets online",
       "Use the metro for quick city transport",
       "Eat dinner after 9 PM like locals",
-      "Learn basic Catalan phrases—locals appreciate it",
+      "Learn basic Catalan phrases, locals appreciate it",
     ],
     categories: ["art", "architecture", "beach"],
   },
@@ -433,7 +433,7 @@ export const extraDestinations: Destination[] = [
     tagline: "City of the Pharaohs",
     description: "Ancient capital on the Nile with pyramids, museums, and bustling Islamic heritage.",
     longDescription:
-      "Cairo sprawls along the Nile, a city of over 20 million where ancient and modern collide. The Giza Pyramids—those eternal wonders—pierce the city's edge. The Egyptian Museum holds treasures beyond measure. Khan el-Khalili bazaar buzzes with merchants and the scent of spices. Islamic Cairo's mosques showcase architectural masterpieces. Felucca sailboats drift peacefully on the Nile. The city's energy is intense, chaotic, and intoxicating. Cairo reveals itself slowly—layer by layer, day by day—a living testament to millennia of human civilization.",
+      "Cairo sprawls along the Nile, a city of over 20 million where ancient and modern collide. The Giza Pyramids, those eternal wonders, pierce the city's edge. The Egyptian Museum holds treasures beyond measure. Khan el-Khalili bazaar buzzes with merchants and the scent of spices. Islamic Cairo's mosques showcase architectural masterpieces. Felucca sailboats drift peacefully on the Nile. The city's energy is intense, chaotic, and intoxicating. Cairo reveals itself slowly, layer by layer, day by day, a living testament to millennia of human civilization.",
     coordinates: { lat: 30.0444, lng: 31.2357 },
     image:
       "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&q=80",
@@ -454,7 +454,7 @@ export const extraDestinations: Destination[] = [
     timezone: "UTC+2",
     travelTips: [
       "Hire experienced guides for pyramid tours",
-      "Haggle in the bazaar—it's part of the experience",
+      "Haggle in the bazaar, it's part of the experience",
       "Drink bottled water and eat cooked foods",
       "Visit the pyramids at sunrise for fewer crowds",
     ],
@@ -468,7 +468,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Paradise on Earth",
     description: "Tropical island nation with coral atolls, overwater bungalows, and pristine reefs.",
     longDescription:
-      "The Maldives represents paradise distilled—1,190 coral islands scattered across the Indian Ocean. Only 200 are inhabited. Overwater bungalows with glass floors reveal a vibrant underwater world. Turquoise lagoons are home to manta rays, sea turtles, and colorful fish. The reefs are some of the world's most pristine. Diving and snorkeling are phenomenal year-round. Resorts range from ultra-luxury to budget-friendly. Uninhabited islands invite complete solitude. The Maldives offers escapism, but global warming threatens its existence—visit soon to witness this fragile paradise.",
+      "The Maldives represents paradise distilled, 1,190 coral islands scattered across the Indian Ocean. Only 200 are inhabited. Overwater bungalows with glass floors reveal a vibrant underwater world. Turquoise lagoons are home to manta rays, sea turtles, and colorful fish. The reefs are some of the world's most pristine. Diving and snorkeling are phenomenal year-round. Resorts range from ultra-luxury to budget-friendly. Uninhabited islands invite complete solitude. The Maldives offers escapism, but global warming threatens its existence, visit soon to witness this fragile paradise.",
     coordinates: { lat: 3.2028, lng: 73.2207 },
     image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
     gallery: [
@@ -504,7 +504,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The Sacred Valley Heart",
     description: "Historic Incan capital with colonial architecture, mountain culture, and ancient temple sites.",
     longDescription:
-      "Cusco sits at 11,150 feet in the Peruvian Andes, a city where Incan stone walls form the foundations of Spanish colonial buildings—a literal representation of cultural layering. The Plaza de Armas buzzes with energy. The Cathedral dominates the square. Nearby ruins of Sacsayhuamán showcase Incan engineering. The city serves as the gateway to Machu Picchu and the Sacred Valley. Local markets overflow with indigenous textiles and produce. The blend of Quechua traditions, Spanish influence, and modern tourism creates a unique atmosphere. Altitude can hit hard—acclimatize carefully.",
+      "Cusco sits at 11,150 feet in the Peruvian Andes, a city where Incan stone walls form the foundations of Spanish colonial buildings, a literal representation of cultural layering. The Plaza de Armas buzzes with energy. The Cathedral dominates the square. Nearby ruins of Sacsayhuamán showcase Incan engineering. The city serves as the gateway to Machu Picchu and the Sacred Valley. Local markets overflow with indigenous textiles and produce. The blend of Quechua traditions, Spanish influence, and modern tourism creates a unique atmosphere. Altitude can hit hard. Acclimatize carefully.",
     coordinates: { lat: -13.5316, lng: -71.9877 },
     image: "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&q=80",
     gallery: [
@@ -528,7 +528,7 @@ export const extraDestinations: Destination[] = [
       "Spend 2-3 days acclimatizing before Machu Picchu",
       "Eat light meals and avoid alcohol initially",
       "Use coca tea to ease altitude sickness",
-      "Hire guides for ruins—they offer invaluable context",
+      "Hire guides for ruins, they offer invaluable context",
     ],
     categories: ["history", "culture", "mountains"],
   },
@@ -540,7 +540,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The City of a Hundred Spires",
     description: "Fairytale capital with Gothic architecture, beer gardens, and medieval charm.",
     longDescription:
-      "Prague feels like a storybook illustration come alive. The Charles Bridge, lined with statues, connects the Old Town to Prague Castle across the Vltava River. Gothic spires pierce the sky. Astronomical Clock draws crowds for its hourly show. Beer culture runs deep—Pilsner beer originated here. Prague's beer halls serve massive liters alongside hearty Czech food. Jewish Quarter's historical weight contrasts with the city's whimsical architecture. The Danube-adjacent setting offers evening river walks. Despite tourism, Prague retains authentic charm and remains remarkably affordable.",
+      "Prague feels like a storybook illustration come alive. The Charles Bridge, lined with statues, connects the Old Town to Prague Castle across the Vltava River. Gothic spires pierce the sky. Astronomical Clock draws crowds for its hourly show. Beer culture runs deep, Pilsner beer originated here. Prague's beer halls serve massive liters alongside hearty Czech food. Jewish Quarter's historical weight contrasts with the city's whimsical architecture. The Danube-adjacent setting offers evening river walks. Despite tourism, Prague retains authentic charm and remains remarkably affordable.",
     coordinates: { lat: 50.0755, lng: 14.4378 },
     image: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=800&q=80",
     gallery: [
@@ -560,7 +560,7 @@ export const extraDestinations: Destination[] = [
     currency: "Czech Koruna (CZK)",
     timezone: "UTC+1",
     travelTips: [
-      "Explore on foot—the city is walkable and picturesque",
+      "Explore on foot, the city is walkable and picturesque",
       "Visit beer halls for authentic local experience",
       "Climb Prague Castle for city views",
       "Avoid main tourist areas for better restaurants",
@@ -575,7 +575,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Pearl of the Adriatic",
     description: "Walled medieval city on the Croatian coast with limestone palaces and azure seas.",
     longDescription:
-      "Dubrovnik is a Mediterranean jewel perfectly preserved behind ancient city walls. Walk the marble-paved Stradun street, the main thoroughfare linking east and west gates. Climb the walls for 360-degree views of red-tiled roofs and the Adriatic beyond. Gothic and Renaissance palaces showcase local wealth. The Old Harbor fills with fishing boats. Despite Game of Thrones tourism, Dubrovnik retains authentic charm. Nearby islands offer escapes from crowds. The sunset over the city, viewed from outside the walls, paints the scene in golden light—utterly timeless.",
+      "Dubrovnik is a Mediterranean jewel perfectly preserved behind ancient city walls. Walk the marble-paved Stradun street, the main thoroughfare linking east and west gates. Climb the walls for 360-degree views of red-tiled roofs and the Adriatic beyond. Gothic and Renaissance palaces showcase local wealth. The Old Harbor fills with fishing boats. Despite Game of Thrones tourism, Dubrovnik retains authentic charm. Nearby islands offer escapes from crowds. The sunset over the city, viewed from outside the walls, paints the scene in golden light, utterly timeless.",
     coordinates: { lat: 42.6426, lng: 18.1044 },
     image:
       "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80",
@@ -599,7 +599,7 @@ export const extraDestinations: Destination[] = [
       "Walk the walls at sunrise or sunset",
       "Stay in Old Town for authentic experience",
       "Take ferries to nearby Lopud Island",
-      "Avoid peak summer crowds—visit shoulder seasons",
+      "Avoid peak summer crowds, visit shoulder seasons",
     ],
     categories: ["history", "coast", "medieval"],
   },
@@ -611,7 +611,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Spice Island Mystique",
     description: "Historic island off Tanzania with Swahili culture, spice plantations, and turquoise waters.",
     longDescription:
-      "Zanzibar is a fusion of African, Arab, and Indian influences on a single island. The Stone Town, a UNESCO site, sprawls with narrow alleys, ornate carved doorways, and aromatic spice markets. The scent of cloves, nutmeg, and cinnamon permeates the air—Zanzibar was once the spice capital of the world. Swahili culture thrives in music, food, and hospitality. Beaches offer white sand and crystalline water. Nearby Pemba Island offers exceptional diving. The island feels timeless, though tourism is increasing—visit soon to experience its authentic character.",
+      "Zanzibar is a fusion of African, Arab, and Indian influences on a single island. The Stone Town, a UNESCO site, sprawls with narrow alleys, ornate carved doorways, and aromatic spice markets. The scent of cloves, nutmeg, and cinnamon permeates the air, Zanzibar was once the spice capital of the world. Swahili culture thrives in music, food, and hospitality. Beaches offer white sand and crystalline water. Nearby Pemba Island offers exceptional diving. The island feels timeless, though tourism is increasing, visit soon to experience its authentic character.",
     coordinates: { lat: -6.1526, lng: 39.1989 },
     image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&q=80",
     gallery: [
@@ -635,7 +635,7 @@ export const extraDestinations: Destination[] = [
     travelTips: [
       "Hire local guides for Stone Town walks",
       "Take a dhow sunset cruise",
-      "Visit spice farms—guides explain the history",
+      "Visit spice farms, guides explain the history",
       "Use local ferries to nearby islands",
     ],
     categories: ["beach", "culture", "history"],
@@ -648,7 +648,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Where Cultures Meet the Sea",
     description: "Island nation with tropical beaches, coral reefs, and legendary Fijian hospitality.",
     longDescription:
-      "Fiji is the South Pacific made real—over 300 islands scattered across brilliant turquoise waters. The Fijian people are famously warm and welcoming, greeting visitors with 'Bula!' (hello). Coral reefs teem with tropical fish. Traditional bure (thatched) villages offer cultural experiences. Diving is world-class, especially around the Bligh Water. Beaches range from white sand to dramatic volcanic coastlines. The music, food, and ceremonies celebrate life joyfully. Fiji remains less touristy than nearby islands—it's still possible to find authentic experiences alongside luxury resorts.",
+      "Fiji is the South Pacific made real, over 300 islands scattered across brilliant turquoise waters. The Fijian people are famously warm and welcoming, greeting visitors with 'Bula!' (hello). Coral reefs teem with tropical fish. Traditional bure (thatched) villages offer cultural experiences. Diving is world-class, especially around the Bligh Water. Beaches range from white sand to dramatic volcanic coastlines. The music, food, and ceremonies celebrate life joyfully. Fiji remains less touristy than nearby islands, it's still possible to find authentic experiences alongside luxury resorts.",
     coordinates: { lat: -17.7134, lng: 178.0650 },
     image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
     gallery: [
@@ -668,7 +668,7 @@ export const extraDestinations: Destination[] = [
     currency: "Fijian Dollar (FJD)",
     timezone: "UTC+12",
     travelTips: [
-      "Learn basic Fijian phrases—locals appreciate it",
+      "Learn basic Fijian phrases, locals appreciate it",
       "Respect local traditions and customs",
       "Try traditional kava ceremony",
       "Book island tours through local operators",
@@ -683,7 +683,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Roof of the World Spirituality",
     description: "High-altitude capital of Tibet with sacred monasteries, pilgrims, and Himalayan mystique.",
     longDescription:
-      "Lhasa sits at 11,975 feet on the Tibetan plateau, one of the world's highest cities. The Potala Palace—the former winter residence of the Dalai Lamas—dominates the skyline with its white and red walls. Jokhang Temple draws pilgrims who prostrate themselves on the stone floor in devotion. The scent of butter lamps and incense fills sacred spaces. Prayer wheels spin with mantras. Pilgrims circle temples in clockwise processions. The city blends Tibetan spirituality, Chinese modernity, and breathtaking altitude. Visitors must acclimatize carefully—the thin air challenges even the fit.",
+      "Lhasa sits at 11,975 feet on the Tibetan plateau, one of the world's highest cities. The Potala Palace, the former winter residence of the Dalai Lamas, dominates the skyline with its white and red walls. Jokhang Temple draws pilgrims who prostrate themselves on the stone floor in devotion. The scent of butter lamps and incense fills sacred spaces. Prayer wheels spin with mantras. Pilgrims circle temples in clockwise processions. The city blends Tibetan spirituality, Chinese modernity, and breathtaking altitude. Visitors must acclimatize carefully, the thin air challenges even the fit.",
     coordinates: { lat: 29.6470, lng: 91.1190 },
     image: "https://images.unsplash.com/photo-1553775927-a071d5a6a39a?w=800&q=80",
     gallery: [
@@ -706,7 +706,7 @@ export const extraDestinations: Destination[] = [
     travelTips: [
       "Acclimatize for 2-3 days before activities",
       "Book tours through licensed operators",
-      "Dress warmly—altitude brings cold nights",
+      "Dress warmly, altitude brings cold nights",
       "Respect Buddhist customs and sacred spaces",
     ],
     categories: ["spiritual", "mountains", "culture"],
@@ -719,7 +719,7 @@ export const extraDestinations: Destination[] = [
     tagline: "City of Seven Hills",
     description: "Charming Atlantic capital with pastel tiles, hilly streets, and seafaring heritage.",
     longDescription:
-      "Lisbon unfolds across seven hills overlooking the Tagus River, a city that feels authentically European yet uniquely Portuguese. Pastel-colored buildings and azulejo tiles (hand-painted ceramics) decorate every neighborhood. The Belém neighborhood showcases maritime history and the stunning Jerónimos Monastery. Tram 28 climbs steep streets offering cinematic views. Fado music wafts from traditional taverns—mournful, soulful songs born from the city's soul. Street food culture thrives: pastel de nata custard tarts, sardines grilled on the street. Despite recent tourism, Lisbon retains its neighborhood character and warmth.",
+      "Lisbon unfolds across seven hills overlooking the Tagus River, a city that feels authentically European yet uniquely Portuguese. Pastel-colored buildings and azulejo tiles (hand-painted ceramics) decorate every neighborhood. The Belém neighborhood showcases maritime history and the stunning Jerónimos Monastery. Tram 28 climbs steep streets offering cinematic views. Fado music wafts from traditional taverns, mournful, soulful songs born from the city's soul. Street food culture thrives: pastel de nata custard tarts, sardines grilled on the street. Despite recent tourism, Lisbon retains its neighborhood character and warmth.",
     coordinates: { lat: 38.7223, lng: -9.1393 },
     image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800&q=80",
     gallery: [
@@ -754,7 +754,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Venice of the North",
     description: "Bicycle-friendly canal city with art museums, Anne Frank's House, and Dutch charm.",
     longDescription:
-      "Amsterdam charms immediately—a city of canals, bicycles, and progressive values. The canal rings reflect light and contain elegant 17th-century townhouses. The Rijksmuseum and Van Gogh Museum house masterpieces. Anne Frank's House moves visitors profoundly. Cycling is the primary transport—locals pedal with ease while tourists weave cautiously. Coffee shops (the cannabis kind) are legal and socially accepted. Street art adorns canal walls. The flower markets overflow with color. Dutch directness and openness define the culture. Amsterdam feels manageable, walkable, and endlessly charming.",
+      "Amsterdam charms immediately, a city of canals, bicycles, and progressive values. The canal rings reflect light and contain elegant 17th-century townhouses. The Rijksmuseum and Van Gogh Museum house masterpieces. Anne Frank's House moves visitors profoundly. Cycling is the primary transport, locals pedal with ease while tourists weave cautiously. Coffee shops (the cannabis kind) are legal and socially accepted. Street art adorns canal walls. The flower markets overflow with color. Dutch directness and openness define the culture. Amsterdam feels manageable, walkable, and endlessly charming.",
     coordinates: { lat: 52.3676, lng: 4.9041 },
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&q=80",
     gallery: [
@@ -774,7 +774,7 @@ export const extraDestinations: Destination[] = [
     currency: "Euro (EUR)",
     timezone: "UTC+1",
     travelTips: [
-      "Rent a bicycle—it's how locals move",
+      "Rent a bicycle, it's how locals move",
       "Book museum tickets online in advance",
       "Stay in residential neighborhoods away from main tourist zones",
       "Try stroopwaffels and Dutch cheese",
@@ -789,7 +789,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The Pink City",
     description: "Colorful Indian city famed for its pink buildings, palaces, and gateway to Rajasthan.",
     longDescription:
-      "Jaipur is India distilled into one vibrant city. The Old City's buildings are painted pink—a tradition begun to welcome the Prince of Wales in 1876. The Palace of Winds (Hawa Mahal) is the city's iconic five-story latticed structure. Within the city walls, the bazaars overflow with textiles, jewelry, and spices. The City Palace remains partially royal residence. Just outside Jaipur, the Amber Fort looms majestically, accessible by elephant or foot. The city pulses with energy, color, and the chaos that defines India. Street food here is exceptional—samosas, jalebis, and street chai everywhere.",
+      "Jaipur is India distilled into one vibrant city. The Old City's buildings are painted pink, a tradition begun to welcome the Prince of Wales in 1876. The Palace of Winds (Hawa Mahal) is the city's iconic five-story latticed structure. Within the city walls, the bazaars overflow with textiles, jewelry, and spices. The City Palace remains partially royal residence. Just outside Jaipur, the Amber Fort looms majestically, accessible by elephant or foot. The city pulses with energy, color, and the chaos that defines India. Street food here is exceptional, samosas, jalebis, and street chai everywhere.",
     coordinates: { lat: 26.9124, lng: 75.7873 },
     image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
     gallery: [
@@ -825,7 +825,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Caribbean Jewel",
     description: "Colorful walled colonial city on Colombia's Caribbean coast with a romantic spirit.",
     longDescription:
-      "Cartagena is a candy-colored dream on Colombia's coast. The walled Old City—a UNESCO site—overflows with pastel-painted colonial buildings, flower-draped balconies, and narrow cobblestone alleys. Fort San Felipe looms protectively. Street musicians and artists enliven plazas. The Caribbean breeze carries tropical scents. Nearby Rosario Islands offer island-hopping and snorkeling. The city pulses with energy and warmth. Despite tourism, Cartagena retains authenticity and charm. The blend of Spanish colonial history, African heritage, and Caribbean culture creates a unique atmosphere—sensual, vibrant, and welcoming.",
+      "Cartagena is a candy-colored dream on Colombia's coast. The walled Old City, a UNESCO site, overflows with pastel-painted colonial buildings, flower-draped balconies, and narrow cobblestone alleys. Fort San Felipe looms protectively. Street musicians and artists enliven plazas. The Caribbean breeze carries tropical scents. Nearby Rosario Islands offer island-hopping and snorkeling. The city pulses with energy and warmth. Despite tourism, Cartagena retains authenticity and charm. The blend of Spanish colonial history, African heritage, and Caribbean culture creates a unique atmosphere, sensual, vibrant, and welcoming.",
     coordinates: { lat: 10.3910, lng: -75.4794 },
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
@@ -861,7 +861,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The Smoke That Thunders",
     description: "Massive waterfall straddling the Zambezi River, one of Earth's greatest natural wonders.",
     longDescription:
-      "Victoria Falls is nature at its most powerful—1,708 meters wide, thundering 108 meters into the gorge below. The spray rises 1,600 meters, visible kilometers away. The sound is deafening, the power humbling. Two countries share this wonder—Zimbabwe and Zambia. Adrenaline junkies bungee jump into the gorge. Rafters navigate rapids below. The falls are at their mightiest during April-May after the rainy season. The surrounding national parks offer excellent wildlife viewing. Seeing Victoria Falls in person is a bucket-list experience—no photograph captures the scale and drama.",
+      "Victoria Falls is nature at its most powerful, 1,708 meters wide, thundering 108 meters into the gorge below. The spray rises 1,600 meters, visible kilometers away. The sound is deafening, the power humbling. Two countries share this wonder, Zimbabwe and Zambia. Adrenaline junkies bungee jump into the gorge. Rafters navigate rapids below. The falls are at their mightiest during April-May after the rainy season. The surrounding national parks offer excellent wildlife viewing. Seeing Victoria Falls in person is a bucket-list experience, no photograph captures the scale and drama.",
     coordinates: { lat: -17.9250, lng: 25.8383 },
     image: "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80",
     gallery: [
@@ -882,7 +882,7 @@ export const extraDestinations: Destination[] = [
     currency: "Zimbabwean Dollar / Zambian Kwacha",
     timezone: "UTC+2",
     travelTips: [
-      "Bring rain gear—the spray soaks everything",
+      "Bring rain gear, the spray soaks everything",
       "Book adrenaline activities through reputable operators",
       "Visit both sides of the falls",
       "Consider helicopter tours for aerial views",
@@ -897,7 +897,7 @@ export const extraDestinations: Destination[] = [
     tagline: "The Paris of South America",
     description: "Sophisticated capital with European architecture, tango culture, and vibrant nightlife.",
     longDescription:
-      "Buenos Aires pulses with European elegance and Latin passion. Elegant avenues lined with Belle Époque architecture radiate from plazas. The Palermo neighborhood overflows with cafés, galleries, and boutiques. Tango throbs in the city's soul—born in working-class neighborhoods, it's now performed in theaters worldwide. Teatro Colón is a gilded masterpiece. Bookstores overflow with literary treasures (Borges was from here). The food culture is extraordinary—Argentina produces world-class beef and wine. The people are stylish and engaging. Buenos Aires seduces slowly, revealing its charms through late-night conversations, passionate performances, and exceptional wine.",
+      "Buenos Aires pulses with European elegance and Latin passion. Elegant avenues lined with Belle Époque architecture radiate from plazas. The Palermo neighborhood overflows with cafés, galleries, and boutiques. Tango throbs in the city's soul, born in working-class neighborhoods, it's now performed in theaters worldwide. Teatro Colón is a gilded masterpiece. Bookstores overflow with literary treasures (Borges was from here). The food culture is extraordinary, Argentina produces world-class beef and wine. The people are stylish and engaging. Buenos Aires seduces slowly, revealing its charms through late-night conversations, passionate performances, and exceptional wine.",
     coordinates: { lat: -34.6037, lng: -58.3816 },
     image: "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80",
     gallery: [
@@ -933,7 +933,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Garden City State",
     description: "Ultra-modern city-state blending high-tech innovation with diverse multicultural heritage.",
     longDescription:
-      "Singapore is a marvel of urban planning and efficiency—a tiny nation that became an Asian Tiger. Gleaming skyscrapers rise above efficient public transit. Gardens are integrated everywhere—rooftop gardens, park corridors, vertical forests. Gardens by the Bay glows nightly with light sculptures. Diverse communities coexist peacefully—Malay, Chinese, Indian, Tamil cultures blend in markets, temples, and food courts. The food is exceptional: hawker stalls serve world-class meals at budget prices. The city is meticulously clean and safe. Despite its modernity, Singapore preserves heritage in temples, mosques, and historic neighborhoods. It's a glimpse of the future that remains human-scaled.",
+      "Singapore is a marvel of urban planning and efficiency, a tiny nation that became an Asian Tiger. Gleaming skyscrapers rise above efficient public transit. Gardens are integrated everywhere, rooftop gardens, park corridors, vertical forests. Gardens by the Bay glows nightly with light sculptures. Diverse communities coexist peacefully, Malay, Chinese, Indian, Tamil cultures blend in markets, temples, and food courts. The food is exceptional: hawker stalls serve world-class meals at budget prices. The city is meticulously clean and safe. Despite its modernity, Singapore preserves heritage in temples, mosques, and historic neighborhoods. It's a glimpse of the future that remains human-scaled.",
     coordinates: { lat: 1.3521, lng: 103.8198 },
     image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80",
     gallery: [
@@ -969,7 +969,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Capital of Tradition and Technology",
     description: "Dynamic city blending historic temples, K-pop culture, and cutting-edge technology.",
     longDescription:
-      "Seoul pulses with energy—ancient temples sit beside neon-lit skyscrapers. The palace grounds offer serene escapes from urban bustle. Bukchon Hanok Village preserves traditional Korean architecture amid modernity. Seoul's culture exports globally—K-pop, K-dramas, Korean cuisine. The food scene is exceptional: from street food to fine dining, everything is delicious and affordable. Neighborhoods like Gangnam gleam with wealth and style, while Hongdae pulses with youth and art. The metro is efficient and clean. Koreans are tech-forward and fashion-conscious. Seoul reinvents itself constantly while respecting its traditions.",
+      "Seoul pulses with energy, ancient temples sit beside neon-lit skyscrapers. The palace grounds offer serene escapes from urban bustle. Bukchon Hanok Village preserves traditional Korean architecture amid modernity. Seoul's culture exports globally, K-pop, K-dramas, Korean cuisine. The food scene is exceptional: from street food to fine dining, everything is delicious and affordable. Neighborhoods like Gangnam gleam with wealth and style, while Hongdae pulses with youth and art. The metro is efficient and clean. Koreans are tech-forward and fashion-conscious. Seoul reinvents itself constantly while respecting its traditions.",
     coordinates: { lat: 37.5665, lng: 126.9780 },
     image: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80",
     gallery: [
@@ -1005,7 +1005,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Clifftop Paradise",
     description: "Spectacular Italian coast with pastel villages, lemon groves, and azure Mediterranean.",
     longDescription:
-      "The Amalfi Coast is Italy's most dramatic coastline—villages cling to cliffsides overlooking the Mediterranean. Positano cascades down the hillside in a riot of pastel colors. Amalfi town centers on a magnificent cathedral. Ravello floats on high cliffs with gardens offering vertigo-inducing views. Lemon groves perfume the air and produce the famous limoncello liqueur. Hiking trails connect villages—paths suspended between sea and sky. Boats navigate grottos carved by waves. The cuisine is seafood-focused: pasta with clams, fresh fish, mozzarella di bufala. The Amalfi Coast epitomizes Italian romance and beauty.",
+      "The Amalfi Coast is Italy's most dramatic coastline, villages cling to cliffsides overlooking the Mediterranean. Positano cascades down the hillside in a riot of pastel colors. Amalfi town centers on a magnificent cathedral. Ravello floats on high cliffs with gardens offering vertigo-inducing views. Lemon groves perfume the air and produce the famous limoncello liqueur. Hiking trails connect villages, paths suspended between sea and sky. Boats navigate grottos carved by waves. The cuisine is seafood-focused: pasta with clams, fresh fish, mozzarella di bufala. The Amalfi Coast epitomizes Italian romance and beauty.",
     coordinates: { lat: 40.6333, lng: 14.6029 },
     image: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=800&q=80",
     gallery: [
@@ -1041,7 +1041,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Adventure Capital of the World",
     description: "Adrenaline-soaked Southern Alps resort town surrounded by dramatic lake and mountain scenery.",
     longDescription:
-      "Queenstown is New Zealand's adventure playground. Nestled between Lake Wakatipu and the Remarkables Mountains, the town offers non-stop adrenaline: bungee jumping off the historic Kawarau Bridge, jet boating, skydiving, heli-skiing. For those seeking less extreme thrills, hiking and wine tasting await. The town pulses with international visitors and a transient population. Yet despite the hype, the landscape is genuinely spectacular—mountains plunge dramatically to crystal waters. The town itself is compact, walkable, and vibrant with restaurants, bars, and accommodation. Queenstown captures the New Zealand spirit: adventure, natural beauty, and a 'can-do' attitude.",
+      "Queenstown is New Zealand's adventure playground. Nestled between Lake Wakatipu and the Remarkables Mountains, the town offers non-stop adrenaline: bungee jumping off the historic Kawarau Bridge, jet boating, skydiving, heli-skiing. For those seeking less extreme thrills, hiking and wine tasting await. The town pulses with international visitors and a transient population. Yet despite the hype, the landscape is genuinely spectacular, mountains plunge dramatically to crystal waters. The town itself is compact, walkable, and vibrant with restaurants, bars, and accommodation. Queenstown captures the New Zealand spirit: adventure, natural beauty, and a 'can-do' attitude.",
     coordinates: { lat: -44.9302, lng: 168.7381 },
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     gallery: [
@@ -1062,9 +1062,9 @@ export const extraDestinations: Destination[] = [
     timezone: "UTC+12",
     travelTips: [
       "Book adventure activities in advance",
-      "Winter brings skiing—summer brings hiking",
+      "Winter brings skiing, summer brings hiking",
       "Rent a car for exploring Central Otago wine region",
-      "Stay a few days—activities are world-class",
+      "Stay a few days, activities are world-class",
     ],
     categories: ["adventure", "mountains", "nature"],
   },
@@ -1076,7 +1076,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Athens of the North",
     description: "Historic Scottish capital with medieval castles, cobblestone streets, and literary heritage.",
     longDescription:
-      "Edinburgh clings to volcanic hills, a city of dramatic contrasts between medieval Old Town and elegant Georgian New Town. Edinburgh Castle dominates the skyline, perched atop an extinct volcano. The Royal Mile—a continuous street from castle to palace—buzzes with shops, restaurants, and street performers. Georgian townhouses in New Town showcase neoclassical architecture. The city birthed the Enlightenment and hosts world-famous writers (Robert Burns, Sir Walter Scott). The annual festival brings theater, comedy, and music. Whisky distilleries surround the city. Edinburgh feels authentically Scottish—proud, creative, and slightly rough around the edges.",
+      "Edinburgh clings to volcanic hills, a city of dramatic contrasts between medieval Old Town and elegant Georgian New Town. Edinburgh Castle dominates the skyline, perched atop an extinct volcano. The Royal Mile, a continuous street from castle to palace, buzzes with shops, restaurants, and street performers. Georgian townhouses in New Town showcase neoclassical architecture. The city birthed the Enlightenment and hosts world-famous writers (Robert Burns, Sir Walter Scott). The annual festival brings theater, comedy, and music. Whisky distilleries surround the city. Edinburgh feels authentically Scottish, proud, creative, and slightly rough around the edges.",
     coordinates: { lat: 55.9533, lng: -3.1883 },
     image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
     gallery: [
@@ -1110,7 +1110,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Lagoon of Dreams",
     description: "Exclusive island paradise with overwater bungalows, turquoise lagoons, and world-class diving.",
     longDescription:
-      "Bora Bora is the epitome of tropical luxury—a tiny island surrounded by a coral reef and lagoon of impossible turquoise. Overwater bungalows with glass floors offer 24/7 views of fish and rays. Mount Otemanu rises majestically behind. The lagoon is protected and calm, perfect for snorkeling. Shark encounters (harmless blacktip sharks) are common and thrilling. The island is small—circumnavigable by boat in hours. The culture is Polynesian—relaxed, welcoming, and community-focused. Bora Bora is expensive but justifiably so: the scenery is incomparable, the diving exceptional, and the experience transcendent.",
+      "Bora Bora is the epitome of tropical luxury, a tiny island surrounded by a coral reef and lagoon of impossible turquoise. Overwater bungalows with glass floors offer 24/7 views of fish and rays. Mount Otemanu rises majestically behind. The lagoon is protected and calm, perfect for snorkeling. Shark encounters (harmless blacktip sharks) are common and thrilling. The island is small, circumnavigable by boat in hours. The culture is Polynesian, relaxed, welcoming, and community-focused. Bora Bora is expensive but justifiably so: the scenery is incomparable, the diving exceptional, and the experience transcendent.",
     coordinates: { lat: -16.5004, lng: -151.7415 },
     image: "https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=800&q=80",
     gallery: [
@@ -1146,7 +1146,7 @@ export const extraDestinations: Destination[] = [
     tagline: "City of Pagodas",
     description: "Spiritual Himalayan capital with ancient temples, pilgrimage sites, and mountain-valley setting.",
     longDescription:
-      "Kathmandu sits in a high valley surrounded by the Himalayas, a city that feels untouched by time. Pashupatinath Temple draws Hindu pilgrims performing sacred rituals along the Bagmati River. Boudhanath Stupa's massive mandala dominates the skyline—pilgrims circumambulate it endlessly, prayer wheels spinning. Swayambhunath Stupa perches on a hill offering city views. The Durbar Square is a UNESCO site with ornate temples and the royal palace. The city's pace is slower, its spirituality palpable. The food is exceptional: dal bhat, momos, and Himalayan herbs flavoring everything. Despite earthquakes, Kathmandu retains its mystical spirit.",
+      "Kathmandu sits in a high valley surrounded by the Himalayas, a city that feels untouched by time. Pashupatinath Temple draws Hindu pilgrims performing sacred rituals along the Bagmati River. Boudhanath Stupa's massive mandala dominates the skyline, pilgrims circumambulate it endlessly, prayer wheels spinning. Swayambhunath Stupa perches on a hill offering city views. The Durbar Square is a UNESCO site with ornate temples and the royal palace. The city's pace is slower, its spirituality palpable. The food is exceptional: dal bhat, momos, and Himalayan herbs flavoring everything. Despite earthquakes, Kathmandu retains its mystical spirit.",
     coordinates: { lat: 27.7172, lng: 85.3240 },
     image: "https://images.unsplash.com/photo-1526711657229-e7e080ed7aa1?w=800&q=80",
     gallery: [
@@ -1182,7 +1182,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Rose of the North",
     description: "Northern Thai city with over 300 temples, elephant sanctuaries, and mountain culture.",
     longDescription:
-      "Chiang Mai offers a different Thailand—mountainous, cultural, and spiritual. Over 300 temples dot the city, many with monks in residence. The Old City, surrounded by ancient moats, is walkable and charming. Night markets overflow with food, crafts, and energy. The nearby Doi Inthanon National Park offers cool mountain air and hiking. Ethical elephant sanctuaries allow visitors to observe these magnificent creatures respectfully. The city is a center for Buddhist learning and meditation. Thai massage originated in the North—practitioners here are among the best. Chiang Mai moves slower than Bangkok, inviting extended stays and deep connections.",
+      "Chiang Mai offers a different Thailand, mountainous, cultural, and spiritual. Over 300 temples dot the city, many with monks in residence. The Old City, surrounded by ancient moats, is walkable and charming. Night markets overflow with food, crafts, and energy. The nearby Doi Inthanon National Park offers cool mountain air and hiking. Ethical elephant sanctuaries allow visitors to observe these magnificent creatures respectfully. The city is a center for Buddhist learning and meditation. Thai massage originated in the North, practitioners here are among the best. Chiang Mai moves slower than Bangkok, inviting extended stays and deep connections.",
     coordinates: { lat: 18.7883, lng: 98.9853 },
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
@@ -1217,7 +1217,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Passionate Andalusia",
     description: "Southern Spanish city with Moorish architecture, flamenco, and Andalusian heat.",
     longDescription:
-      "Seville pulses with Spanish passion. The Cathedral—one of Europe's largest—showcases Gothic grandeur and houses Columbus's tomb. The Real Alcázar Palace reveals Moorish elegance, with its intricate tilework and peaceful gardens. The narrow streets of the Santa Cruz neighborhood wind romantically. Flamenco erupts spontaneously and electrifies—the raw emotion and complexity of this Gypsy art form moves viewers profoundly. The city sits on the Guadalquivir River, its banks alive with bars and restaurants. Seville's heat and pace feel authentically Andalusian—slower than northern Spain but intensely alive.",
+      "Seville pulses with Spanish passion. The Cathedral, one of Europe's largest, showcases Gothic grandeur and houses Columbus's tomb. The Real Alcázar Palace reveals Moorish elegance, with its intricate tilework and peaceful gardens. The narrow streets of the Santa Cruz neighborhood wind romantically. Flamenco erupts spontaneously and electrifies, the raw emotion and complexity of this Gypsy art form moves viewers profoundly. The city sits on the Guadalquivir River, its banks alive with bars and restaurants. Seville's heat and pace feel authentically Andalusian, slower than northern Spain but intensely alive.",
     coordinates: { lat: 37.3886, lng: -5.9823 },
     image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800&q=80",
     gallery: [
@@ -1253,7 +1253,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Beachfront Mayan Ruins",
     description: "Coastal archaeological site with Mayan temples overlooking Caribbean turquoise waters.",
     longDescription:
-      "Tulum is archaeology meets beach paradise. Mayan ruins perch on clifftops directly above the turquoise Caribbean. The Temple of the Wind and Castillo are iconic. The site is compact and manageable, with peaceful beaches below for swimming. The town of Tulum has grown into a trendy destination with excellent restaurants, boutique hotels, and wellness resorts. Cenotes—mysterious underground freshwater pools—dot the area, offering surreal swimming. The nearby Sian Ka'an Biosphere Reserve protects vast stretches of jungle and coast. Tulum captures Mexico's allure: ancient cultures, natural beauty, and modern amenities blended seamlessly.",
+      "Tulum is archaeology meets beach paradise. Mayan ruins perch on clifftops directly above the turquoise Caribbean. The Temple of the Wind and Castillo are iconic. The site is compact and manageable, with peaceful beaches below for swimming. The town of Tulum has grown into a trendy destination with excellent restaurants, boutique hotels, and wellness resorts. Cenotes, mysterious underground freshwater pools, dot the area, offering surreal swimming. The nearby Sian Ka'an Biosphere Reserve protects vast stretches of jungle and coast. Tulum captures Mexico's allure: ancient cultures, natural beauty, and modern amenities blended seamlessly.",
     coordinates: { lat: 20.2114, lng: -87.4271 },
     image: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800&q=80",
     gallery: [
@@ -1275,7 +1275,7 @@ export const extraDestinations: Destination[] = [
     timezone: "UTC-5",
     travelTips: [
       "Visit ruins early to avoid crowds and heat",
-      "Swim in cenotes—they're refreshing and mysterious",
+      "Swim in cenotes, they're refreshing and mysterious",
       "Stay in town rather than resort zones",
       "Book cenote tours through local guides",
     ],
@@ -1289,7 +1289,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Fairytale Alpine Lake",
     description: "Picturesque glacial lake surrounded by forests, with a castle and island church.",
     longDescription:
-      "Lake Bled is Slovenia's most iconic destination—impossibly pretty. The emerald-green glacial lake reflects forested mountains and a medieval castle perched on a clifftop. The tiny island church (Church of the Assumption) sits in the lake's center, accessible by traditional pletna boat. Legend says ringing the church bell grants wishes. The surrounding forests offer hiking and walking trails. In winter, the lake may freeze, creating ethereal ice landscapes. The nearby cave (Vintgar Gorge) offers adventure. Lake Bled feels like stepping into a fairytale—it's packed with tourists but deserves its reputation.",
+      "Lake Bled is Slovenia's most iconic destination, impossibly pretty. The emerald-green glacial lake reflects forested mountains and a medieval castle perched on a clifftop. The tiny island church (Church of the Assumption) sits in the lake's center, accessible by traditional pletna boat. Legend says ringing the church bell grants wishes. The surrounding forests offer hiking and walking trails. In winter, the lake may freeze, creating ethereal ice landscapes. The nearby cave (Vintgar Gorge) offers adventure. Lake Bled feels like stepping into a fairytale, it's packed with tourists but deserves its reputation.",
     coordinates: { lat: 46.3623, lng: 14.1087 },
     image: "https://images.unsplash.com/photo-1525983360072-2ebda055ba40?w=800&q=80",
     gallery: [
@@ -1324,7 +1324,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Temple Complex Wonder",
     description: "Largest religious monument on Earth, with intricate Khmer temple architecture lost to jungle.",
     longDescription:
-      "Angkor Wat is a masterpiece of ancient engineering and art—the largest religious monument on Earth. The temple complex was built in the 12th century and abandoned for centuries, reclaimed by jungle. Towering spires and intricate stone carvings are breathtaking. Thousands of years of skilled craftwork went into every detail. The sunrise, watched from outside the complex, paints the temple in golden light—iconic and transcendent. Beyond Angkor Wat lies a vast temple complex (Angkor Archaeological Park) with hundreds of sites at various states of preservation and overgrowth. Exploring for multiple days reveals different temples and vistas. The history is contested—the temples endured Khmer Rouge damage, now carefully restored.",
+      "Angkor Wat is a masterpiece of ancient engineering and art, the largest religious monument on Earth. The temple complex was built in the 12th century and abandoned for centuries, reclaimed by jungle. Towering spires and intricate stone carvings are breathtaking. Thousands of years of skilled craftwork went into every detail. The sunrise, watched from outside the complex, paints the temple in golden light, iconic and transcendent. Beyond Angkor Wat lies a vast temple complex (Angkor Archaeological Park) with hundreds of sites at various states of preservation and overgrowth. Exploring for multiple days reveals different temples and vistas. The history is contested, the temples endured Khmer Rouge damage, now carefully restored.",
     coordinates: { lat: 13.3667, lng: 103.8667 },
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
@@ -1346,7 +1346,7 @@ export const extraDestinations: Destination[] = [
     timezone: "UTC+7",
     travelTips: [
       "Start temple exploration at sunrise",
-      "Hire knowledgeable guides—they unlock context",
+      "Hire knowledgeable guides, they unlock context",
       "Rent bicycles to explore temple grounds",
       "Respect the site's spiritual and historical significance",
     ],
@@ -1360,7 +1360,7 @@ export const extraDestinations: Destination[] = [
     tagline: "African Wilderness Theater",
     description: "Vast savanna ecosystem with Africa's greatest wildlife concentration and annual migrations.",
     longDescription:
-      "The Serengeti is nature's greatest theater—an endless golden savanna where millions of animals migrate in annual cycles. The Great Migration—wildebeest and zebra moving between Tanzania and Kenya—is one of Earth's most spectacular natural events. Year-round, lions, leopards, cheetahs, elephants, and countless bird species inhabit this ecosystem. Game drives reveal daily dramas: predator-prey hunts, territorial disputes, social hierarchies. The landscape shifts seasonally—lush after rains, golden during dry seasons. Overnight game drives reveal nocturnal hunters. The wilderness humbles visitors—human presence is tiny against vastness. Serengeti represents untamed Africa.",
+      "The Serengeti is nature's greatest theater, an endless golden savanna where millions of animals migrate in annual cycles. The Great Migration, wildebeest and zebra moving between Tanzania and Kenya, is one of Earth's most spectacular natural events. Year-round, lions, leopards, cheetahs, elephants, and countless bird species inhabit this ecosystem. Game drives reveal daily dramas: predator-prey hunts, territorial disputes, social hierarchies. The landscape shifts seasonally, lush after rains, golden during dry seasons. Overnight game drives reveal nocturnal hunters. The wilderness humbles visitors, human presence is tiny against vastness. Serengeti represents untamed Africa.",
     coordinates: { lat: -2.3333, lng: 34.8333 },
     image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80",
     gallery: [
@@ -1382,7 +1382,7 @@ export const extraDestinations: Destination[] = [
       "Use experienced safari guides for animal behavior insights",
       "Book safaris during dry season for best sightings",
       "Bring binoculars and a good camera",
-      "Respect wildlife—maintain safe distances",
+      "Respect wildlife, maintain safe distances",
     ],
     categories: ["wildlife", "adventure", "nature"],
   },
@@ -1394,7 +1394,7 @@ export const extraDestinations: Destination[] = [
     tagline: "Ancient Kingdom Sanctuary",
     description: "Tranquil riverside town with temples, monks, and preserved Southeast Asian heritage.",
     longDescription:
-      "Luang Prabang is Southeast Asia's soul—preserved, peaceful, and spiritual. The town sits on the Mekong River, surrounded by jungle-covered mountains. French colonial architecture blends with Lao temples. Monks in saffron robes gather each dawn for alms collection—a ritual unchanged for centuries. The Night Market offers local crafts and food. Temples are everywhere—each revealing intricate woodwork and golden details. The pace is slow, inviting extended stays and contemplation. Nearby waterfalls and caves offer day trips. The Mekong River sunset is magical. Luang Prabang feels like traveling backward in time to a gentler Southeast Asia.",
+      "Luang Prabang is Southeast Asia's soul, preserved, peaceful, and spiritual. The town sits on the Mekong River, surrounded by jungle-covered mountains. French colonial architecture blends with Lao temples. Monks in saffron robes gather each dawn for alms collection, a ritual unchanged for centuries. The Night Market offers local crafts and food. Temples are everywhere, each revealing intricate woodwork and golden details. The pace is slow, inviting extended stays and contemplation. Nearby waterfalls and caves offer day trips. The Mekong River sunset is magical. Luang Prabang feels like traveling backward in time to a gentler Southeast Asia.",
     coordinates: { lat: 19.8845, lng: 102.1348 },
     image:
       "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",

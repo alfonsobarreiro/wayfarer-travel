@@ -25,7 +25,7 @@ const benefits = [
     number: "01",
     title: "Tailored to You",
     description:
-      "Destinations matched to your travel style, budget, and interests. Not generic top-10 lists. Tell us how you travel, and we'll show you where.",
+      "Destinations matched to your travel style, budget, and interests. Tell us how you travel and we'll show you where.",
     image:
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
   },
@@ -52,7 +52,7 @@ const benefits = [
     number: "04",
     title: "Evolves With You",
     description:
-      "The more you explore, the sharper your recommendations get. Your travel profile grows with every trip, every save, every search.",
+      "The more you explore, the sharper your recommendations get. Every save updates your travel profile.",
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
   },
@@ -141,35 +141,28 @@ export default function HomePage() {
             </motion.h1>
 
             <motion.p
-              className="text-base text-neutral-600 mb-4 max-w-md"
+              className="text-base text-neutral-600 mb-8 max-w-md"
               variants={fadeUp}
               custom={1}
             >
-              Wayfarer makes it simple to discover a world of adventures
-              tailored just for you.
-            </motion.p>
-
-            <motion.p
-              className="text-base text-neutral-500 mb-8"
-              variants={fadeUp}
-              custom={2}
-            >
-              There&apos;s an adventure waiting just for you.
+              Tell us your travel style, budget, and interests. We&apos;ll
+              match you to destinations, plan segments, and hold the whole
+              itinerary together.
             </motion.p>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-4"
               variants={fadeUp}
-              custom={3}
+              custom={2}
             >
               <button
                 onClick={() => setSignUpOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors shadow-lg shadow-brand-600/20"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors shadow-primary"
               >
                 Sign Up!
               </button>
               <p className="text-xs text-neutral-500 self-center">
-                No spam, just adventures.
+                No spam. Weekly picks only.
               </p>
             </motion.div>
           </motion.div>
@@ -200,7 +193,8 @@ export default function HomePage() {
                 Destinations
               </motion.h2>
               <p className="text-neutral-500 mt-2">
-                Swipe to explore where Wayfarer can take you.
+                {destinations.length} destinations across 7 continents. Swipe
+                to browse.
               </p>
             </div>
 
@@ -278,7 +272,7 @@ export default function HomePage() {
         <Container className="mt-8 flex justify-end">
           <Link
             href="/destinations"
-            className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-link hover:text-link-strong transition-colors"
           >
             View all destinations
             <ArrowRight className="w-4 h-4" />
@@ -287,18 +281,10 @@ export default function HomePage() {
       </Section>
 
       {/* ── Discover Teaser ──────────────────────── */}
-      <Section className="bg-bg-surface-inverse">
+      <Section bg="inverse">
         <Container>
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
             <div className="md:w-1/2">
-              <motion.p
-                className="text-brand-300 text-sm font-semibold uppercase tracking-widest mb-3"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                Interactive
-              </motion.p>
               <motion.h2
                 className="text-3xl font-medium text-white tracking-tight mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
@@ -309,9 +295,8 @@ export default function HomePage() {
                 Explore the Globe
               </motion.h2>
               <p className="text-neutral-400 mb-8 max-w-md">
-                Spin a 3D globe, click any pin, and discover destinations that
-                match your curiosity, not an algorithm. {destinations.length}+
-                places, all in your hands.
+                Spin a 3D globe, click any pin, and browse destinations picked
+                by hand. {destinations.length}+ places, all in your hands.
               </p>
               <Link
                 href="/discover"
@@ -339,11 +324,8 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-neutral-900/20" />
                 <div className="absolute bottom-5 left-5 right-5">
-                  <p className="text-white/60 text-xs font-medium uppercase tracking-widest mb-1">
-                    {destinations.length}+ destinations
-                  </p>
                   <p className="text-white text-sm font-medium">
-                    Spin. Click. Discover.
+                    Spin the globe to explore.
                   </p>
                 </div>
               </div>
@@ -353,17 +335,9 @@ export default function HomePage() {
       </Section>
 
       {/* ── Why Wayfarer — split layout with hover image ── */}
-      <Section className="bg-bg-surface-ground">
+      <Section bg="ground">
         <Container>
           <div className="mb-16">
-            <motion.p
-              className="text-brand-600 text-sm font-semibold uppercase tracking-widest mb-3"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Why Wayfarer
-            </motion.p>
             <motion.h2
               className="text-3xl font-medium text-neutral-900 tracking-tight"
               style={{ fontFamily: "var(--font-heading)" }}
@@ -438,12 +412,11 @@ export default function HomePage() {
                     }`}
                   />
                 ))}
-                {/* Subtle overlay with active benefit label */}
+                {/* Subtle overlay with active benefit title (the number
+                    already appears at size-3xl in the list, so the callout
+                    only carries the title). */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-white/60 text-xs font-medium uppercase tracking-widest mb-1">
-                    {benefits[hoveredBenefit].number}
-                  </p>
                   <p
                     className="text-white text-xl font-medium"
                     style={{ fontFamily: "var(--font-heading)" }}
@@ -475,14 +448,6 @@ export default function HomePage() {
             content is a page-wide centered column, not a prose-in-Container
             column (that pattern is the "one left rail" bug). */}
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <motion.p
-            className="text-brand-300 text-sm font-semibold uppercase tracking-widest mb-4"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Your next adventure starts here
-          </motion.p>
           <motion.h2
             className="text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -490,9 +455,9 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            See how Wayfarer
+            Personalized picks.
             <br />
-            supports your journey
+            Interactive planning.
           </motion.h2>
           <motion.p
             className="text-base text-white/70 mb-12 max-w-xl mx-auto"
@@ -500,12 +465,12 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
           >
-            Personalized recommendations, interactive planning tools, and a
-            community of explorers. All free to get started.
+            All free to start. Sign up and get destination picks matched to
+            your travel style within a minute.
           </motion.p>
           <motion.button
             onClick={() => setSignUpOpen(true)}
-            className="inline-flex items-center justify-center px-12 py-4 rounded-lg bg-bg-primary text-white font-medium text-base hover:bg-bg-primary-hover transition-colors shadow-xl shadow-brand-600/30"
+            className="inline-flex items-center justify-center px-12 py-4 rounded-lg bg-bg-primary text-white font-medium text-base hover:bg-bg-primary-hover transition-colors shadow-primary-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

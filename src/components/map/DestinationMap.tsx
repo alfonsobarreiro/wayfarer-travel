@@ -31,14 +31,14 @@ export function DestinationMap({
     // Read marker + text colors from the semantic alias layer so a
     // palette swap in globals.css moves the map with the rest of the
     // UI. --color-bg-map-marker anchors the pin (accent-500), and
-    // --color-accent-700 the hover state. Fallback hexes keep the
-    // globe alive if the vars ever fail to resolve.
+    // --color-accent-700 the hover state. Tokens are guaranteed defined
+    // at :root so no hex fallback is needed — that keeps ONE source of
+    // truth for color in globals.css.
     const rootStyles = getComputedStyle(document.documentElement);
-    const readVar = (name: string, fallback: string) =>
-      (rootStyles.getPropertyValue(name).trim() || fallback);
-    const ACCENT       = readVar("--color-bg-map-marker", "#D27A5E");
-    const ACCENT_HOVER = readVar("--color-accent-700",    "#8F4A37");
-    const POPUP_MUTED  = readVar("--color-text-muted",    "#6B6560");
+    const readVar = (name: string) => rootStyles.getPropertyValue(name).trim();
+    const ACCENT       = readVar("--color-bg-map-marker");
+    const ACCENT_HOVER = readVar("--color-accent-700");
+    const POPUP_MUTED  = readVar("--color-text-muted");
 
     const map = new mapboxgl.Map({
       container: mapContainer.current,

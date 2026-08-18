@@ -28,7 +28,7 @@ export function Navbar() {
           <Link
             href="/"
             aria-label="Wayfarer home"
-            className="flex items-center text-brand-900"
+            className="flex items-center text-text-wordmark"
           >
             <WayfarerLogo className="h-7 w-auto" />
           </Link>
@@ -37,19 +37,19 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link
               href="/destinations"
-              className="text-sm font-medium text-neutral-600 hover:text-brand-700 transition-colors"
+              className="text-sm font-medium text-neutral-600 hover:text-link-strong transition-colors"
             >
               Top Spots
             </Link>
             <Link
               href="/discover"
-              className="text-sm font-medium text-neutral-600 hover:text-brand-700 transition-colors"
+              className="text-sm font-medium text-neutral-600 hover:text-link-strong transition-colors"
             >
               Discover
             </Link>
             <Link
               href="/planner"
-              className="text-sm font-medium text-neutral-600 hover:text-brand-700 transition-colors"
+              className="text-sm font-medium text-neutral-600 hover:text-link-strong transition-colors"
             >
               Plan
             </Link>

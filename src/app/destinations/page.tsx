@@ -67,17 +67,8 @@ export default function DestinationsPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <Section className="bg-bg-surface-inverse text-white">
+      <Section bg="inverse">
         <Container>
-          {/* Editorial eyebrow — cognac accent is Wayfarer's Guide-page
-              signature; used sparingly (one per zone). */}
-          <motion.p
-            className="text-xs font-semibold uppercase tracking-[0.16em] text-accent-300 mb-3"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            Curated Selection
-          </motion.p>
           <motion.h1
             className="text-4xl md:text-5xl font-medium mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -154,7 +145,7 @@ export default function DestinationsPage() {
                   {selected.name}
                 </h3>
                 <div className="flex items-center gap-2 mb-2">
-                  <p className="text-sm text-brand-600 font-medium">
+                  <p className="text-sm text-link font-medium">
                     {selected.tagline}
                   </p>
                   {isNatureDest(selected.categories) && (
@@ -169,7 +160,7 @@ export default function DestinationsPage() {
                 </p>
                 <Link
                   href={`/destinations/${selected.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-link-strong hover:text-link-hover transition-colors"
                 >
                   View full guide <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -260,7 +251,7 @@ export default function DestinationsPage() {
                     )}
                   </div>
                   <h3
-                    className="text-xl font-bold text-neutral-900 mb-1 group-hover:text-brand-700 transition-colors"
+                    className="text-xl font-bold text-neutral-900 mb-1 group-hover:text-link-strong transition-colors"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {dest.name}

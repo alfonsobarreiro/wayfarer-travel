@@ -69,7 +69,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         "font-semibold tracking-[-0.01em] transition-colors",
         // Focus ring — 2px brand-500 with 2px offset. Restated for parity
         // with the global :focus-visible baseline in globals.css.
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2",
         // Disabled — cursor + no interaction
         "disabled:cursor-not-allowed",
         SIZE[size],
