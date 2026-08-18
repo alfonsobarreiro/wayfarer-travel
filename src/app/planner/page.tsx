@@ -38,7 +38,6 @@ import {
   Car,
   Share2,
   Printer,
-  Ticket,
   Check,
   Info,
   ChevronDown,
@@ -212,7 +211,6 @@ export default function PlannerPage() {
   const [pickerQuery, setPickerQuery]     = useState("");
   const [savedOpen, setSavedOpen]         = useState(true);
   const [shareToast, setShareToast]       = useState(false);
-  const [modelHelpOpen, setModelHelpOpen] = useState(false);
 
   /* — Computed totals — */
   const totalDays    = segments.reduce((sum, s) => sum + s.duration, 0);
@@ -365,106 +363,74 @@ export default function PlannerPage() {
 
   return (
     <div className="pt-16 min-h-screen bg-bg-surface-ground print:bg-white">
-      {/* ── Header ────────────────────────────────────────── */}
-      <Section variant="compact" className="bg-white border-b border-neutral-200 print:!py-4">
+      {/* ── Hero — full-bleed image, matches destinations + discover pattern */}
+      <section className="relative h-[62vh] min-h-[460px] print:hidden">
+        <DestinationImage
+          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1800&q=80"
+          fallbackSrc="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1800&q=80"
+          alt="Wayfarer trip planner — airplane wing at golden hour"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/20" />
+        <div className="absolute inset-0 flex items-end">
+          <Container className="pb-12 w-full">
+            <motion.h1
+              className="text-[2.5rem] md:text-[3.75rem] font-medium text-white mb-3"
+              style={{ fontFamily: "var(--font-heading)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
+            >
+              Trip Planner
+            </motion.h1>
+            <motion.p
+              className="text-neutral-100 text-[1.0625rem] max-w-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+            >
+              Save destinations you&apos;re curious about, add segments with
+              flexible durations, and commit to dates when you&apos;re ready.
+            </motion.p>
+          </Container>
+        </div>
+      </section>
+
+      {/* ── Print header (only visible in print mode; the hero is display-only) */}
+      <div className="hidden print:block px-6 pt-4 pb-2">
+        <h1
+          className="text-[2.5rem] font-medium text-neutral-900"
+          style={{ fontFamily: "var(--font-heading)" }}
+        >
+          Trip Planner
+        </h1>
+      </div>
+
+      {/* ── How planning works — three primitives, always visible so the model
+             isn't hidden behind a toggle. */}
+      <Section variant="compact" className="bg-white border-b border-neutral-200 print:hidden">
         <Container>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <div>
-              <h1
-                className="text-[2.5rem] font-medium text-neutral-900"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Trip Planner
-              </h1>
-              <p className="text-neutral-600 mt-1 max-w-2xl">
-                Save destinations you&apos;re curious about, add segments with
-                flexible durations, and commit to dates when you&apos;re
-                ready.
-              </p>
-            </div>
-
-            {/* Stats + end-state actions */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 print:hidden">
-              <div className="flex gap-6">
-                <Stat label="Segments"  value={segments.length} />
-                <Stat label="Days"      value={totalDays} />
-                <Stat label="Saved"     value={savedCount} />
-              </div>
-              <div className="flex flex-wrap items-center gap-2 ml-auto">
-                <button
-                  onClick={handlePrint}
-                  disabled={segments.length === 0}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                >
-                  <Printer className="w-4 h-4" />
-                  Export
-                </button>
-                <button
-                  onClick={handleShare}
-                  disabled={segments.length === 0}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                >
-                  <Share2 className="w-4 h-4" />
-                  Share
-                </button>
-                {/* Direction-of-travel hint: the planner ends in handoff, not
-                    just an itinerary. Disabled affordance signals what's next
-                    without pretending it works today. */}
-                <span
-                  title="Hand off the trip to a booking partner. Coming next."
-                  aria-label="Send to booking. Coming next."
-                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-[0.9375rem] font-medium text-neutral-400 cursor-not-allowed select-none"
-                >
-                  <Ticket className="w-4 h-4" />
-                  <span className="hidden sm:inline">Send to booking</span>
-                  <span className="sm:hidden">Booking</span>
-                  <span className="text-xs font-medium text-neutral-500 bg-neutral-100 px-2 py-1 rounded">
-                    Soon
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Model clarifier: explain Day vs Segment vs Saved Location so the
-              three primitives don't blur together. */}
-          <button
-            type="button"
-            onClick={() => setModelHelpOpen((v) => !v)}
-            className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-link-strong hover:text-link-hover print:hidden"
-          >
-            <Info className="w-3.5 h-3.5" />
+          <h2 className="text-[0.9375rem] font-medium text-neutral-900 mb-4 flex items-center gap-2">
+            <Info className="w-4 h-4 text-link-strong" />
             How the three primitives work
-            {modelHelpOpen ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
-          </button>
-          <AnimatePresence>
-            {modelHelpOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{    opacity: 0, height: 0 }}
-                className="overflow-hidden print:hidden"
-              >
-                <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl">
-                  <PrimitiveCard
-                    icon={Bookmark}
-                    title="Saved Location"
-                    body="A wishlist entry. No duration. No dates. Useful when you’re curious but not committing."
-                  />
-                  <PrimitiveCard
-                    icon={CalendarRange}
-                    title="Segment"
-                    body="A destination with a flexible duration (e.g. 3 days, Spring 2026). The default planning unit so you don’t have to invent dates."
-                  />
-                  <PrimitiveCard
-                    icon={Plane}
-                    title="Day"
-                    body="A committed, dated activity slot. Only appears once you finalize. Lives inside a segment when you’re ready."
-                  />
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <PrimitiveCard
+              icon={Bookmark}
+              title="Saved Location"
+              body="A wishlist entry. No duration. No dates. Useful when you&rsquo;re curious but not committing."
+            />
+            <PrimitiveCard
+              icon={CalendarRange}
+              title="Segment"
+              body="A destination with a flexible duration (e.g. 3 days, Spring 2026). The default planning unit so you don&rsquo;t have to invent dates."
+            />
+            <PrimitiveCard
+              icon={Plane}
+              title="Day"
+              body="A committed, dated activity slot. Only appears once you finalize. Lives inside a segment when you&rsquo;re ready."
+            />
+          </div>
         </Container>
       </Section>
 
@@ -518,12 +484,40 @@ export default function PlannerPage() {
                 <Plus className="w-4 h-4" />
                 Add another segment
               </button>
+
+              {/* End-state actions — moved down out of the header so the hero
+                  carries only H1 + deck. Export + Share sit here where they
+                  actually apply: once you have segments to hand off. */}
+              <div className="mt-4 flex flex-wrap items-center justify-end gap-2 print:hidden">
+                <button
+                  onClick={handlePrint}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+                >
+                  <Printer className="w-4 h-4" />
+                  Export
+                </button>
+                <button
+                  onClick={handleShare}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+                >
+                  <Share2 className="w-4 h-4" />
+                  Share
+                </button>
+              </div>
             </>
           )}
         </div>
 
         {/* ── Saved Locations rail ────────────────────── */}
-        <aside className="print:hidden">
+        <aside className="print:hidden space-y-4">
+          {/* Stats — moved here from the header so the hero can stay clean.
+              Sits above Saved as a small at-a-glance summary. */}
+          <div className="bg-white rounded-lg border border-neutral-200 p-4 grid grid-cols-3 gap-3">
+            <Stat label="Segments"  value={segments.length} />
+            <Stat label="Days"      value={totalDays} />
+            <Stat label="Saved"     value={savedCount} />
+          </div>
+
           <div className="bg-white rounded-lg border border-neutral-200 sticky top-24">
             <button
               type="button"
