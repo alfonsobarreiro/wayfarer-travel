@@ -79,17 +79,19 @@ export function Navbar() {
               <Search className="w-5 h-5 text-neutral-600" />
             </button>
 
-            {/* Sign in (secondary) + Sign up (primary). Pair signals returning
-                users have a way in, not just new ones. */}
+            {/* Sign in + Sign up both ghost so the hero owns the one primary per
+                screen (per DS simplify-first constraint list: one primary action per
+                screen). When the user scrolls past the hero, they still see both
+                links; on click either opens the appropriate modal. */}
             <button
               onClick={() => setSignInOpen(true)}
-              className="hidden md:inline-flex text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              className="hidden md:inline-flex text-[0.9375rem] font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
             >
               Sign in
             </button>
             <button
               onClick={() => setSignUpOpen(true)}
-              className="hidden md:inline-flex items-center px-4 py-2 rounded-full bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
+              className="hidden md:inline-flex text-[0.9375rem] font-medium text-neutral-900 hover:text-bg-primary transition-colors"
             >
               Sign up
             </button>

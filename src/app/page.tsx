@@ -150,20 +150,15 @@ export default function HomePage() {
               itinerary together.
             </motion.p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
-              variants={fadeUp}
-              custom={2}
-            >
+            <motion.div variants={fadeUp} custom={2}>
+              {/* One primary action per screen. Nav is ghost so hero owns the primary.
+                  Medium 500 weight ceiling per constraint list; text-[0.9375rem] = 15px on-scale. */}
               <button
                 onClick={() => setSignUpOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors shadow-primary"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bg-primary text-white font-medium text-[0.9375rem] hover:bg-bg-primary-hover transition-colors shadow-primary"
               >
                 Sign Up!
               </button>
-              <p className="text-xs text-neutral-500 self-center">
-                No spam. Weekly picks only.
-              </p>
             </motion.div>
           </motion.div>
         </Container>
