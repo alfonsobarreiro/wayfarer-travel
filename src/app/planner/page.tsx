@@ -371,15 +371,15 @@ export default function PlannerPage() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <h1
-                className="text-4xl font-bold text-neutral-900"
+                className="text-[2.5rem] font-medium text-neutral-900"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Trip Planner
               </h1>
               <p className="text-neutral-600 mt-1 max-w-2xl">
-                Plan with as much commitment as you have. Save destinations
-                you&apos;re curious about, add segments with flexible
-                durations, then commit to dates when you&apos;re ready.
+                Save destinations you&apos;re curious about, add segments with
+                flexible durations, and commit to dates when you&apos;re
+                ready.
               </p>
             </div>
 
@@ -394,7 +394,7 @@ export default function PlannerPage() {
                 <button
                   onClick={handlePrint}
                   disabled={segments.length === 0}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >
                   <Printer className="w-4 h-4" />
                   Export
@@ -402,7 +402,7 @@ export default function PlannerPage() {
                 <button
                   onClick={handleShare}
                   disabled={segments.length === 0}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >
                   <Share2 className="w-4 h-4" />
                   Share
@@ -413,12 +413,12 @@ export default function PlannerPage() {
                 <span
                   title="Hand off the trip to a booking partner. Coming next."
                   aria-label="Send to booking. Coming next."
-                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-sm font-medium text-neutral-400 cursor-not-allowed select-none"
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-dashed border-neutral-300 text-[0.9375rem] font-medium text-neutral-400 cursor-not-allowed select-none"
                 >
                   <Ticket className="w-4 h-4" />
                   <span className="hidden sm:inline">Send to booking</span>
                   <span className="sm:hidden">Booking</span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2 py-1 rounded">
+                  <span className="text-xs font-medium text-neutral-500 bg-neutral-100 px-2 py-1 rounded">
                     Soon
                   </span>
                 </span>
@@ -469,7 +469,7 @@ export default function PlannerPage() {
       </Section>
 
       {/* ── Body ──────────────────────────────────────────── */}
-      <Section className="py-12 md:py-12">
+      <Section className="py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
         {/* ── Trip outline (segments) ─────────────────── */}
@@ -513,7 +513,7 @@ export default function PlannerPage() {
                   setPickerMode("segment");
                   setPickerOpen(true);
                 }}
-                className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-neutral-300 text-neutral-600 font-medium text-sm hover:border-border-focus-subtle hover:text-link-strong hover:bg-white transition-colors print:hidden"
+                className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-neutral-300 text-neutral-600 font-medium text-[0.9375rem] hover:border-border-focus-subtle hover:text-link-strong hover:bg-white transition-colors print:hidden"
               >
                 <Plus className="w-4 h-4" />
                 Add another segment
@@ -532,7 +532,7 @@ export default function PlannerPage() {
             >
               <div className="flex items-center gap-2">
                 <Bookmark className="w-4 h-4 text-brand-600" />
-                <span className="text-sm font-medium text-neutral-900">Saved</span>
+                <span className="text-[0.9375rem] font-medium text-neutral-900">Saved</span>
                 <span className="text-xs text-neutral-500">{savedCount}</span>
               </div>
               {savedOpen ? <ChevronDown className="w-4 h-4 text-neutral-400" /> : <ChevronRight className="w-4 h-4 text-neutral-400" />}
@@ -582,7 +582,7 @@ export default function PlannerPage() {
                                 onClick={() => promoteToSegment(item.id)}
                                 aria-label="Promote to segment"
                                 title="Promote to segment"
-                                className="text-xs font-semibold text-link-strong hover:text-link-hover"
+                                className="text-xs font-medium text-link-strong hover:text-link-hover"
                               >
                                 Add
                               </button>
@@ -638,7 +638,7 @@ export default function PlannerPage() {
               exit={{    scale: 0.96, opacity: 0 }}
             >
               <h2
-                className="text-xl font-bold mb-1"
+                className="text-xl font-medium mb-1"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {pickerMode === "segment" ? "Add a segment" : "Save a destination"}
@@ -656,7 +656,7 @@ export default function PlannerPage() {
                   value={pickerQuery}
                   onChange={(e) => setPickerQuery(e.target.value)}
                   placeholder="Filter by name, country, or interest"
-                  className="flex-1 bg-transparent outline-none text-sm placeholder:text-neutral-400"
+                  className="flex-1 bg-transparent outline-none text-[0.9375rem] placeholder:text-neutral-400"
                   autoFocus
                 />
                 {pickerQuery && (
@@ -671,7 +671,7 @@ export default function PlannerPage() {
               </div>
 
               {filteredPicker.length === 0 ? (
-                <p className="py-12 text-center text-sm text-neutral-500">
+                <p className="py-12 text-center text-[0.9375rem] text-neutral-500">
                   No destinations match &ldquo;{pickerQuery}&rdquo;.
                 </p>
               ) : (
@@ -692,7 +692,7 @@ export default function PlannerPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/70 transition-colors" />
                       <div className="absolute bottom-2.5 left-3 right-3">
-                        <p className="text-white font-medium text-sm">
+                        <p className="text-white font-medium text-[0.9375rem]">
                           {dest.name}
                         </p>
                         <p className="text-white/70 text-xs">{dest.country}</p>
@@ -704,7 +704,7 @@ export default function PlannerPage() {
 
               <button
                 onClick={() => setPickerOpen(false)}
-                className="w-full mt-4 py-3 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-600 hover:bg-neutral-50 transition-colors"
+                className="w-full mt-4 py-3 rounded-lg border border-neutral-200 text-[0.9375rem] font-medium text-neutral-600 hover:bg-neutral-50 transition-colors"
               >
                 Cancel
               </button>
@@ -720,10 +720,10 @@ export default function PlannerPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{    opacity: 0, y: 12 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-full bg-neutral-900 text-white text-sm font-medium shadow-lg flex items-center gap-2"
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-full bg-neutral-900 text-white text-[0.9375rem] font-medium shadow-lg flex items-center gap-2"
           >
             <Check className="w-4 h-4" />
-            Link copied. Share away.
+            Link copied.
           </motion.div>
         )}
       </AnimatePresence>
@@ -736,8 +736,8 @@ export default function PlannerPage() {
 function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div>
-      <p className="text-2xl font-medium text-link-strong tabular-nums">{value}</p>
-      <p className="text-xs text-neutral-500 uppercase tracking-wider">{label}</p>
+      <p className="text-[1.75rem] font-medium text-link-strong tabular-nums">{value}</p>
+      <p className="text-xs text-neutral-500">{label}</p>
     </div>
   );
 }
@@ -747,7 +747,7 @@ function PrimitiveCard({ icon: Icon, title, body }: { icon: typeof Sun; title: s
     <div className="rounded-lg border border-neutral-200 bg-neutral-50/50 p-3">
       <div className="flex items-center gap-2 mb-1">
         <Icon className="w-4 h-4 text-brand-600" />
-        <h3 className="text-xs font-semibold text-neutral-900">{title}</h3>
+        <h3 className="text-xs font-medium text-neutral-900">{title}</h3>
       </div>
       <p className="text-xs text-neutral-600">{body}</p>
     </div>
@@ -759,18 +759,18 @@ function EmptyState({ onAdd }: { onAdd: () => void }) {
     <div className="text-center py-16 bg-white rounded-lg border border-dashed border-neutral-300">
       <Plane className="w-12 h-12 text-neutral-300 mx-auto mb-3" />
       <h2
-        className="text-xl font-bold text-neutral-700 mb-1"
+        className="text-xl font-medium text-neutral-700 mb-1"
         style={{ fontFamily: "var(--font-heading)" }}
       >
         No segments yet
       </h2>
-      <p className="text-sm text-neutral-500 mb-6 max-w-sm mx-auto">
+      <p className="text-[0.9375rem] text-neutral-500 mb-6 max-w-sm mx-auto">
         Start by adding a segment. You can always change the duration later, or
         save destinations to the sidebar without committing.
       </p>
       <button
         onClick={onAdd}
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-semibold text-sm hover:bg-bg-primary-hover transition-colors"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white font-medium text-[0.9375rem] hover:bg-bg-primary-hover transition-colors"
       >
         <Plus className="w-4 h-4" />
         Add your first segment
@@ -863,7 +863,7 @@ function SegmentCard({
                   className="inline-block group"
                 >
                   <h3
-                    className="text-xl font-bold text-neutral-900 group-hover:text-link-strong transition-colors"
+                    className="text-xl font-medium text-neutral-900 group-hover:text-link-strong transition-colors"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {segment.destination.name}
@@ -934,7 +934,7 @@ function SegmentCard({
                       <input
                         value={a.label}
                         onChange={(e) => onUpdateActivity(a.id, e.target.value)}
-                        className="flex-1 text-sm text-neutral-800 bg-transparent border-b border-transparent hover:border-neutral-200 focus:border-border-focus-subtle outline-none py-1 transition-colors"
+                        className="flex-1 text-[0.9375rem] text-neutral-800 bg-transparent border-b border-transparent hover:border-neutral-200 focus:border-border-focus-subtle outline-none py-1 transition-colors"
                       />
                       <button
                         onClick={() => onRemoveActivity(a.id)}
@@ -999,7 +999,7 @@ function CategoryHeader({ category }: { category: ActivityCategory }) {
   const Icon = meta.icon;
   return (
     <div className="flex items-center gap-2">
-      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold uppercase tracking-wider border ${meta.tone}`}>
+      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium border ${meta.tone}`}>
         <Icon className="w-3 h-3" />
         {meta.label}
       </span>
