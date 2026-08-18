@@ -4,9 +4,8 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { DestinationImage } from "@/components/DestinationImage";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, ArrowRight, Globe, SlidersHorizontal, Search, Leaf } from "lucide-react";
+import { MapPin, ArrowRight, Globe, SlidersHorizontal, Leaf } from "lucide-react";
 import { DestinationMap } from "@/components/map/DestinationMap";
-import { useSearch } from "@/components/search/SearchContext";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import {
@@ -48,7 +47,6 @@ const continents = [
 export default function DestinationsPage() {
   const [selected, setSelected] = useState<Destination | null>(initialDestination);
   const [activeContinent, setActiveContinent] = useState("All");
-  const { open: openSearch } = useSearch();
 
   const filtered = useMemo(() => {
     if (activeContinent === "All") return destinations;
@@ -70,7 +68,7 @@ export default function DestinationsPage() {
       <Section bg="inverse">
         <Container>
           <motion.h1
-            className="text-4xl md:text-5xl font-medium mb-4"
+            className="text-[2.5rem] md:text-[3.75rem] font-medium mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.05 } }}
@@ -78,7 +76,7 @@ export default function DestinationsPage() {
             Top Spots
           </motion.h1>
           <motion.p
-            className="text-neutral-400 text-base max-w-xl"
+            className="text-neutral-400 text-[1.0625rem] max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           >
@@ -86,21 +84,8 @@ export default function DestinationsPage() {
             {Object.keys(counts).length - 1} continents. Filter by region or
             click any pin on the globe.
           </motion.p>
-
-          {/* In-page search affordance (opens the global overlay) */}
-          <motion.button
-            type="button"
-            onClick={openSearch}
-            className="mt-6 inline-flex items-center gap-2 pl-3 pr-2 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 text-sm text-white/90 transition-colors min-w-[280px]"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.18 } }}
-          >
-            <Search className="w-4 h-4 text-white/70" />
-            <span className="flex-1 text-left">Search a country, region, or interest</span>
-            <kbd className="text-xs font-mono px-2 py-1 rounded bg-white/15 text-white/80 border border-white/20">
-              ⌘K
-            </kbd>
-          </motion.button>
+          {/* Nav Search sits one click away in the sticky header; no second
+              search affordance here to avoid duplicated CTA per DS restraint. */}
         </Container>
       </Section>
 
@@ -139,28 +124,28 @@ export default function DestinationsPage() {
               </div>
               <div className="flex-1">
                 <h3
-                  className="text-2xl font-bold text-neutral-900 mb-1"
+                  className="text-[1.25rem] font-medium text-neutral-900 mb-1"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {selected.name}
                 </h3>
                 <div className="flex items-center gap-2 mb-2">
-                  <p className="text-sm text-link font-medium">
+                  <p className="text-[0.9375rem] text-neutral-600 font-medium">
                     {selected.tagline}
                   </p>
                   {isNatureDest(selected.categories) && (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-[11px] font-medium">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-bg-success-muted text-text-success border border-sage-300 text-xs font-medium">
                       <Leaf className="w-3 h-3" />
                       Nature
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-neutral-500 mb-4">
+                <p className="text-[0.9375rem] text-neutral-500 mb-4">
                   {selected.description}
                 </p>
                 <Link
                   href={`/destinations/${selected.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-link-strong hover:text-link-hover transition-colors"
+                  className="inline-flex items-center gap-2 text-[0.9375rem] font-medium text-link-strong hover:text-link-hover transition-colors"
                 >
                   View full guide <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -178,12 +163,12 @@ export default function DestinationsPage() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <h2
-              className="text-3xl font-bold"
+              className="text-[1.75rem] font-medium"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               All Destinations
             </h2>
-            <p className="text-sm text-neutral-500 mt-1">
+            <p className="text-[0.9375rem] text-neutral-500 mt-1">
               {filtered.length} destination{filtered.length !== 1 ? "s" : ""}
               {activeContinent !== "All" ? ` in ${activeContinent}` : ""}
             </p>
@@ -239,7 +224,7 @@ export default function DestinationsPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white">
                       <MapPin className="w-4 h-4" />
-                      <span className="text-sm font-medium">
+                      <span className="text-[0.9375rem] font-medium">
                         {dest.country}
                       </span>
                     </div>
@@ -251,12 +236,12 @@ export default function DestinationsPage() {
                     )}
                   </div>
                   <h3
-                    className="text-xl font-bold text-neutral-900 mb-1 group-hover:text-link-strong transition-colors"
+                    className="text-[1.25rem] font-medium text-neutral-900 mb-1 group-hover:text-link-strong transition-colors"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {dest.name}
                   </h3>
-                  <p className="text-sm text-neutral-500 line-clamp-2">
+                  <p className="text-[0.9375rem] text-neutral-500 line-clamp-2">
                     {dest.description}
                   </p>
                 </Link>
@@ -269,7 +254,7 @@ export default function DestinationsPage() {
         {filtered.length === 0 && (
           <div className="text-center py-20">
             <Globe className="w-12 h-12 text-neutral-300 mx-auto mb-3" />
-            <p className="text-neutral-500">
+            <p className="text-[0.9375rem] text-neutral-500">
               No destinations found for {activeContinent}. Try another region.
             </p>
           </div>
