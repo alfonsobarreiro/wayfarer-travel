@@ -4,12 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 import { SignInModal } from "@/components/form/SignInModal";
+import { SignUpModal } from "@/components/form/SignUpModal";
 import { WayfarerLogo } from "@/components/WayfarerLogo";
 import { useSearch } from "@/components/search/SearchContext";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [signInOpen, setSignInOpen] = useState(false);
+  const [signUpOpen, setSignUpOpen] = useState(false);
   const { open: openSearch } = useSearch();
 
   return (
@@ -135,6 +137,12 @@ export function Navbar() {
       <SignInModal
         open={signInOpen}
         onClose={() => setSignInOpen(false)}
+        onSwitchToSignUp={() => setSignUpOpen(true)}
+      />
+      <SignUpModal
+        open={signUpOpen}
+        onClose={() => setSignUpOpen(false)}
+        onSwitchToSignIn={() => setSignInOpen(true)}
       />
     </>
   );

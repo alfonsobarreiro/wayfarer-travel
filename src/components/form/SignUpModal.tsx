@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronRight, ChevronLeft, Check, Edit3 } from "lucide-react";
+import { X, ChevronRight, ChevronLeft, Check } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -62,21 +62,22 @@ const topDestinations = [
   "New Zealand",
 ];
 
-const bgImages = [
-  "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=60",
-  "https://images.unsplash.com/photo-1469521669194-babb45599def?w=800&q=60",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=60",
-  "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=60",
-  "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=60",
-];
+// One static hero photo instead of 5 rotating remote images. Ties the
+// auth flow visually to the planner hero + removes 4 extra network
+// requests and the motion drift between step changes.
+const HERO_IMAGE = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80";
+const HERO_FALLBACK = "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&q=80";
 
 /* ── Component ───────────────────────────────────────── */
 interface SignUpModalProps {
   open: boolean;
   onClose: () => void;
+  /** Optional switch back to Sign in. Caller wires this to open SignInModal.
+   *  Keeps the auth pair symmetric with SignInModal's onSwitchToSignUp. */
+  onSwitchToSignIn?: () => void;
 }
 
-export function SignUpModal({ open, onClose }: SignUpModalProps) {
+export function SignUpModal({ open, onClose, onSwitchToSignIn }: SignUpModalProps) {
   const [step, setStep] = useState(0);
   const [complete, setComplete] = useState(false);
 
@@ -118,10 +119,6 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
     if (valid && step === totalSteps - 1) {
       setComplete(true);
     }
-  }
-
-  function jumpToStep(target: number) {
-    setStep(target);
   }
 
   function handleBack() {
@@ -186,31 +183,23 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            {/* Left — Image */}
+            {/* Left — static hero image (no per-step rotation). Reuses the
+                planner's airplane-wing photo so the auth flow visually
+                previews the destination (the trip planner) users are
+                signing up to use. */}
             <div className="hidden md:block w-2/5 relative">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={step}
-                  src={bgImages[step]}
-                  alt=""
-                  className="absolute inset-0 w-full h-full object-cover"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                />
-              </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <img
+                src={HERO_IMAGE}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = HERO_FALLBACK;
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white/80 text-xs font-medium mb-1">
-                  Step {step + 1} of {totalSteps}
-                </p>
                 <p className="text-white text-[0.9375rem] font-medium">
-                  {step === 0 && "Your account"}
-                  {step === 1 && "Your travel style"}
-                  {step === 2 && "What excites you?"}
-                  {step === 3 && "Dream destinations"}
-                  {step === 4 && "Review your profile"}
+                  Wayfarer
                 </p>
               </div>
             </div>
@@ -226,8 +215,9 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                 <X className="w-5 h-5 text-neutral-500" />
               </button>
 
-              {/* Progress */}
-              <div className="flex gap-2 mb-2">
+              {/* Progress — bar only. The bar carries "where am I in the flow"
+                  without a redundant "Step N of Y" line or step title above it. */}
+              <div className="flex gap-2 mb-6">
                 {Array.from({ length: totalSteps }).map((_, i) => (
                   <div
                     key={i}
@@ -237,9 +227,6 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                   />
                 ))}
               </div>
-              <p className="text-xs text-neutral-400 mb-4 md:hidden">
-                Step {step + 1} of {totalSteps}
-              </p>
 
               {!complete ? (
                 <>
@@ -504,20 +491,10 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                         {step === 4 && (
                           <div className="space-y-4">
                             {/* Account */}
-                            <div className="rounded-lg border border-neutral-200 p-4">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-medium text-neutral-500">
-                                  Account
-                                </h3>
-                                <button
-                                  type="button"
-                                  onClick={() => jumpToStep(0)}
-                                  className="flex items-center gap-1 text-xs text-link hover:text-link-strong font-medium transition-colors"
-                                >
-                                  <Edit3 className="w-3 h-3" />
-                                  Edit
-                                </button>
-                              </div>
+                            <div className="rounded-sm border border-neutral-200 p-4">
+                              <h3 className="text-xs font-medium text-neutral-500 mb-2">
+                                Account
+                              </h3>
                               <p className="text-[0.9375rem] text-neutral-800">
                                 {form1.getValues("firstName")}{" "}
                                 {form1.getValues("lastName")}
@@ -528,20 +505,10 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             </div>
 
                             {/* Travel Preferences */}
-                            <div className="rounded-lg border border-neutral-200 p-4">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-medium text-neutral-500">
-                                  Travel Preferences
-                                </h3>
-                                <button
-                                  type="button"
-                                  onClick={() => jumpToStep(1)}
-                                  className="flex items-center gap-1 text-xs text-link hover:text-link-strong font-medium transition-colors"
-                                >
-                                  <Edit3 className="w-3 h-3" />
-                                  Edit
-                                </button>
-                              </div>
+                            <div className="rounded-sm border border-neutral-200 p-4">
+                              <h3 className="text-xs font-medium text-neutral-500 mb-2">
+                                Travel preferences
+                              </h3>
                               <div className="flex flex-wrap gap-2">
                                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-bg-chip text-text-chip border border-border-chip">
                                   {form2.getValues("travelStyle") || "—"}
@@ -560,20 +527,10 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             </div>
 
                             {/* Interests */}
-                            <div className="rounded-lg border border-neutral-200 p-4">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-medium text-neutral-500">
-                                  Interests
-                                </h3>
-                                <button
-                                  type="button"
-                                  onClick={() => jumpToStep(2)}
-                                  className="flex items-center gap-1 text-xs text-link hover:text-link-strong font-medium transition-colors"
-                                >
-                                  <Edit3 className="w-3 h-3" />
-                                  Edit
-                                </button>
-                              </div>
+                            <div className="rounded-sm border border-neutral-200 p-4">
+                              <h3 className="text-xs font-medium text-neutral-500 mb-2">
+                                Interests
+                              </h3>
                               <div className="flex flex-wrap gap-2">
                                 {(form3.getValues("interests") || []).map(
                                   (interest) => (
@@ -590,20 +547,10 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             </div>
 
                             {/* Destinations */}
-                            <div className="rounded-lg border border-neutral-200 p-4">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-medium text-neutral-500">
-                                  Dream Destinations
-                                </h3>
-                                <button
-                                  type="button"
-                                  onClick={() => jumpToStep(3)}
-                                  className="flex items-center gap-1 text-xs text-link hover:text-link-strong font-medium transition-colors"
-                                >
-                                  <Edit3 className="w-3 h-3" />
-                                  Edit
-                                </button>
-                              </div>
+                            <div className="rounded-sm border border-neutral-200 p-4">
+                              <h3 className="text-xs font-medium text-neutral-500 mb-2">
+                                Dream destinations
+                              </h3>
                               <div className="flex flex-wrap gap-2">
                                 {(form4.getValues("destinations") || []).map(
                                   (dest) => (
@@ -646,6 +593,25 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
+
+                  {/* Reciprocal switch to Sign in — mirrors SignInModal's
+                      "Create an account" switch link so the auth pair is
+                      symmetric. Only renders if the caller wired the prop. */}
+                  {onSwitchToSignIn && (
+                    <p className="mt-6 text-center text-[0.9375rem] text-neutral-600">
+                      Already have an account?{" "}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          onSwitchToSignIn();
+                          handleClose();
+                        }}
+                        className="font-medium text-link-strong hover:text-link-hover transition-colors"
+                      >
+                        Sign in
+                      </button>
+                    </p>
+                  )}
                 </>
               ) : (
                 /* ── Success ──────────────────────────── */

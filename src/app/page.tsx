@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { SignUpModal } from "@/components/form/SignUpModal";
+import { SignInModal } from "@/components/form/SignInModal";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { allDestinations as destinations } from "@/data/destinations";
@@ -69,6 +70,7 @@ const fadeUp = {
 
 export default function HomePage() {
   const [signUpOpen, setSignUpOpen] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
   const [hoveredBenefit, setHoveredBenefit] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isHoveringCarousel, setIsHoveringCarousel] = useState(false);
@@ -479,7 +481,16 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <SignUpModal open={signUpOpen} onClose={() => setSignUpOpen(false)} />
+      <SignUpModal
+        open={signUpOpen}
+        onClose={() => setSignUpOpen(false)}
+        onSwitchToSignIn={() => setSignInOpen(true)}
+      />
+      <SignInModal
+        open={signInOpen}
+        onClose={() => setSignInOpen(false)}
+        onSwitchToSignUp={() => setSignUpOpen(true)}
+      />
     </>
   );
 }
