@@ -157,7 +157,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-800 placeholder:text-neutral-400 focus:border-focus focus:ring-2 focus:ring-focus-soft outline-none transition-all";
+    "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-[1.0625rem] text-neutral-800 placeholder:text-neutral-400 focus:border-focus focus:ring-2 focus:ring-focus-soft outline-none transition-all";
   const errorClass = "text-xs text-text-danger mt-1";
 
   return (
@@ -180,7 +180,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
 
           {/* Modal */}
           <motion.div
-            className="relative z-10 w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh]"
+            className="relative z-10 w-full max-w-3xl bg-white rounded-sm overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh]"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
@@ -202,15 +202,15 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
               </AnimatePresence>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white/80 text-xs font-medium uppercase tracking-wider mb-1">
+                <p className="text-white/80 text-xs font-medium mb-1">
                   Step {step + 1} of {totalSteps}
                 </p>
-                <p className="text-white text-sm font-medium">
-                  {step === 0 && "Let's get to know you"}
+                <p className="text-white text-[0.9375rem] font-medium">
+                  {step === 0 && "Your account"}
                   {step === 1 && "Your travel style"}
                   {step === 2 && "What excites you?"}
                   {step === 3 && "Dream destinations"}
-                  {step === 4 && "Almost there!"}
+                  {step === 4 && "Review your profile"}
                 </p>
               </div>
             </div>
@@ -246,20 +246,20 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                   {/* Step Title */}
                   <div className="mb-6">
                     <h2
-                      className="text-xl font-bold text-neutral-900 mb-1"
+                      className="text-[1.25rem] font-medium text-neutral-900 mb-1"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
-                      {step === 0 && "Create Your Account"}
-                      {step === 1 && "How Do You Travel?"}
-                      {step === 2 && "What Are Your Interests?"}
-                      {step === 3 && "Where Do You Want to Go?"}
-                      {step === 4 && "Review Your Profile"}
+                      {step === 0 && "Create your account"}
+                      {step === 1 && "How do you travel?"}
+                      {step === 2 && "What are your interests?"}
+                      {step === 3 && "Where do you want to go?"}
+                      {step === 4 && "Review your profile"}
                     </h2>
-                    <p className="text-sm text-neutral-500">
+                    <p className="text-[0.9375rem] text-neutral-500">
                       {step === 0 && "Create an account to save trips and personalize picks."}
                       {step === 1 && "Help us tailor recommendations for you."}
                       {step === 2 && "Select all that apply."}
-                      {step === 3 && "Pick destinations that call to you."}
+                      {step === 3 && "Pick destinations you want to visit."}
                       {step === 4 && "Make sure everything looks right."}
                     </p>
                   </div>
@@ -345,7 +345,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                         shouldValidate: true,
                                       })
                                     }
-                                    className={`p-3 rounded-lg border text-sm font-medium transition-all ${
+                                    className={`p-3 rounded-lg border text-[0.9375rem] font-medium transition-all ${
                                       form2.watch("travelStyle") === style
                                         ? "border-border-selected bg-bg-chip text-text-chip"
                                         : "border-neutral-200 text-neutral-600 hover:border-neutral-300"
@@ -377,7 +377,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                           shouldValidate: true,
                                         })
                                       }
-                                      className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
+                                      className={`p-3 rounded-lg border text-[0.9375rem] font-medium transition-all text-left ${
                                         active
                                           ? "border-border-selected bg-bg-chip text-text-chip"
                                           : "border-neutral-200 text-neutral-700 hover:border-neutral-300"
@@ -411,7 +411,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                         shouldValidate: true,
                                       })
                                     }
-                                    className={`p-3 rounded-lg border text-sm font-medium transition-all ${
+                                    className={`p-3 rounded-lg border text-[0.9375rem] font-medium transition-all ${
                                       form2.watch("groupSize") === size
                                         ? "border-border-selected bg-bg-chip text-text-chip"
                                         : "border-neutral-200 text-neutral-600 hover:border-neutral-300"
@@ -443,7 +443,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                     key={interest}
                                     type="button"
                                     onClick={() => toggleInterest(interest)}
-                                    className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
+                                    className={`p-3 rounded-lg border text-[0.9375rem] font-medium transition-all text-left ${
                                       selected
                                         ? "border-border-selected bg-bg-chip text-text-chip"
                                         : "border-neutral-200 text-neutral-600 hover:border-neutral-300"
@@ -478,7 +478,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                     key={dest}
                                     type="button"
                                     onClick={() => toggleDestination(dest)}
-                                    className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
+                                    className={`p-3 rounded-lg border text-[0.9375rem] font-medium transition-all text-left ${
                                       selected
                                         ? "border-border-selected bg-bg-chip text-text-chip"
                                         : "border-neutral-200 text-neutral-600 hover:border-neutral-300"
@@ -506,7 +506,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             {/* Account */}
                             <div className="rounded-lg border border-neutral-200 p-4">
                               <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                                <h3 className="text-xs font-medium text-neutral-500">
                                   Account
                                 </h3>
                                 <button
@@ -518,11 +518,11 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                                   Edit
                                 </button>
                               </div>
-                              <p className="text-sm text-neutral-800">
+                              <p className="text-[0.9375rem] text-neutral-800">
                                 {form1.getValues("firstName")}{" "}
                                 {form1.getValues("lastName")}
                               </p>
-                              <p className="text-sm text-neutral-500">
+                              <p className="text-[0.9375rem] text-neutral-500">
                                 {form1.getValues("email")}
                               </p>
                             </div>
@@ -530,7 +530,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             {/* Travel Preferences */}
                             <div className="rounded-lg border border-neutral-200 p-4">
                               <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                                <h3 className="text-xs font-medium text-neutral-500">
                                   Travel Preferences
                                 </h3>
                                 <button
@@ -562,7 +562,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             {/* Interests */}
                             <div className="rounded-lg border border-neutral-200 p-4">
                               <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                                <h3 className="text-xs font-medium text-neutral-500">
                                   Interests
                                 </h3>
                                 <button
@@ -592,7 +592,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                             {/* Destinations */}
                             <div className="rounded-lg border border-neutral-200 p-4">
                               <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                                <h3 className="text-xs font-medium text-neutral-500">
                                   Dream Destinations
                                 </h3>
                                 <button
@@ -629,7 +629,7 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                     <button
                       onClick={handleBack}
                       disabled={step === 0}
-                      className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                      className={`flex items-center gap-2 text-[0.9375rem] font-medium transition-colors ${
                         step === 0
                           ? "text-neutral-300 cursor-not-allowed"
                           : "text-neutral-600 hover:text-neutral-800"
@@ -640,9 +640,9 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                     </button>
                     <button
                       onClick={handleNext}
-                      className="flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
+                      className="flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-primary text-white text-[0.9375rem] font-medium hover:bg-bg-primary-hover transition-colors"
                     >
-                      {step === totalSteps - 1 ? "Confirm & Join" : "Continue"}
+                      {step === totalSteps - 1 ? "Create account" : "Continue"}
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -658,18 +658,17 @@ export function SignUpModal({ open, onClose }: SignUpModalProps) {
                     <Check className="w-8 h-8 text-text-success" />
                   </div>
                   <h2
-                    className="text-2xl font-bold text-neutral-900 mb-2"
+                    className="text-[1.75rem] font-medium text-neutral-900 mb-2"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
-                    Welcome to Wayfarer!
+                    Welcome to Wayfarer.
                   </h2>
-                  <p className="text-sm text-neutral-500 mb-6 max-w-xs">
-                    Your profile is saved. Destination picks tailored to your
-                    style are ready.
+                  <p className="text-[0.9375rem] text-neutral-500 mb-6 max-w-xs">
+                    Your profile is saved. We tailored destination picks to your style.
                   </p>
                   <button
                     onClick={handleClose}
-                    className="px-6 py-3 rounded-lg bg-bg-primary text-white text-sm font-medium hover:bg-bg-primary-hover transition-colors"
+                    className="px-6 py-3 rounded-lg bg-bg-primary text-white text-[0.9375rem] font-medium hover:bg-bg-primary-hover transition-colors"
                   >
                     Start Exploring
                   </button>

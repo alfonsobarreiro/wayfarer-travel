@@ -66,7 +66,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
           <motion.div
             role="dialog"
             aria-label="Sign in"
-            className="relative z-10 bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden"
+            className="relative z-10 bg-white rounded-sm shadow-2xl w-full max-w-md overflow-hidden"
             initial={{ scale: 0.96, opacity: 0, y: 10 }}
             animate={{ scale: 1,    opacity: 1, y: 0 }}
             exit={{    scale: 0.96, opacity: 0, y: 10 }}
@@ -88,19 +88,19 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                   <Check className="w-6 h-6 text-link" />
                 </div>
                 <h2
-                  className="text-2xl font-bold mb-1"
+                  className="text-[1.75rem] font-medium mb-1"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   Welcome back
                 </h2>
-                <p className="text-sm text-neutral-500 mb-6">
+                <p className="text-[0.9375rem] text-neutral-500 mb-6">
                   You&apos;re signed in. In a real product, this would open your
                   saved trips and personalized recommendations.
                 </p>
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="w-full py-3 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
+                  className="w-full py-3 rounded-lg bg-bg-primary text-white text-[0.9375rem] font-medium hover:bg-bg-primary-hover transition-colors"
                 >
                   Continue
                 </button>
@@ -108,13 +108,13 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="p-8">
                 <h2
-                  className="text-2xl font-bold mb-1"
+                  className="text-[1.75rem] font-medium mb-1"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   Sign in
                 </h2>
-                <p className="text-sm text-neutral-500 mb-6">
-                  Welcome back. Pick up where you left off.
+                <p className="text-[0.9375rem] text-neutral-500 mb-6">
+                  Welcome back.
                 </p>
 
                 {/* Email */}
@@ -128,7 +128,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                     autoComplete="email"
                     placeholder="you@example.com"
                     {...register("email")}
-                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-focus focus:outline-none transition-colors"
+                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-[1.0625rem] placeholder:text-neutral-400 focus:border-focus focus:outline-none transition-colors"
                   />
                 </div>
                 {formState.errors.email && (
@@ -160,7 +160,7 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
                     autoComplete="current-password"
                     placeholder="At least 6 characters"
                     {...register("password")}
-                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-sm placeholder:text-neutral-400 focus:border-focus focus:outline-none transition-colors"
+                    className="w-full pl-12 pr-3 py-3 rounded-lg border border-neutral-200 text-[1.0625rem] placeholder:text-neutral-400 focus:border-focus focus:outline-none transition-colors"
                   />
                 </div>
                 {formState.errors.password && (
@@ -171,14 +171,14 @@ export function SignInModal({ open, onClose, onSwitchToSignUp }: SignInModalProp
 
                 <button
                   type="submit"
-                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-bg-primary text-white text-sm font-semibold hover:bg-bg-primary-hover transition-colors"
+                  className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-bg-primary text-white text-[0.9375rem] font-medium hover:bg-bg-primary-hover transition-colors"
                 >
                   Sign in
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
                 {onSwitchToSignUp && (
-                  <p className="mt-6 text-center text-sm text-neutral-600">
+                  <p className="mt-6 text-center text-[0.9375rem] text-neutral-600">
                     New here?{" "}
                     <button
                       type="button"
