@@ -512,13 +512,13 @@ export default function PlannerPage() {
         <aside className="print:hidden space-y-4">
           {/* Stats — moved here from the header so the hero can stay clean.
               Sits above Saved as a small at-a-glance summary. */}
-          <div className="bg-white rounded-lg border border-neutral-200 p-4 grid grid-cols-3 gap-3">
+          <div className="bg-white rounded-sm border border-neutral-200 p-4 grid grid-cols-3 gap-3">
             <Stat label="Segments"  value={segments.length} />
             <Stat label="Days"      value={totalDays} />
             <Stat label="Saved"     value={savedCount} />
           </div>
 
-          <div className="bg-white rounded-lg border border-neutral-200 sticky top-24">
+          <div className="bg-white rounded-sm border border-neutral-200 sticky top-24">
             <button
               type="button"
               onClick={() => setSavedOpen((v) => !v)}
@@ -750,7 +750,7 @@ function PrimitiveCard({ icon: Icon, title, body }: { icon: typeof Sun; title: s
 
 function EmptyState({ onAdd }: { onAdd: () => void }) {
   return (
-    <div className="text-center py-16 bg-white rounded-lg border border-dashed border-neutral-300">
+    <div className="text-center py-16 bg-white rounded-sm border border-dashed border-neutral-300">
       <Plane className="w-12 h-12 text-neutral-300 mx-auto mb-3" />
       <h2
         className="text-xl font-medium text-neutral-700 mb-1"
@@ -822,7 +822,7 @@ function SegmentCard({
   return (
     <Reorder.Item
       value={segment}
-      className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden print:shadow-none print:border-neutral-300"
+      className="bg-white rounded-sm border border-neutral-200 shadow-sm overflow-hidden print:shadow-none print:border-neutral-300"
     >
       <div className="p-6">
         <div className="flex items-start gap-3">

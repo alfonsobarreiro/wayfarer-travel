@@ -191,16 +191,20 @@
   --font-body:    'Inter', system-ui, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
 
-  /* Type scale — matches brief sizes (H1 60, H2 48, H3 32, H4 24; Body 20/18/16) */
-  --text-display:  3.75rem; /* 60px — hero */
-  --text-h1:       3rem;    /* 48px */
-  --text-h2:       2rem;    /* 32px */
-  --text-h3:       1.5rem;  /* 24px */
-  --text-h4:       1.25rem; /* 20px */
-  --text-body-lg:  1.25rem; /* 20px */
-  --text-body:     1rem;    /* 16px */
-  --text-body-sm:  0.875rem;/* 14px */
-  --text-caption:  0.75rem; /* 12px */
+  /* Type scale — DS constraint-list anchors: 60 / 40 / 28 / 20 / 17 / 15 / 12.
+     Previous scale (48 / 32 / 24 / 16 / 14) was legacy pre-constraint-list
+     drift; component callsites already use arbitrary utilities that hit these
+     anchors. Tokens re-aligned so any future callsite that reads them lands
+     on-scale by default. */
+  --text-display:  3.75rem;   /* 60px — hero display */
+  --text-h1:       3.75rem;   /* 60px — h1 same as display */
+  --text-h2:       2.5rem;    /* 40px */
+  --text-h3:       1.75rem;   /* 28px */
+  --text-h4:       1.25rem;   /* 20px */
+  --text-body-lg:  1.25rem;   /* 20px */
+  --text-body:     1.0625rem; /* 17px — article body anchor */
+  --text-body-sm:  0.9375rem; /* 15px — default UI body */
+  --text-caption:  0.75rem;   /* 12px */
 
   /* Leading */
   --leading-display: 1.1;

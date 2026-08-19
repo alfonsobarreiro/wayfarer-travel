@@ -139,7 +139,7 @@ export default function DestinationsPage() {
             key={selected.slug}
           >
             <Container>
-            <div className="bg-white rounded-lg border border-neutral-200 p-6 flex flex-col md:flex-row gap-6 items-center shadow-sm">
+            <div className="bg-white rounded-sm border border-neutral-200 p-6 flex flex-col md:flex-row gap-6 items-center shadow-sm">
               <div className="relative w-full md:w-48 h-32 rounded-lg overflow-hidden flex-shrink-0 img-skeleton">
                 <DestinationImage
                   src={selected.image}

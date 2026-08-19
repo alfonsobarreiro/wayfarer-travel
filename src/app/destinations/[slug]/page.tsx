@@ -280,7 +280,7 @@ export default function DestinationDetailPage({
             {/* Travel tips — each tip rendered as a titled block instead of a
                 fragmented snippet. Title = leading clause or the part before a
                 natural separator; body = the rest. */}
-            <div className="rounded-lg border border-neutral-200 p-6">
+            <div className="rounded-sm border border-neutral-200 p-6">
               <h3
                 className="text-xl font-medium mb-4 flex items-center gap-2"
                 style={{ fontFamily: "var(--font-heading)" }}
@@ -310,7 +310,7 @@ export default function DestinationDetailPage({
             </div>
 
             {/* CTA */}
-            <div className="rounded-lg bg-bg-primary p-6">
+            <div className="rounded-sm bg-bg-primary p-6">
               <h3
                 className="text-xl font-medium text-white mb-2"
                 style={{ fontFamily: "var(--font-heading)" }}

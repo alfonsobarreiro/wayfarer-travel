@@ -9,9 +9,8 @@ import { cn } from "@/lib/cn";
  *   - secondary — outlined, supporting action next to a primary.
  *   - ghost     — no chrome, tertiary/inline.
  *
- * Sizes control padding + font-size only. Weight is fixed:
- *   Semibold-600 is the button exception to the site-wide Medium-500
- *   ceiling — buttons need the extra weight to sit as decisive marks.
+ * Sizes control padding + font-size only. Weight is fixed at Medium 500
+ * — no exception. The site-wide Medium-500 ceiling holds on buttons too.
  *
  * Tracking is -0.01em on all variants to match Space Grotesk display
  * behavior. Focus ring is a 2px brand-500 ring with 2px offset — the
@@ -44,9 +43,9 @@ const VARIANT: Record<ButtonVariant, string> = {
 };
 
 const SIZE: Record<ButtonSize, string> = {
-  sm: "px-3   py-2 text-xs   rounded-md gap-2",
-  md: "px-6   py-3 text-sm   rounded-lg gap-2",
-  lg: "px-8   py-4 text-base rounded-lg gap-2",
+  sm: "px-3 py-2 text-xs                 rounded-md gap-2",
+  md: "px-6 py-3 text-[0.9375rem]        rounded-lg gap-2",
+  lg: "px-8 py-4 text-[1.0625rem]        rounded-lg gap-2",
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -66,7 +65,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       className={cn(
         // Layout + typography — buttons are always inline-flex marks
         "inline-flex items-center justify-center whitespace-nowrap select-none",
-        "font-semibold tracking-[-0.01em] transition-colors",
+        "font-medium tracking-[-0.01em] transition-colors",
         // Focus ring — 2px brand-500 with 2px offset. Restated for parity
         // with the global :focus-visible baseline in globals.css.
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2",
