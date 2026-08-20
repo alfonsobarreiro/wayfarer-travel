@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
  * Section — vertical rhythm primitive.
  *
  * Three variants define the site's section-level vertical scale:
- *   - content: py-20 md:py-28  (default; ordinary page sections)
+ *   - content: py-16 md:py-24  (default; DS constraint-list rhythm)
  *   - hero:    py-32 md:py-44  (top-of-page marquee sections)
  *   - compact: py-8  md:py-10  (dense app surfaces like the planner header)
  *
@@ -21,7 +21,7 @@ export type SectionVariant = "content" | "hero" | "compact";
 export type SectionBg      = "ground" | "raised" | "inverse";
 
 const VARIANT: Record<SectionVariant, string> = {
-  content: "py-20 md:py-28",
+  content: "py-16 md:py-24",
   hero:    "py-32 md:py-44",
   compact: "py-8  md:py-10",
 };
